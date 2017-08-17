@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>气费</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../css/sub-life/pay-fees.css">
+    </head>
+
+    <body>
+    <form class="mui-input-group">
+        <div class="mui-input-row" id="pay-fees-row">
+            <div class="border-btm mui-navigate-right">
+                <label>缴费单位</label>
+                <span id="unit" data-id="5">成都市燃气</span>
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>缴费户号</label>
+                <input type="text" class="num" value="" placeholder="请输入户号" />
+            </div>
+        </div>
+        <p>营业时间：02:00-22:00</p>
+        <div class="mui-button-row records-btn">
+            <button type="button" class="mui-btn mui-btn-danger my-btn" >查询/添加</button>
+        </div>
+        <div class="recharge-tip">
+            <p class="recharge-tip-title">缴费须知：</p>
+             <p>1.水电气缴费目前只支持成都地区。</p>
+            <p>2.水电气缴费时间为：02:00-22:00，获取缴费户号，请查询水、电、气卡片，或者查询纸质历史账单，还可以通过以往短信查询。</p>
+        </div>
+    </form>
+    <div id="pay-fees">
+        <form class="mui-input-group  mt-0">
+            <div class="mui-input-row">
+                <i class="mui-icon mui-icon-closeempty close-icon"></i>
+                <header class="text-c">缴费单位</header>
+            </div>
+            <div class="mui-input-row unit" data-id="5">
+                <div class="border-btm line-height">
+                    成都市燃气
+                </div>
+            </div>
+            <div class="mui-input-row unit" data-id="6">
+                <div class="border-btm line-height">
+                    四川联发燃气
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../js/sub-life/query-fees.js"></script>
+    <script>
+        queryFees(14,'gas-account.html',4)
+    </script>
+    </body>
+
+</html>

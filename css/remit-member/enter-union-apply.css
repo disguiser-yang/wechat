@@ -1,0 +1,390 @@
+/*入会申请*/
+.mui-input-row label~input, .mui-input-row label~select,
+.mui-input-row label~textarea  {
+    text-align: left;
+}
+.mui-input-group {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    background-color: transparent;
+}
+.mui-input-group .mui-input-row {
+    padding: 0 1rem;
+    height: 2.25rem;
+    background-color: white;
+}
+.mui-input-group .mui-button-row{
+    height: auto;
+}
+.mui-input-group .mui-input-row:after,
+.mui-input-group:after {
+    position: static;
+}
+#long-label{
+    padding: .2rem 0;
+    line-height: 1.4;
+}
+.border-btm {
+    height: 100%;
+    border-bottom: 1px solid #f5f5f5;
+}
+.my-btn {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    /* margin-top: 2rem; */
+    margin-bottom: 1rem;
+    border:1px solid #ccc;
+    width: 90%;
+    background-color: #ccc;
+    font-size: .8rem;
+}
+.btn-success{
+    border:1px solid #EC2619;
+    background-color: #EC2619;
+}
+.submit{
+	margin-top: 2rem;
+}
+.next{
+    margin-top: 1rem;
+}
+.mui-input-row label{
+    padding:.8rem 0;
+    width: 35%;
+    color: #333;
+}
+.mui-input-row label~input{
+    padding: 0;
+    width: 65%;
+    height: 2.25rem;
+    text-align: right;
+}
+.mui-navigate-right label~input{
+    padding-right: .5rem;
+}
+.sex-box {
+    display: inline-block;
+    padding-left: 1.3rem;
+    /*width: 3rem;*/
+    height: 100%;
+    line-height: 2.3rem;
+}
+.first-box{
+    margin-right: .5rem;
+    margin-left: 4.3rem;
+}
+.mui-radio input[type=radio]:before {
+    font-size: 1rem;
+}
+.mui-radio input[type=radio]{
+    top: .6rem;
+}
+.mui-radio input[type=radio]:checked:before{
+    color: #EC2619;
+    opacity: 1;
+}
+.mui-radio.mui-left input[type=radio]{
+    left:0;
+}
+ input, select, textarea{
+    font-size: .7rem;
+}
+.mui-poppicker-header .mui-btn{
+	font-size: 0.7rem;
+	border-color: #ddd;
+	line-height:1.5;
+}
+
+/*提示*/
+#tip{
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 10rem;
+    background-color: rgba(0,0,0,.3);
+    color: white;
+    display: none;
+}
+#hint{
+    text-align: left;
+    padding: .5rem;
+    padding-top: 1rem;
+    color: #999;
+}
+.erro{
+    color: red;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-size: .65rem;
+}
+.mui-btn-blue{
+    color: #fff;
+    border: 1px solid #EC2619;
+    background-color: #EC2619;
+}
+input, select, textarea{
+    font-size: .7rem;
+}
+/*提示框字体颜色*/
+.mui-popup-button{
+    color: #ec291b;
+}
+/*loading加载动画*/
+#load,
+#load-wrap{
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: white;
+}
+.spinner {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ec291b;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 50% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
+/*不是会员*/
+.mt-1{
+    margin-top: .6rem;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2rem;
+    background-color: rgba(225,225,225,.8);
+}
+/*.my-btn {*/
+    /*padding-top: .4rem;*/
+    /*padding-bottom: .4rem;*/
+    /*border:1px solid #EC2719;*/
+    /*width: 90%;*/
+    /*background-color:#EC2719;*/
+    /*font-size: .8rem;*/
+/*}*/
+#unit,#import{
+    position: fixed;
+    top: 0;
+    right:-40rem;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: right .5s linear;
+    /* display: none; */
+}
+#import{
+    background-color: rgba(0,0,0,.5);
+}
+.input-wrap{
+    padding: .4rem;
+    background-color: #f0f0f0;
+}
+.input-wrap input{
+    margin-bottom: 0;
+    padding: .2rem .5rem;
+    height: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: .6rem;
+    text-align: center;
+}
+.union-list{
+	padding-left: .8rem;
+}
+.union-list>div{
+	padding-top: .4rem;
+    padding-bottom: .3rem;
+    padding-right: .8rem;
+}
+.search{
+	color: #ec291b;
+}
+.list-none-tip .none-tip{
+	margin-top: 1rem;
+	text-align: center;
+	color: #666;
+} 
+.import-wrap{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 85%;
+    height: 156px;
+    border-radius: 5px;
+}
+#input-box{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#input-box,
+#button-row{
+    padding: 1.8rem 1rem;
+    background-color: white;
+}
+#input-box input{
+    /*border: none;*/
+    margin-bottom: 0;
+    padding: .5rem;
+    border-color: #ff7479;
+}
+#button-row{
+    padding: 0;
+}
+#button-row div{
+    float: left;
+    padding: .5rem;
+    width: 50%;
+    text-align: center;
+}
+#button-row #cancel{
+    background-color: #f3f3f3;
+    border-bottom-left-radius: 5px;
+}
+#button-row #submit{
+    background-color: #ec281b;
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+.cancel-import,
+.list-none,
+.list-wrap-none,
+#detail{
+    display: none;
+}
+header{
+    height: 1.8rem;
+    line-height: 1.8rem;
+    text-align: center;
+}
+.close-icon{
+    position: absolute;
+    top: 20%;
+    font-size: 1.2rem;
+}
+.mui-scroll-wrapper{
+    margin-top: 3.8rem
+}
+.mui-content {
+    background-color: white;
+    -webkit-overflow-scrolling: touch;
+}
+.text-c{
+    text-align:center;
+}
+/*.text-l{*/
+/*text-align:left;*/
+/*}*/
+
+#hasUnit{
+    position:fixed;
+    bottom:-20rem;
+    width:100%;
+    background-color:#e4e4e4;
+}
+#hasUnit>div{
+    margin:.5rem auto;
+    width:90%;
+    height:1.5rem;
+    line-height:1.5rem;
+    background-color:white;
+    text-align:center;
+    border-radius:5px;
+    transition: right .5s linear;
+}
+/*已经是会员*/
+.tip{
+    padding: 1rem .5rem .4rem .5rem;
+    font-size: .65rem;
+    color: #8f8f94;
+}
+.display-none{
+    display: none;
+}
+#step2 input{
+    float: left;
+    padding: 0;
+    width: 50%;
+    height: 2.25rem;
+}
+#step2 .yzm{
+    width: 50%;
+    text-align: right;
+}
+.detail{
+    float: left;
+    width: 65%;
+    text-align: right;
+    line-height: 2.25rem;
+}
+.mui-input-row .yzm{
+    padding: .4rem 0;
+}
+.yzm span{
+    padding: .4rem .6rem;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #EC2619;
+    text-align: center;
+    font-size: .65rem;
+    color: white;
+}
+ input[type=button]:enabled:active{
+	background-color:white;
+	color:#333;
+}

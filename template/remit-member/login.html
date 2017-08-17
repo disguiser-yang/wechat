@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/remit-member/person-center.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--提示-->
+    <div id="tip">
+        <div id="tip-wrap">
+            <div id="tip-box"></div>
+        </div>
+    </div>
+
+    <div class="login-bg login">
+        <div class="login-btn-row">
+            <span class="login-btn">登录</span><span class="register-btn">注册</span>
+        </div>
+    </div>
+
+    <div class="login-content">
+        <div class="mui-input-row input-box pos-r">
+            <span class="user-phone c-666">+86</span>
+            <input type="text" class="login-phone" placeholder="请输入手机号码" autocomplete="off" />
+            <i class="icon-clear icon-hidden"></i>
+        </div>
+        <div class="input-box login-pwd-box">
+            <input type="password" class="login-pwd" placeholder="请输入登录密码" autocomplete="off" />
+            <span class="see-pwd no-see"></span>
+        </div>
+    </div>
+    <div class="mui-button-row login-row">
+        <button type="button" class="mui-btn my-btn-login" id="login-submit">登 录</button>
+        <div class="c-red" id="forget-pwd"><a href="forget-pwd.html">忘记密码？</a></div>
+    </div>
+    <div class="mui-button-row" id="register-next" style="display: none">
+        <button type="button" class="mui-btn my-btn-login" id="next-btn">下一步</button>
+        <div><span class="c-666">注册即视为同意</span><a class="c-red user-agreement" href="user-agreement.html">《成都职工平台注册服务协议》</a></div>
+    </div>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../js/public/config.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../js/remit-member/login.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

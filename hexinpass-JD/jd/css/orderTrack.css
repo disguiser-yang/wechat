@@ -1,0 +1,90 @@
+.track-order {
+	background-color: white;
+	border-bottom: 1px solid rgb(220, 220, 220);
+	padding: 10px;
+	font-size: 16px;
+	overflow: hidden;
+	zoom: 1;
+}
+.track-order-id {
+	float: left;
+	color: #333;
+}
+.track-order-state {
+	float: right;
+	color: #FD555A;
+}
+.track-order-time {
+	width: 100%;
+	float: left;
+	font-size: 13px;
+	color: #999;
+	margin-top: 5px;
+}
+.track-list {
+	background-color: white;
+	border-top: 1px solid rgb(220, 220, 220);
+	border-bottom: 1px solid rgb(220, 220, 220);
+	margin-top: 10px;
+	font-size: 16px;
+	position: relative;
+}
+.track-header {
+	width: 100%;
+	padding-left: 10px;
+	line-height: 40px;
+	color: #333;
+	border-bottom: 1px solid rgb(220, 220, 220);
+}
+.track-list-item {
+	position: relative;
+	padding: 10px 10px 10px 0;
+	color: #999;
+	overflow: hidden;
+	zoom: 1;
+}
+.track-list-item-point {
+	width: 10%;
+	float: left;
+}
+.track-list-item-circlebg {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.track-list-item-circle {
+	width: 10px;
+	height: 10px;
+	background-color: rgb(220, 220, 220);
+	border-radius: 5px;
+	margin: 80% auto 0 auto;
+}
+.track-list-item-line {
+	position: absolute;
+	width: 1px;
+	top: 0;
+	bottom: 0;
+	margin-left: 4.8%;
+	background-color: rgb(220, 220, 220);
+}
+.track-list-item-detail {
+	float: left;
+	width: 90%;
+}
+.track-list-item-desc {
+	width: 100%;
+	float: left;
+}
+.track-list-item-time {
+	float: left;
+	width: 100%;
+	font-size: 14px;
+}
+.track-list-item-seperate {
+	position: absolute;
+	height: 1px;
+	bottom: 0;
+	left: 10%;
+	width: 90%;
+	background-color: rgb(220, 220, 220);
+}

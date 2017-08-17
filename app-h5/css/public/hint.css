@@ -1,0 +1,443 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+
+/* body{
+    display: none;
+} */
+
+.wait,
+.leave-words-success,
+.leave-words-fail,
+.register-success,
+.balance {
+    margin: 5rem auto 0;
+    width: 5rem;
+    height: 5rem;
+    background: url("../../images/public/wait.png") no-repeat;
+    background-size: 100%;
+}
+
+.wait {
+    margin: 7.5rem auto 0;
+}
+
+.wait-word {
+    text-align: center;
+    font-size: .7rem;
+    color: #666;
+}
+
+.mui-btn:enabled:active {
+    background-color: #EC2619;
+}
+
+
+/*留言成功提示页*/
+
+.leave-words-success,
+.register-success {
+    background: url("../../images/public/success-icon.png") no-repeat;
+    background-size: 100%;
+}
+
+.leave-words-fail {
+    background: url("../../images/public/fail-icon.png") no-repeat;
+    background-size: 100%;
+}
+
+.balance {
+    background: url("../../images/public/balance.png") no-repeat;
+    background-size: 100%;
+}
+
+.my-btn {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 90%;
+    font-size: .75rem;
+    color: white;
+}
+
+.btn-success {
+    border: 1px solid #EC2619;
+    background-color: #EC2619;
+}
+
+.hint {
+    margin-top: 1rem;
+    margin-bottom: 1.3rem;
+    text-align: center;
+    font-size: .8rem;
+}
+
+.hint-success {
+    color: #39B34A;
+}
+
+.hint-fail {
+    color: #999;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.no-price {
+    font-size: .8rem;
+    color: green;
+}
+
+
+/*注册成功页*/
+
+.register-success {
+    margin-top: 3.75rem;
+}
+
+.motto {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.btn-apply {
+    margin-top: 0;
+    border: 1px solid white;
+    background-color: white;
+    color: #333;
+}
+
+
+/*辅助色—浅黑*/
+
+.c-333,
+.c-333 a,
+a.c-333 {
+    color: #333
+}
+
+.c-333 a:hover,
+a.c-333:hover {
+    color: #333
+}
+
+
+/*用户协议*/
+
+.gh-logo {
+    margin: 2rem auto 0;
+    width: 4rem;
+    height: 4rem;
+    background: url("../../images/public/gh-logo.png") no-repeat;
+    background-size: 100%;
+}
+
+.agreement-title {
+    font-size: .9rem;
+    color: black;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.agreement-content {
+    padding: 0 .5rem;
+    font-size: .75rem;
+    text-indent: 2em;
+    line-height: 1.8;
+}
+
+.agreement-content p {
+    color: #444;
+}
+
+.agreement-content .text-indent {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-indent: initial;
+}
+
+.user-agreement p {
+    margin-bottom: 0;
+}
+
+.mui-checkbox input[type=checkbox] {
+    position: static;
+    margin-right: .2rem;
+    width: .8rem;
+    height: .8rem;
+}
+
+p.agreement {
+    text-align: center;
+    font-size: .6rem
+}
+
+.mui-checkbox input[type=checkbox]:before {
+    font-size: .8rem;
+}
+
+.mui-checkbox input[type=checkbox]:checked:before {
+    color: #ec291b;
+}
+
+.c-bold {
+    font-weight: bold;
+}
+
+
+/*loading加载动画*/
+
+#load-wrap {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ec291b;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+
+/*绑定银行卡成功*/
+
+.success-infor {
+    width: 100%;
+    height: 7rem;
+    background-color: white;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.bind-success-icon {
+    margin: 0 auto;
+    margin-top: 2.13rem;
+    margin-bottom: 0.5rem;
+    width: 2.35rem;
+    height: 2.35rem;
+    background: url("../../images/remit-member/bind-success.gif") no-repeat 50% 100%;
+    background-size: 100%;
+}
+
+.success-infor .hint-success {
+    /*margin-top: .8rem;*/
+    margin-top: 0rem;
+    color: #333;
+    font-size: .7rem;
+}
+
+
+/*上海银行电子账户服务协议*/
+
+.user-agreement-bank p {
+    margin-bottom: .5rem;
+    text-indent: initial;
+}
+
+.user-agreement-bank .text-indent {
+    margin-top: 0;
+    font-weight: 100;
+    text-indent: 2em;
+}
+
+#server {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    line-height: 2rem;
+    text-align: center;
+    font-size: .6rem;
+    color: #999;
+}
+
+
+/*支付成功广告位*/
+
+.font-1 {
+    font-size: .7rem;
+}
+
+#img {
+    width: 100%;
+}
+
+.red-tip {
+    margin-top: .6rem;
+    margin-bottom: .8rem;
+    font-size: .65rem;
+    color: #666;
+}
+
+.pay-success .leave-words-success {
+    margin-top: 1rem;
+    background: url("../../images/public/success-icon.gif") no-repeat 50% 50%;
+    background-size: 80%;
+}
+
+.pay-success .hint {
+    margin-top: .2rem;
+    margin-bottom: .5rem;
+}
+
+.pay-success .price {
+    font-size: 1.2rem;
+}
+
+.random-red-pocket {
+    width: 3.84rem;
+    width: 100%;
+    padding: 0.89rem;
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 0.43rem;
+    padding-right: 0rem;
+}
+
+.red-pocket-img {
+    width: 1.66rem;
+    height: 2.11rem;
+    background-image: url('../../images/remit-member/little-red-pocket.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    float: left;
+    transform: scale(0.7);
+    animation: regBag 0.8s ease-in;
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.random-red-pocket-value {
+    display: inline-block;
+    height: 2.11rem;
+    /*width: 13rem;*/
+    float: left;
+    padding-left: 0.85rem;
+    margin-top: 0.1rem;
+}
+
+.random-red-pocket-value-info {
+    color: #ec2619;
+    font-size: 0.80rem;
+    margin-bottom: 0.3rem;
+}
+
+.random-red-pocket-value-describe {
+    margin-bottom: 0px;
+    font-size: 0.55rem;
+}
+
+@keyframes regBag {
+    from {
+        transform: scale(0.7);
+    }
+    80% {
+        transform: scale(1.1)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.random-red-pocket-value p {
+    margin-top: 0rem;
+    margin-left: 0rem;
+}
+
+.choose-default-pay-type {
+    /*padding: 1rem;*/
+    padding: 0.72rem;
+    padding-bottom: 0rem;
+}
+
+.choose-default-pay-type p.choose-title {
+    color: #666666;
+}
+
+.choose-default-pay-type p {
+    margin-top: 0rem;
+    margin-left: 0rem;
+    text-align: left;
+}
+
+.choose-default-pay-type p.agreement {
+    font-size: 0.7rem;
+}
+
+.choose-default-pay-type form label {
+    font-size: 0.7rem;
+}
+
+#second-radio {
+    margin-left: 2rem;
+}
+
+.alert-info {
+    color: #666;
+    padding-top: 0.5rem;
+    font-size: 0.6rem;
+}

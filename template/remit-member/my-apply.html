@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>我的申请</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../css/remit-member/my-apply.css">
+
+    </head>
+
+    <body>
+        <!--loading-->
+        <div id="load-wrap">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+        <!--下拉刷新容器-->
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper mt-1">
+            <div class="mui-scroll">
+                <!--数据列表-->
+                <form class="mui-input-group"></form>
+            </div>
+        </div>
+        <div id="none">暂无申请</div>
+
+        <!--模板开始-->
+        <script type="text/html" id="list">
+            <div class="mui-input-row list" id=${applicationId}>
+                <div class="border-btm">
+                    <div class="f-l apply-title">
+                        {{if applicationType=='transfer'}}
+                        <p class="application-type" id=${applicationType}>转会申请</p>
+                        {{else applicationType=='join'}}
+                        <p class="application-type" id=${applicationType}>入会申请</p>
+                        {{else applicationType=='promotion'}}
+                        <p class="application-type" id=${applicationType}>素质提升报名申请</p>
+                        {{else applicationType=='activity'}}
+                        <p class="application-type" id=${applicationType}>普惠活动报名申请</p>
+                        {{/if}}
+                        <p class="time title">${title}</p>
+                    </div>
+                    <div class="f-l apply-title apply-state">
+                        <p class="time">${createTime}</p>
+                        {{if checkStatus=='审核中'}}
+                        <p class="checkStatus c-red">${checkStatus}</p>
+                        {{else}}
+                        <p class="checkStatus">${checkStatus}</p>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </script>
+        <!--模板结束-->
+
+        <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../js/public/fontsize.js"></script>
+        <script src="../../lib/mui/dist/js/mui.min.js"></script>
+        <script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+        <script src="../../js/remit-member/my-apply.js"></script>
+        <script>
+        </script>
+    </body>
+
+</html>

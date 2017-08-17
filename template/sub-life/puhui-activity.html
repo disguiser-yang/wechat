@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>普惠活动</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../css/sub-life/puhui-activity.css">
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <!--loading-->
+        <div id="load-wrap">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+        <header class="clearfix">
+            <div class="f-l classify first-classify">
+                <span>按类型<span class="arrow-icon"></span></span>
+            </div>
+            <div class="f-l classify">
+                <span>按时间<span class="arrow-icon"></span></span>
+            </div>
+        </header>
+        <aside class="type-option" id="channel-wrap">
+            <div class="active" id="0">全部<span></span></div>
+        </aside>
+        <aside  class="time-option">
+            <div class="active" id="1">最新发布<span></span></div>
+            <div id="2">即将开始<span></span></div>
+            <div id="3">报名开始<span></span></div>
+        </aside>
+        <div>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--下拉刷新容器-->
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--数据列表-->
+                <div class="mui-table-view mui-table-view-chevron" id="content-list">
+
+                </div>
+            </div>
+        </div>
+
+        <!--模板开始-->
+        <script type="text/html" id="list">
+            <div class="mui-card list" id=${issueId} data-state=${statusCode}>
+                <div class="mui-card-content">
+                    <div class="img-wrap">
+                        <img data-lazyload=${cover} />
+                        <div class="content-title">${title}</div>
+                    </div>
+                    <div class="mui-card-footer">
+                        {{if statusCode==1}}
+                        <div class="state state-over">${statusDesc}</div> <!--报名未开始-->
+                        {{else statusCode==2}}
+                        <div class="state state-publish">${statusDesc}</div> <!--报名中-->
+                        {{else statusCode==3}}
+                        <div class="state state-over">${statusDesc}</div> <!--活动未开始-->
+                        {{else statusCode==4}}
+                        <div class="state state-publish">${statusDesc}</div> <!--活动进行中-->
+                        {{else statusCode==5}}
+                        <div class="state state-over">${statusDesc}</div> <!--活动已结束-->
+                        {{/if}}
+                        <div class="union">${author}</div>
+                        <div class="time">${createTime}</div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <!--模板结束-->
+
+        <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../js/public/fontsize.js"></script>
+        <script src="../../lib/mui/dist/js/mui.min.js"></script>
+        <script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+        <script src="../../lib/mui/mui.lazyload.js"></script>
+        <script src="../../lib/mui/mui.lazyload.img.js"></script>
+        <script src="../../js/public/list.js"></script>
+        <script src="../../js/sub-life/puhui-activity.js"></script>
+        <script>
+
+        </script>
+    </body>
+
+</html>

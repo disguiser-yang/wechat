@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>安全中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/remit-member/person-center.css">
+    <!--<link rel="stylesheet" href="../../css/remit-member/safe-center.css">-->
+    <style>
+        .pwd {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--提示-->
+    <div id="tip">
+        <div id="tip-wrap">
+            <div id="tip-box"></div>
+        </div>
+    </div>
+    <!--具体内容-->
+    <form class="mui-input-group" enctype="multipart/form-data" id="form-submit">
+
+        <div class="mui-input-row pwd" id="modify-pwd">
+            <div class="border-btm">
+                <label>修改登录密码</label>
+                <a class="f-r mui-navigate-right">
+                </a>
+            </div>
+        </div>
+        <!--<div class="mui-input-row pwd" id="set-pay-pwd">
+            <div class="border-btm">
+                <label>设置支付密码</label>
+                <a class="f-r mui-navigate-right">
+                </a>
+            </div>
+        </div>-->
+        <div class="mui-input-row pwd" id="modify-pay-pwd">
+            <div class="border-btm">
+                <label>修改支付密码</label>
+                <a class="f-r mui-navigate-right">
+                </a>
+            </div>
+        </div>
+        <div class="mui-input-row pwd" id="forget-pay-pwd">
+            <label>忘记支付密码</label>
+            <a class="f-r mui-navigate-right">
+            </a>
+        </div>
+
+
+    </form>
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/mine/dealImage.js"></script>
+    <script src="../../lib/form.js"></script>
+    <!--<script src="../../js/remit-member/personal-center.js"></script>-->
+    <script src="../../js/remit-member/safe-center.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

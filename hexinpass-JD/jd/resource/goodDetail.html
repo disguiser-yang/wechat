@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>商品详情</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../css/goodDetail.css" />		
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+		<link rel="stylesheet" href="../goodDetail/itemmain.css" />
+	</head> 
+	<body>		
+		<div class="mui-content" id="goodDetailId">
+			<script type="text/html" id="goodDetailTemplateId">
+				<!-- Banner -->
+				<div id="slider" class="mui-slider" sku={{detail.sku}}>
+				  <div class="mui-slider-group mui-slider-loop">
+				    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				    <div class="mui-slider-item mui-slider-item-duplicate">
+				      <a href="#">
+				        <img src={{imgbase+bannerFirst.path}}>
+				      </a>
+				    </div>
+				    {{each detail.images as item index}}
+					    <div class="mui-slider-item">
+				      		<a href="#">
+					        <img src={{imgbase+item.path}}>
+					      </a>
+					    </div>
+                    {{/each}}
+				    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				    <div class="mui-slider-item mui-slider-item-duplicate">
+				      <a href="#">
+				        <img src={{imgbase+bannerLast.path}}>
+				      </a>
+				    </div>
+				  </div>
+				  <div class="mui-slider-indicator">
+				  	{{each detail.images as item index}}
+				    		<div class="mui-indicator"></div>
+				    {{/each}}
+				  </div>
+				</div>
+				
+				<div class="detail-swipe-area" id="detailSwipeUpId" stock={{detail.stockStateId}}>					
+					<div class="detail-name">{{detail.name}}</div>
+					<div class="detail-desc">重量：{{detail.weight}}kg&nbsp;&nbsp;&nbsp;&nbsp;已售：{{detail.sales}}</div>
+					<div class="detail-price">
+						<div class="detail-price-rmb">¥</div>
+						<div class="detail-price-price">{{detail.price}}</div>  
+						{{if detail.price < detail.jdPrice}}
+							<div class="detail-price-jdprice">京东价：{{detail.jdPrice}}</div>
+						{{/if}}
+					</div>
+					<div class="detail-refund-desc">支持7天无理由退货</div>
+					<div class="detail-bill-list">
+						<div>包装清单：</div>
+						<div id="billList"></div>
+					</div>
+					<div class="detail-from-jd" id="appintroduce"></div>
+					<div class="detail-from-jd" id="introduction"></div>
+					<div class="detail-from-jd" id="param"></div>
+				</div>
+			</script>
+		</div>
+		<div class="app-backtop" id="backTop"></div>
+		<div class="detail-toolbar" id="cart1">
+			<div class="detail-toolbar-left">
+				<span class="appui-icon appui-icon-cart detail-cart" id="cartId">
+					<span class="mui-badge detail-cart-badge" id="cartBagedId">0</span>
+				</span>
+				<div class="detail-cart-caculate">去结算</div>
+			</div>
+			<div class="detail-toolbar-right">加入购物车</div>
+		</div>
+		<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+		<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+		<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../common/js/common.js"></script>
+		<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+		<script type="text/javascript" src="../js/openPlatform.js"></script>
+		<script type="text/javascript" src="../js/goodDetail.js"></script>
+	</body>
+</html>

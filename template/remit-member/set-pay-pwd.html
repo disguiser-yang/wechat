@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>开通普惠钱包</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link href="../../common/public.css" rel="stylesheet">
+    <link href="../../css/remit-member/pay-pwd.css" rel="stylesheet">
+    <link href="../../css/remit-member/set-pay-pwd.css" rel="stylesheet">
+    <link href="../../css/sub-life/puhui-pay.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <div class='set-pwd-wrap' style="display:none;">
+
+        <div class='progress-bar'>
+            <div class='step1 actived'>1设置支付密码</div>
+            <div class='step2 '>2实名认证</div>
+            <div class='step3 '>3完成</div>
+        </div>
+
+        <div id="tip">
+            <div id="tip-wrap">
+                <div id="tip-box"></div>
+            </div>
+        </div>
+
+        <p class="hint hint-success" id='hint-success' style='margin-top:0.4rem;'>设置普惠钱包支付密码</p>
+        <div class="pwd-row pwd-row1 mui-text-center" style='margin-top:0.4rem;'>
+            <input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input
+                type="password" maxlength="1" readonly />
+        </div>
+        <p class='pwd-describe repeat-pwd' id='repeat-pwd' style='margin-top:0.4rem;'>确认支付密码</p>
+        <div class="pwd-row pwd-row2 mui-text-center" style='margin-top:0.4rem;'>
+            <input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input
+                type="password" maxlength="1" readonly />
+        </div>
+        <p class='pwd-describe'>支付密码用于扫码支付与线上支付</p>
+        <div class="mui-button-row" id='next-step-wrap'>
+            <button type="button" class="mui-btn my-btn" id="btn-success">下 一 步</button>
+        </div>
+        <p class="mui-input-row mui-checkbox  c-333 mui-left agreement">
+            <input name="checkbox1" type="checkbox" id="checkbox" checked> 同意
+            <span class="c-red recharge-agreement">《免密支付协议》</span>，开启免密支付
+        </p>
+
+        <div id="keyboard">
+            <div id="switch"></div>
+            <span class="num border-none">1</span><span class="num">2</span><span class="num">3</span>
+            <span class="num border-none">4</span><span class="num">5</span><span class="num">6</span>
+            <span class="num border-none">7</span><span class="num">8</span><span class="num">9</span>
+            <span class="del all-del border-none">C</span><span class="num">0</span><span class="del single-del"></span>
+        </div>
+    </div>
+
+    <div class='next-step-wrap' style="display:none;">
+        <p>你已设置支付密码</p>
+        <div class='next-step-div'> <a href="javascript:;" class='next-step-btn'>下一步</a></div>
+    </div>
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../js/remit-member/set-pay-pwd.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.progress-bar {
+    height: 2.13rem;
+    line-height: 2.13rem;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.64rem;
+}
+
+.progress-bar div {
+    width: 33.3%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+}
+
+.actived {
+    color: #ec2619;
+}
+
+#repeat-pwd {
+    font-size: 0.7rem;
+    color: #333;
+    margin: 0 0 0 1rem;
+}

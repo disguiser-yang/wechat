@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>水卡</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../css/sub-life/pay-fees.css">
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+    <!--提示-->
+    <div id="tip"><div id="tip-wrap"><div id="tip-box"></div></div></div>
+    <div id="money">
+        <div >待缴费用</div>
+        <div id="price"><span id="font">0.0</span>元</div>
+    </div>
+    <form class="mui-input-group mt-0">
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>缴费单位</label>
+                <input type="text" class="unit" value="缴费户号" />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>缴费户号</label>
+                <input type="text" class="num" value="缴费户号" />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>户名</label>
+                <input type="text" class="name" value="缴费户号" />
+            </div>
+        </div>
+    </form>
+    <p class="mui-checkbox  c-333 mui-left agreement">
+        <input name="checkbox1" type="checkbox" checked>
+        同意<span class="c-red recharge-agreement">《和信通便民缴费服务协议》</span>
+    </p>
+    <div class="mui-button-row">
+        <button type="button" class="mui-btn my-btn c-fff btn-success" >缴 费</button>
+    </div>
+    <!--支付键盘-->
+    <div id="pay-keyboard-wrap">
+        <div id="pay-keyboard">
+            <div id="keyboard">
+                <div class="mui-input-row">
+              <span class="mui-icon mui-icon-closeempty close-icon"></span>
+              <header class="text-c">支付密码</header>
+          </div>
+                <div class="pwd-row mui-text-center">
+                    <input type="password" maxlength="1" readonly
+                    /><input type="password" maxlength="1" readonly
+                    /><input type="password" maxlength="1" readonly
+                    /><input type="password" maxlength="1" readonly
+                    /><input type="password" maxlength="1" readonly
+                    /><input type="password" maxlength="1" readonly />
+                </div>
+                <span class="num border-none">1</span><span class="num">2</span><span class="num">3</span>
+                <span class="num border-none">4</span><span class="num">5</span><span class="num">6</span>
+                <span class="num border-none">7</span><span class="num">8</span><span class="num">9</span>
+                <span class="del all-del border-none">C</span><span class="num">0</span><span class="del single-del"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../js/sub-life/query-fees.js"></script>
+    <script>
+        payFees(2,15)
+    </script>
+    </body>
+
+</html>

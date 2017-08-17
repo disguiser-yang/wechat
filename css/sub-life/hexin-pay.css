@@ -1,0 +1,343 @@
+.order-info-wrap {
+    padding: 0.64rem;
+}
+
+.order-info {
+    background-color: #fff;
+}
+
+
+/*
+.pay-method {
+    padding: 1.28rem;
+    font-size: 0.7rem;
+}*/
+
+.card-number {
+    margin-left: 2rem;
+    color: #576b95
+}
+
+.pay-amount {
+    padding: 1.28rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+}
+
+.pay-amount p {
+    font-size: 0.7rem;
+    color: #000;
+}
+
+.pay-amount-title {
+    padding: 1rem 0rem;
+}
+
+.pay-amount p.pay-amount-num {
+    font-size: 1rem;
+    /*margin-top: 1rem;*/
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.pay-amount p.pay-amount-num span {
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.comfirm-btn {
+    padding: 1.28rem 0rem;
+}
+
+.comfirm-btn-a {
+    display: block;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    background-color: #1aad19;
+    color: #fff;
+    font-size: 0.68rem;
+    width: 12.1rem;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.float-mask {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    /*z-index: 2;*/
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.order-info-wrap {
+    padding: 0.64rem 0.64rem;
+    background-color: #fff;
+    margin-bottom: 0.49rem;
+}
+
+.order-info-wrap p {
+    height: 1.28rem;
+    line-height: 1.28rem;
+    color: #000;
+    font-size: 0.6rem;
+}
+
+.order-info-wrap p span.title {
+    color: #666666;
+    font-size: 0.6rem;
+}
+
+.order-info-wrap p span.value {
+    padding-left: 0.5rem;
+}
+
+.order-amount span.value {
+    color: #ec2619;
+}
+
+.login-wrap {
+    display: none;
+}
+
+.login-wrap p {
+    color: #818495;
+    padding-left: 0.64rem;
+    padding-top: 0.47rem;
+    padding-bottom: 0.47rem;
+}
+
+.login-wrap form {
+    background-color: #fff;
+    padding-left: 0.64rem;
+}
+
+.input-cell {
+    padding: 0 0.64rem 0 0rem;
+    height: 2.13rem;
+    line-height: 2.13rem;
+    border-bottom: 1px solid #d8d8d8;
+    overflow: hidden;
+    position: relative;
+    top: -1px;
+}
+
+.input-cell span {
+    width: 16%;
+    font-size: 0.6rem;
+    display: inline-block;
+}
+
+.input-cell input {
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 0rem;
+    border: none;
+    font-size: 0.6rem;
+    height: 2.13rem;
+}
+
+#input-code {
+    border-bottom: none;
+}
+
+.login-btn-wrap {
+    padding: 1.06rem 0.64rem;
+}
+
+.login-btn-a {
+    height: 1.92rem;
+    color: #fff;
+    line-height: 1.92rem;
+    text-align: center;
+    background-color: #ec2619;
+    display: block;
+    border-radius: 5px;
+    font-size: 0.68rem;
+}
+
+.login-btn-a:active {
+    color: #fff;
+    background-color: #fe594e;
+}
+
+.pay-method-wrap .pay-method {
+    padding-left: 0.64rem;
+    background-color: #fff;
+}
+
+.pay-method-bankCard {
+    height: 2.13rem;
+    /*background-color: red;*/
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.checked .pay-method-check-icon {
+    background: url(../../images/sub-life/checked.png);
+    height: 0.49rem;
+    width: 0.49rem;
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pay-method-check-icon {
+    height: 0.49rem;
+    width: 0.49rem;
+    display: inline-block;
+    background: url(../../images/sub-life/unChecked.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pay-method-card-icon {
+    width: 1.41rem;
+    height: 1.11rem;
+    display: inline-block;
+    background: url(../../images/sub-life/ic_yinlian.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 1rem;
+}
+
+.pay-method-card-text .bankCard-detail {
+    color: #a8abb4;
+}
+
+.pay-method-check-icon {
+    background-image: url(../../images/sub-life/unChecked.png)
+}
+
+.pay-method-wallet .pay-method-card-icon {
+    width: 1.28rem;
+    height: 1.34rem;
+    background-image: url(../../images/sub-life/ic_yinlian2.png)
+}
+
+.pay-btn-wrap {
+    padding: 1.06rem 0.64rem;
+}
+
+.pay-btn-a {
+    height: 1.92rem;
+    color: #fff;
+    line-height: 1.92rem;
+    text-align: center;
+    background-color: #ec2619;
+    display: block;
+    border-radius: 5px;
+    font-size: 0.68rem;
+}
+
+.pay-btn-a:active {
+    color: #fff;
+    background-color: #fe594e;
+}
+
+#pay-keyboard-wrap {
+    height: auto;
+    bottom: 0px;
+    top: auto;
+}
+
+#keyboard {
+    position: relative;
+}
+
+.pay-method-wallet {
+    border-bottom: none;
+}
+
+#pay-method-wrap {
+    display: block;
+}
+
+.order-wrap {
+    padding: 0.64rem;
+}
+
+.order-wrap-detail {
+    background-color: #fff;
+    padding-top: 1.49rem;
+    padding-bottom: 2.43rem;
+    border-radius: 5px;
+}
+
+.order-wrap-detail-icon {
+    width: 2.56rem;
+    height: 2.56rem;
+    background-image: url(../../images/sub-life/pay-success.png);
+    background-size: 100%;
+    margin: 0 auto;
+}
+
+.pay-success-info {
+    color: #000000;
+    font-size: 0.72rem;
+    text-align: center;
+    padding: 0.7rem 0rem;
+}
+
+.pay-success-amount {
+    color: #000000;
+    font-size: 0.94rem;
+    text-align: center;
+    /*padding: 0.7rem 0rem;*/
+    font-weight: bold;
+}
+
+.return-wrap {
+    padding: 0.64rem 0.64rem;
+}
+
+.return-a {
+    background-color: #ec2619;
+    display: block;
+    height: 1.92rem;
+    line-height: 1.92rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.72rem;
+}
+
+.return-a:active {
+    color: #fff;
+    background-color: #fe594e;
+}
+
+.pay-method-wallet .pay-method-card-icon {
+    margin: 0 1.08rem;
+}
+
+.puhui-wallet-bankCard {
+    width: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #a8abb4;
+}
+
+.puhui-title {
+    color: #000;
+}
+
+.pay-method-wechat {
+    border-bottom: none;
+    border-top: 1px solid #d8d8d8;
+}
+
+.some-tip {
+    padding: 0.64rem;
+}
+
+.some-tip p {
+    margin: 0.2rem 0rem;
+}

@@ -1,0 +1,48 @@
+.progress-bar {
+    height: 2.13rem;
+    line-height: 2.13rem;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.64rem;
+}
+
+.progress-bar div {
+    width: 33.3%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+}
+
+.actived {
+    color: #ec2619;
+}
+
+#repeat-pwd {
+    font-size: 0.7rem;
+    color: #333;
+    margin: 0 0 0 1rem;
+}
+
+.next-step-wrap .next-step-btn {
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    background: #ec2619;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.next-step-wrap {
+    margin: 0 auto;
+}
+
+.next-step-div {
+    padding: 2rem 0;
+}
+
+.next-step-wrap {
+    padding-top: 3rem;
+}

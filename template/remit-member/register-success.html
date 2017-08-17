@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册成功</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link href="../../css/public/hint.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="register-success"></div>
+    <p class="hint hint-success">恭喜您注册成功</p>
+    <!--<p class="motto">我们想要更“懂”你，快来完成下<br/>列步骤，加入工会的家园</p>-->
+    <div class="mui-button-row">
+        <button type="button" class="mui-btn my-btn btn-success" id="enter-union-apply">完成</button>
+    </div>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/config.js"></script>
+    <script>
+        $(function() {
+            var from = sessionStorage.getItem('from');
+            if (from == 'activity') {
+                $('#enter-union-apply').text("注册成功，进入活动！");
+            } else {
+                $('#enter-union-apply').text("完成");
+            }
+            //申请入会------->  完成后关闭浏览器
+            mui('body').on('tap', '#enter-union-apply', function() {
+                // window.location.href = 'enter-apply-agreement.html'
+                var from = sessionStorage.getItem('from');
+                var phone = local.getItem('phone');
+                var token = local.getItem('token');
+                if (from == 'activity') {
+                    sessionStorage.removeItem('from');
+                    window.location.href = activityPage + '?phone=' + phone + '&token=' + token + '_wechat';
+                } else {
+                    window.location.href = 'personal.html'
+                        // WeixinJSBridge.call('closeWindow');
+                }
+            });
+            pushHistory();
+            window.addEventListener("popstate", function(e) {
+                //监听到了浏览器的返回按钮事件
+                WeixinJSBridge.call('closeWindow');
+            }, false);
+
+            function pushHistory() {
+                window.history.pushState('', "title", "");
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>

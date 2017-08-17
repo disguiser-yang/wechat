@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>普惠扫码支付</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link rel="stylesheet" href="/puhuihua/static/wechat/lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="/puhuihua/static/wechat/common/public.css">
+    <!--<link rel="stylesheet" href="/puhuihua/static/wechat/css/remit-member/pay-pwd.css">-->
+    <link rel="stylesheet" href="../css/puhui-pay.css">
+    <link rel="stylesheet" href="../css/set-pay-pwd.css">
+    <link rel="stylesheet" href="../css/pay-pwd.css">
+    <style>
+        .mui-popup-title+.mui-popup-text {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <div id="pay-wrap" class="display-none">
+        <div class="pay-wrap">
+            <div class="identify">
+                <img src="../images/gonghui-icon.png" class='gonghui-icon'>
+                <span class='puhui-store'>普惠商户</span>
+                <!--<img src="/puhuihua/static/wechat/images/remit-member/hexinpass.png" class='hexinpass'>-->
+            </div>
+            <div class="pay-content">
+                <div class='pay-content-wrap'>
+                    <div class='pay-qr-code-wrap' style='display:none;'>
+                        <div class="bar-code"><canvas id="canvas"></canvas> </div>
+                        <p class="bar-code-num text-c"></p>
+                        <!--<p class="text-c" id="all-canbe-accept">和信通签约商户均可受理</p>-->
+                        <div class="QR-code"></div>
+                        <!--<div class="mui-text-center c-666 font-7">付款码及数字每分钟更新，请当面使用勿泄露</div>-->
+                        <div class="mui-text-center font-2 mt-4" id='member-365'>工会会员365天扫码支付笔笔消费<br/>随机立送现金红包 <span class="font-2">最高免单</span></div>
+                    </div>
+                    <div class='no-enough-money' style='display:none;'>
+                        <p class=' alert-info-money '>您的零钱余额不足</p>
+                        <p class='alert-tip '>请点击下方“充值”进行充值消费<br/>或更换支付方式</p>
+                    </div>
+
+                    <!--<div class='no-enough-money no-enough-money-bankCard '>
+                        <p class='alert-info-money '>您的银行卡余额不足</p>
+                        <p class='alert-tip '>请点击下方“更换”选择其它支付方式</p>
+                    </div>-->
+                    <div class="wallet-infor clearfix" id='wallet-infor' style='display:none;'>
+                        <div class="c-666 wallet">零钱</div>
+                        <div class="balance wallet">余额：<span id="balance"></span></div>
+                        <div class="balance bank">中国银行(1234)</div>
+                        <div id='change-pay-wrap' style="float: right">
+                            <div style="float: right" class="change-pay-type"><span class="c-red">充值</span></div>
+                            <!--<div style="float: right" class="change-pay-type"><span class="c-red">更换</span></div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class='open-puhui-wallet ' id='open-puhui-wallet' style='display:none;'>
+
+                    <p class='info '>您还未开通普惠钱包</p>
+                    <p class='open-step-1 '>仅需2步即可开通！</p>
+                    <p class='open-step-2 '>工会会员使用普惠钱包扫码支付，365天每笔消费随机立送现金红包，最高免单</p>
+                    <p class='open-step-3 '>开通成功，立享便捷支付，还可抢200万随机开通红包</p>
+
+                    <div class='open-btn '>
+                        <a href="javascript:;" class='redirect-open'>立即开通</a>
+                    </div>
+                </div>
+                <div class='set-pay-pwd open-puhui-wallet' id='set-pay-pwd' style='display:none; '>
+
+                    <p class='info' style='visibility:hidden;'>开通成功</p>
+                    <p class='open-step-1 '>为保证你的交易安全，请设置交易密码</p>
+                    <p class='open-step-2 '>请输入6位数字密码</p>
+                    <!--<p class='open-step-3 '>开通成功，立享便捷支付，还可抢200万随机开通红包</p>-->
+                    <div class="pwd-row pwd-row1 mui-text-center pwd-wrap" style='margin:0.85rem 0rem; ' id='pwd-input-wrap '>
+                        <input type="password" maxlength="1" readonly style='font-size:1.4rem;' /><input type="password" maxlength="1" readonly style='font-size:1.4rem;' /><input type="password" maxlength="1" readonly style='font-size:1.4rem;' /><input
+                            type="password" maxlength="1" readonly style='font-size:1.4rem;' /><input type="password" maxlength="1" readonly style='font-size:1.4rem;' /><input type="password" maxlength="1" readonly style='font-size:1.4rem;' />
+                    </div>
+                    <span class='show-pwd '>
+                        <i class='show-pwd-icon '> </i>
+                        显示密码
+                    </span>
+                    <div class='open-btn '>
+                        <a href="javascript:;" class='comfirm-open'>确 认</a>
+                    </div>
+
+                </div>
+
+                <div class=' open-puhui-wallet-success ' id='open-puhui-wallet-success' style='display:none; '>
+                    <div class='open-puhui-wallet-icon '>
+                        <i></i>
+                    </div>
+                    <p>开通普惠钱包成功<br/>你已可使用普惠钱包进行扫码支付！</p>
+                    <div class='puhui-red-bag-wrap '>
+                        <div class='puhui-left '>
+                            <img src="../images/red-bag.png" alt="">
+                        </div>
+                        <div class='puhui-right '>
+                            <p class='puhui-right-amount '>恭喜你获得5元红包</p>
+                            <p class='puhui-right-info '>红包将于次日到账</p>
+                        </div>
+                    </div>
+                    <div class='open-btn '>
+                        <a href="javascript:;" class='open-btn-end'>完 成</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="refresh-btn" style='visibility:hidden; '>
+                <span class='refresh-alert '>
+                    每分钟自动更新
+                </span>
+                <span class="refresh">
+                         <!--<img src="/puhuihua/static/wechat/images/sub-life/refreash.png">-->
+                         
+                         <span>手动刷新</span>
+                </span>
+                <!--<span class="set">设置</span>-->
+            </div>
+
+        </div>
+        <div class='hexinpass-icon-wrap '>
+            <img src="../images/hexinpass.png" class='hexinpass '>
+        </div>
+        <div class='provide '>
+            支付服务由四川商通提供，<span class='link-to-about-us '>关于四川商通<i></i></span>
+        </div>
+    </div>
+    <!--选择支付方式-->
+    <div class='float-mask '>
+    </div>
+    <div class="select-type-wrap">
+        <div class="select-type-box">
+            <header><span class=" close-icon"></span>选择付款方式</header>
+            <div class="tip">提示：银行卡支付金额与账户之和不能大于5000元</div>
+            <div class="type balance pay-type active">
+                <div>余额</div>
+            </div>
+            <div class="type add-card pos-r">
+                <div class="mui-navigate-right">添加银行卡</div>
+            </div>
+        </div>
+        <div class="bank-server">
+
+        </div>
+    </div>
+    </div>
+
+    <!--设置免密支付-->
+    <div class="noPwd-box">
+        <div class="no-password-wrap">
+            <div>
+                <p class="help">使用帮助</p>
+            </div>
+            <div>
+                <p class="password-set">免密支付设置</p>
+            </div>
+            <div>
+                <p class="cancel">取消</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="pay-pwd-wrap" class="display-none">
+        <div id="tip">
+            <div id="tip-wrap">
+                <div id="tip-box"></div>
+            </div>
+        </div>
+        <p class="hint hint-success">请输入您的支付密码</p>
+        <div class="pwd-row mui-text-center">
+            <input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input
+                type="password" maxlength="1" readonly />
+        </div>
+        <p class="mui-input-row mui-checkbox  c-333 mui-left agreement">
+            <input name="checkbox1" type="checkbox" id="checkbox"> 同意
+            <span class="c-red recharge-agreement">《免密支付协议》</span>，开启免密支付
+        </p>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn my-btn" id="btn-success">确  定</button>
+        </div>
+
+        <div id="keyboard">
+            <div id="switch"></div>
+            <span class="num border-none">1</span><span class="num">2</span><span class="num">3</span>
+            <span class="num border-none">4</span><span class="num">5</span><span class="num">6</span>
+            <span class="num border-none">7</span><span class="num">8</span><span class="num">9</span>
+            <span class="del all-del border-none">C</span><span class="num">0</span><span class="del single-del"></span>
+        </div>
+    </div>
+
+    <div id="keyboard" class='keyboard-input '>
+        <div id="switch"></div>
+        <span class="num border-none">1</span><span class="num">2</span><span class="num">3</span>
+        <span class="num border-none">4</span><span class="num">5</span><span class="num">6</span>
+        <span class="num border-none">7</span><span class="num">8</span><span class="num">9</span>
+        <span class="del all-del border-none">C</span><span class="num">0</span><span class="del single-del"></span>
+    </div>
+    <script src="/puhuihua/static/wechat/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/public/fontsize.js"></script>
+    <script src="/puhuihua/static/wechat/lib/mui/dist/js/mui.min.js"></script>
+    <script src="/puhuihua/static/wechat/lib/jquery/jquery.qrcode.min.js"></script>
+    <script src="/puhuihua/static/wechat/lib/jquery/JsBarcode.all.min.js"></script>
+    <script src="../js/puhui-pay.js"></script>
+    <script src="../js/set-pay-pwd.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

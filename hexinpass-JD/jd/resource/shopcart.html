@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>购物车</title> 
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../css/shopcart.css" />		
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+	</head>
+	<body>		 
+		<div class="mui-content">
+			<div class="cart-list" id="cartListId">
+				<script type="text/html" id="cartTemplateId">
+					{{each list as item index}}
+					<div class="cart-item-bg">
+						<div class="cart-list-item" sku={{item.sku}} price={{item.price}}">
+							<div class="cart-list-item-check-bg">
+								<div class="mui-icon appui-icon-hud appui-icon-hud-unselect cart-list-item-check"></div>
+							</div>
+							<div class="cart-list-item-img-bg">
+								<img class="cart-list-item-img" src={{imgbase+item.img}} />
+							</div>
+							<div class="cart-list-item-title">{{item.name}}</div>
+							<div class="cart-list-item-desc">{{item.goodRateString}}%好评率&nbsp;&nbsp;&nbsp;&nbsp;已售：{{item.sales}}</div>
+							<div class="cart-list-item-operate">
+								<div class="cart-list-item-operate-price">¥ {{item.price}}</div> 
+								<div class="cart-list-item-operate-bg" sku={{item.sku}} stock={{item.stockStateId}}>
+									<div class="cart-list-item-operate-plus">+</div>
+									<div class="cart-list-item-operate-number">{{item.num}}</div> 
+									<div class="cart-list-item-operate-minus">-</div>
+								</div>
+							</div>
+						</div>
+						<div class="cart-list-item-delete">删除</div>
+					</div>
+					{{/each}}
+				</script>
+			</div>		
+			<div class="cart-empty" id="cartEmpty">
+				<img class="cart-empty-img" src="../../common/images/fullNull.png" />
+				<div class="cart-empty-text">暂时没有东东哟</div>
+			</div>
+			<div class="cart-toolbar" id="toolBar">
+				<div class="cart-toolbar-caculate" id="caculateBtn" active="0" style="background-color: darkgray">
+					<div class="cart-toolbar-caculate-desc">结算</div>
+				</div>
+				<div class="cart-toobar-left" id="toolBarLeft">
+					<div class="cart-toolbar-selectbg">
+						<div class="cart-toolbar-select-checkbox">
+							<div class="mui-icon appui-icon-hud appui-icon-hud-unselect cart-list-item-check" checked="0" id="toolbarSelectAll" ></div>
+						</div>
+						<div class="cart-toolbar-select-title">全选</div>
+					</div>
+					<div class="cart-toolbar-pricebg">
+						<div class="cart-toolbar-price" id="totalPrice" style="padding-right: 10px;">0</div>
+						<div class="cart-toolbar-price">¥</div>
+						<div class="cart-toolbar-total">合计：</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+		<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+		<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../common/js/common.js"></script>
+		<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+		<script type="text/javascript" src="../js/shopcart.js"></script>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>支付成功</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/sub-life/phone-recharge.css">
+    <link rel="stylesheet" href="../../css/sub-life/hexin-pay.css">
+</head>
+<style>
+    #tip {
+        z-index: 99;
+    }
+</style>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--提示-->
+    <div id="tip">
+        <div id="tip-wrap">
+            <div id="tip-box"></div>
+        </div>
+    </div>
+    <div class='order-wrap'>
+        <div class='order-wrap-detail'>
+            <div class='order-wrap-detail-icon'>
+
+            </div>
+            <p class='pay-success-info'>支付成功</p>
+            <p class='pay-success-amount'></p>
+        </div>
+    </div>
+    <div class='return-wrap'>
+        <a href="javascript:;" class='return-a'>返回商户</a>
+    </div>
+
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../js/public/config.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <!--<script src="../../js/sub-life/hexin-pay.js"></script>-->
+    <script src="../../js/sub-life/hexin-pay-success.js"></script>
+</body>
+
+</html>

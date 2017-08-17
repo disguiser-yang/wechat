@@ -1,0 +1,239 @@
+.mui-table-view.order-table {
+	margin-top: 11px;
+}
+.mui-table-view-cell.order-cell {
+	padding: 11px 10px;
+}
+.order-info {
+	padding: 10px;
+	background-color: white;
+	height: 60px;
+	border-bottom: 1px solid RGBA(227, 227, 229, 1.00);
+}
+.order-info-number {
+	width: 80%;
+	float: left;
+	color: #333;
+	font-size: 15px;
+}
+.order-info-time {
+	width: 80%;
+	float: left;
+	color: #999;
+	font-size: 11px;
+}
+.order-info-state {
+	width: 20%;
+	float: right;
+	color: #FD555A;
+	line-height: 40px;
+	text-align: right;
+	font-size: 13px;
+}
+
+.order-address {
+	padding: 10px;
+	margin-top: 10px;
+	background-color: white;
+	position: relative;
+	border-bottom: 1px solid RGBA(227, 227, 229, 1.00);
+	border-top: 1px solid RGBA(227, 227, 229, 1.00);
+	overflow: hidden;
+	zoom: 1;
+}
+.order-address-imgbg {
+	width: 15px;
+	height: 50px;
+	float: left;
+	display: -webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    -webkit-box-orient: vertical;
+    text-align: left;
+}
+.order-address-img {
+	width: 15px;
+	height: 20px;
+}
+.order-address-name {
+	position: absolute;
+	margin-left: 20px;
+	float: left;
+	color: #333;
+	font-size: 15px;
+}
+.order-address-phone {
+	position: absolute;
+	right: 10px;
+	color: #333;
+	font-size: 15px;
+	text-align: right;
+}
+.order-address-address {
+	position: absolute;
+	left: 30px;
+	right: 10px;
+	color: #999;
+	font-size: 12px;
+	margin-top: 26px;
+	line-height: 15px;
+}
+
+
+.order-goodlist-title {
+	margin-top: 10px;
+	width: 100%;
+	height: 30px;
+	padding: 5px 10px;
+	background-color: white;
+	border-top: 1px solid RGBA(227, 227, 229, 1.00);
+}
+.order-goodlist-titlealpha {
+	float: left;
+	color: #999;
+	font-size: 15px;
+	line-height: 20px;
+}
+.order-goodlist-titlechar {
+	float: left;
+	color: #333;
+	padding-left: 5px;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.order-goodlist {
+	background-color: white;
+	padding-bottom: 10px;
+	border-bottom: 1px solid RGBA(227, 227, 229, 1.00);
+}
+.order-goodlist-item {
+	width: 100%;
+	height: 96px;
+	background-color: RGBA(248, 248, 248, 1.00);
+	padding: 8px 10px 8px 10px;
+	position: relative;
+}
+.order-goodlist-item-imgbg {
+	width: 80px;
+	height: 80px;
+	float: left;
+	padding: 4px;
+}
+.order-goodlist-item-img {
+	width: 72px;
+	height: 72px;
+}
+.order-goodlist-item-title {
+	position: absolute;
+	left: 100px;
+	right: 10px;
+	top: 10px;
+	color: #333;
+	font-size: 14px;
+	display:-webkit-box;
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.order-goodlist-item-desc {
+	position: absolute;
+	left: 100px;
+	bottom: 10px;
+	color: #999;
+	font-size: 12px;
+}
+.order-goodlist-item-num {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: #999;
+	font-size: 13px;
+}
+.order-goodlist-item-servicebg {
+	width: 100%;
+	background-color: white;
+	height: 35px;
+	padding-right: 10px;
+	padding-top: 6px;
+}
+.order-goodlist-item-service {
+	border: 1px solid #999;
+	padding: 0 8px;
+	border-radius: 5px;
+	float: right;
+	color: #333;
+	text-align: center;
+	font-size: 13px;
+}
+
+.order-data-left {
+	width: 50%;
+	float: left;
+	font-size: 16px;
+	text-align: left;
+	color: #333;
+}
+.order-data-right {
+	width: 50%;
+	float: left;
+	font-size: 16px;
+	text-align: right;
+	color: #FD555A;
+}
+.hexinpass-pay {
+	color: dodgerblue;
+}
+.order-left-time {
+	width: 50%;
+	float: left;
+}
+.order-left-time-title {
+	font-size: 10px;
+	color: #999;
+}
+.order-left-time-time {
+	font-size: 15px;
+	color: #333;
+}
+.order-total-price {
+	float: right;
+	color: #FD555A;
+	font-size: 16px;
+}
+.order-total-title {
+	float: right;
+	color: #333;
+	font-size: 16px;
+}
+
+.order-operate {
+	width: 50%;
+	float: left;
+}
+.order-operate-cancel {
+	float: right;
+	border: solid 1px #999;
+	color: #333;
+	border-radius: 3.5px;
+	font-size: 12px;
+	padding: 2px 8px;
+	margin-top: 6px;
+	text-align: center;
+}
+.order-operate-pay {
+	float: right;
+	border: solid 1px #FD555A;
+	color: #FD555A;
+	border-radius: 3.5px;
+	font-size: 12px;
+	padding: 2px 8px;
+	margin-left: 10px;
+	margin-top: 6px;
+	text-align: center;
+}
+.mui-table-view-cell.mui-active {
+	background-color: white;
+}
+

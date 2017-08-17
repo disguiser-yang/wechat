@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>申请售后服务</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+		<link rel="stylesheet" href="../css/afService.css" />		
+		<link rel="stylesheet" href="../css/addressEdit.css" />		
+	</head>
+	<body>
+		<div class="mui-content" id="content">
+			<script type="text/html" id="contentTemplateId">
+				<div class="mui-content" id="afBaseInfo">
+					<div class="af-product">
+						<div class="af-product-imgbg">
+							<img class="af-product-img" src={{imgbase+item.imagePath}} />
+						</div>
+						<div class="af-product-title">{{item.name}}</div>
+						<div class="af-product-price">¥{{price}}</div>
+						{{if item.saleUnit != null &&  item.saleUnit != '' && item.saleUnit != ' '}}
+						<div class="af-product-desc">规格：{{item.saleUnit}}&nbsp;&nbsp;&nbsp;&nbsp;重量：{{item.weight}}kg</div>
+						{{else}}
+							<div class="af-product-desc">重量：{{item.weight}}kg</div>
+						{{/if}}
+						<div class="af-product-num">x{{num}}</div>
+					</div>
+					<div class="af-service">
+						<div class="af-service-title">服务类型</div>
+						<div class="af-service-type">
+							{{each item.serviceType as serviceType index}}
+								<div class="af-service-type-item" code={{serviceType.code}}>{{serviceType.name}}</div>
+							{{/each}}
+						</div>
+					</div>
+					<div class="af-applynum">
+						<div class="af-service-title">申请数量</div>
+						<div class="af-applynum-operate" id="applyNumOperate">
+							<div class="af-applynum-operate-minus">-</div>
+							<div class="af-applynum-operate-num">1</div>
+							<div class="af-applynum-operate-plus">+</div>
+						</div>
+					</div>
+					<div class="af-report">
+						<div class="af-service-title">检测报告</div>
+						<div class="af-report-check-bg">
+							<div class="mui-icon appui-icon-hud appui-icon-hud-unselect af-check" code='1'></div>
+							<div class="af-report-desc">已有检测报告</div>
+							<div class="mui-icon appui-icon-hud appui-icon-hud-unselect af-check" code='0'></div>
+							<div class="af-report-desc">尚无检测报告</div>
+						</div>
+						<div class="af-service-desc">若有检测报告请拍照上传</div>
+					</div>
+					<div class="af-package">
+						<div class="af-service-title">有无包装</div>
+						<div class="af-report-check-bg">
+							<div class="mui-icon appui-icon-hud appui-icon-hud-unselect af-check" code="0"></div>
+							<div class="af-report-desc">无包装</div>
+							<div class="mui-icon appui-icon-hud appui-icon-hud-unselect af-check" code="10"></div>
+							<div class="af-report-desc">包装完好</div>
+							<div class="mui-icon appui-icon-hud appui-icon-hud-unselect af-check" code="20"></div>
+							<div class="af-report-desc">包装破损</div>
+						</div>
+					</div>
+					<div class="af-problem">
+						<div class="af-service-title">问题描述</div>
+						<div class="af-problem-seperator"></div>
+						<textarea class="af-problem-desc" placeholder="请在此详细描述您的问题（最多2000字符）" onkeydown="if (value.length >2000) value=value.substr(0,2000)"></textarea>
+					</div>
+					<div class="af-photo">
+						<div class="af-service-title">上传照片</div>
+						<input type="file" id="uploadPhotoId" hidden onchange="getPhonePhoto(this)" />
+						<div class="af-photo-box">
+							<div class="af-photo-box-add">+</div>
+						</div>
+						<div class="af-service-desc">最多上传5张，每张不超过5M，支持JPG/BMP/PNG</div>
+					</div>
+					<div class="af-nextstep">下一步</div>
+				</div>
+				<div class="mui-content" id="afAddress">
+					<div class="af-return">
+						<div class="af-service-title">商品退回方式</div>
+						<div class="af-service-type">
+							{{each item.returnType as returnType index}}
+								<div class="af-service-type-item" code={{returnType.code}}>{{returnType.name}}</div>
+							{{/each}}
+						</div>
+					</div>
+					<div class="af-return-tips">商品返回地址将在服务单审核通过后以短信形式告知，或在售后服务记录中查询，京东不收取快递附加费用</div>
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<div class="area-editing-title">确认地址</div>
+							<div class="af-address-tips">（该地址是京东回寄给您的地址）</div>
+						</li>
+		   				<li class="mui-table-view-cell">
+							<div class="area-editing-title">姓名</div>
+							<input id="areaName" class="area-editing-input" type="text" placeholder="请输入姓名" value={{item.userName}} />
+						</li>
+						<li class="mui-table-view-cell">
+							<div class="area-editing-title">手机号码</div>
+							<input id="areaPhone" class="area-editing-input" type="number" placeholder="请输入手机号码" oninput="if(value.length>11)value=value.slice(0,11)" value={{item.mobile}} />
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								<div class="area-editing-title">所在地区</div>
+								<input id="areaSelectBtn" class="area-editing-input" type="text" placeholder="请选择地区" readonly="readonly" value={{item.provinceName+item.cityName+item.countyName+item.townName}} />
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<div class="area-editing-title">详细地址</div>
+							<input id="areaDetail" class="area-editing-input" type="text" placeholder="请输入详细地址" value={{item.address}} /> 
+						</li> 
+					</ul>
+					<div class="af-return-tips" style="border-bottom: none;padding: 5px 10px;">提交后，售后专员可能与您电话沟通，请保持手机畅通</div>
+					<div class="af-submit">提交</div>
+				</div>
+			</script>
+		</div>
+		<div class="address-mask-layer" id="maskLayer">
+			<div class="address-selector" id="addressSelector">
+				<div class="address-selector-header">
+					<div class="address-selector-header-title">选择所在地区</div>
+					<div id="areaClose" class="mui-icon mui-icon-closeempty address-selector-close"></div>
+				</div>
+				<div class="address-selector-selectitem">
+					<div class="address-selector-selectitem-item address-active" id="tabProvince" content="#tableProvince">请选择</div>
+					<div class="address-selector-selectitem-item" style="display: none;" id="tabCity" content="#tableCity">请选择</div>
+					<div class="address-selector-selectitem-item" style="display: none;" id="tabCounty" content="#tableCounty">请选择</div>
+					<div class="address-selector-selectitem-item" style="display: none;" id="tabTown" content="#tableTown">请选择</div>
+				</div>
+				<div class="address-selector-progressbar" id="addressProgressBar"></div>
+				<div class="address-selector-list">
+					<div class="address-selector-list-table" style="transform: translate(0,0);-webkit-transform: translate(0,0);" id="tableProvince">
+						<script type="text/html" id="templateProvince">
+							{{each list as value key}}  
+								<div class="address-selector-list-table-cell" index={{value}} type="1">{{key}}</div>
+							{{/each}}
+						</script>
+					</div>
+					<div class="address-selector-list-table" id="tableCity">
+						<script type="text/html" id="templateCity">
+							{{each list as value key}}  
+								<div class="address-selector-list-table-cell" index={{value}} type="2">{{key}}</div>
+							{{/each}}
+						</script>
+					</div>
+					<div class="address-selector-list-table" id="tableCounty">
+						<script type="text/html" id="templateCounty">
+							{{each list as value key}}  
+								<div class="address-selector-list-table-cell" index={{value}} type="3">{{key}}</div>
+							{{/each}}
+						</script>
+					</div>
+					<div class="address-selector-list-table" id="tableTown">
+						<script type="text/html" id="templateTown">
+							{{each list as value key}}  
+								<div class="address-selector-list-table-cell" index={{value}} type="4">{{key}}</div>
+							{{/each}}
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+		<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../common/js/common.js"></script>
+		<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+		<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+		<script type="text/javascript" src="../../common/js/photoViewer.js"></script>
+		<script type="text/javascript" src="../js/addressEdit.js"></script>
+		<script type="text/javascript" src="../js/afService.js"></script>
+	</body>
+</html>

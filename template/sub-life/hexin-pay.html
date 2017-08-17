@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>支付</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/sub-life/phone-recharge.css">
+    <link rel="stylesheet" href="../../css/sub-life/hexin-pay.css">
+</head>
+<style>
+    #tip {
+        z-index: 99;
+    }
+</style>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--提示-->
+    <div id="tip">
+        <div id="tip-wrap">
+            <div id="tip-box"></div>
+        </div>
+    </div>
+
+    <!--<div class='order-info-wrap'>
+        <div class='order-info'>
+            <div class='pay-method'>
+                <span>银行卡</span>
+                <span class='card-number'>农业银行(2514)</span>
+            </div>
+            <div class='pay-amount'>
+                <p class='pay-amount-title'>支付金额</p>
+                <p class='pay-amount-num'>
+                    &yen;&nbsp;&nbsp;<span>55</span>
+                </p>
+            </div>
+            <div class='comfirm-btn'>
+                <a href="javascript:;" class='comfirm-btn-a'>
+                    确认支付
+                </a>
+            </div>
+        </div>
+    </div>-->
+    <div class='float-mask'>
+
+    </div>
+    <!--订单信息-->
+    <!--<div class='order-info-wrap'>
+        <p>
+            <span class='title'>订单编号:</span>
+            <span class='value'>5484758475888</span>
+        </p>
+        <p>
+            <span class='title'>订单日期:</span>
+            <span class='value'>2017-09-12  10:12:21</span>
+        </p>
+        <p>
+            <span class='title'>商户名称:</span>
+            <span class='value'>测试商户</span>
+        </p>
+        <p>
+            <span class='title'>订单内容:</span>
+            <span class='value'>京东测试订单</span>
+        </p>
+        <p class='order-amount'>
+            <span class='title'>订单金额:</span>
+            <span class='value'>202.30</span>
+        </p>
+    </div>-->
+    <!--订单信息结束-->
+    <!--登录工会-->
+    <div class='login-wrap' id='login-wrap'>
+        <p>登录工会</p>
+        <form action="">
+            <div class='input-cell'>
+                <span>账户</span>
+                <input type="text" class='login-account' placeholder="请输入工会登录帐号" maxlength="11">
+            </div>
+            <div class='input-cell'>
+                <span>密码</span>
+                <input type="password" class='login-pwd' placeholder="请输入工会登录密码">
+            </div>
+            <div class='input-cell' id='input-code'>
+                <span>验证码</span>
+                <input type="text" class='login-code' placeholder="请输入验证码">
+            </div>
+
+        </form>
+        <div class='login-btn-wrap'>
+            <a href="javascript:;" class='login-btn-a'>登录</a>
+        </div>
+    </div>
+    <!--登录工会结束-->
+    <!--支付方式选择-->
+    <div class='pay-method-wrap login-wrap' id='pay-method-wrap'>
+        <p>选择支付方式</p>
+        <div class='pay-method'>
+            <div class='pay-method-bankCard' payFlag='bankCard' style='display:none;'>
+                <span class='pay-method-check-icon'></span>
+                <span class='pay-method-card-icon'></span>
+                <span class='pay-method-card-text puhui-wallet-bankCard'><span class='puhui-title'>普惠钱包银行卡</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class='bankCard-detail bankCard-name'></span></span>
+            </div>
+            <div class='pay-method-bankCard pay-method-wallet  checked' payFlag='wallet'>
+                <span class='pay-method-check-icon'></span>
+                <span class='pay-method-card-icon'></span>
+                <span class='pay-method-card-text'>普惠钱包余额&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='bankCard-detail bankCard-balance'></span></span>
+            </div>
+            <div class='pay-method-bankCard pay-method-wechat' payFlag='wechat'>
+                <span class='pay-method-check-icon'></span>
+                <span class='pay-method-card-icon' id='icon-wechat'></span>
+                <span class='pay-method-card-text'>微信&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </div>
+        </div>
+        <div class='pay-btn-wrap'>
+            <a href="javascript:;" class='pay-btn-a'>支付</a>
+        </div>
+    </div>
+    <!--支付方式选择结束-->
+
+    <div class='some-tip' style='display:none;'>
+        <p>温馨提示：</p>
+        <p>1、如需开具发票、咨询售后相关问题请致电客服热线：<a href="tel:4008331133">400-833-1133</a>;</p>
+        <p>2、酒品为五粮液集团原厂正品，不支持退换货，敬请谅解，祝您购物愉快！</p>
+        <p>3、每次只能购买一种商品，如需购买多种商品，请购买成功后返回到商品页面。</p>
+    </div>
+    <!--支付键盘-->
+    <div id="pay-keyboard-wrap">
+        <div id="pay-keyboard">
+            <div id="keyboard">
+                <div class="mui-input-row">
+                    <span class="mui-icon mui-icon-closeempty close-icon"></span>
+                    <header class="text-c">请输入支付密码</header>
+                </div>
+                <div class="pwd-row mui-text-center">
+                    <input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly
+                    /><input type="password" maxlength="1" readonly />
+                </div>
+                <span class="num border-none">1</span><span class="num">2</span><span class="num">3</span>
+                <span class="num border-none">4</span><span class="num">5</span><span class="num">6</span>
+                <span class="num border-none">7</span><span class="num">8</span><span class="num">9</span>
+                <span class="del all-del border-none">C</span><span class="num">0</span><span class="del single-del"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../js/public/config.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../js/sub-life/hexin-pay.js"></script>
+    <style>
+        .bankCard-balance {
+            word-break: nowrap;
+            text-overflow: ellipsis
+        }
+    </style>
+</body>
+
+</html>

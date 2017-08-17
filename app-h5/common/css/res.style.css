@@ -1,0 +1,127 @@
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+}
+
+html,
+body {
+	font-family: Helvetica, sans-serif, 'SimHei', 黑体;
+	font-size: 14px;
+	line-height: normal;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background-color: #f6f6f6;
+	-webkit-text-size-adjust: 100%;
+}
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+img {
+	display: block;
+	border: 0;
+}
+
+.m-bottom-border,
+.m-top-border {
+	position: relative;
+}
+.m-bottom-border:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	content: '';
+	-webkit-transform: scaleY(.5);
+	background-color: #dedede;
+}
+.m-top-border:after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	content: '';
+	-webkit-transform: scaleY(.5);
+	background-color: #dedede;
+}
+.m-img-load{
+    -webkit-animation: md-fadeIn 350ms linear 0ms 1 normal both;
+    animation: md-fadeIn 350ms linear 0ms 1 normal both;
+    opacity: 1;
+}
+.m-fullNull{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top:0px;
+	left: 0px;
+	z-index: 9000;
+	background-color: #f6f6f6;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	-webkit-box-orient: vertical;
+}
+.m-fullNull i{
+	display: block;
+	width: 88px;
+	height: 100px;
+	background: url(../images/fullNull.png) no-repeat;
+	background-size: 100% 100%;
+}
+.m-fullNull label{
+	display: block;
+	font-size: 16px;
+	color: #878787;
+	margin: 10px 15px;
+	padding-bottom: 50%;
+}
+.N-scroller.m-ios,
+.N-scroller.m-ios body{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.N-scroller.m-ios .N-scroller-warp{
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.N-scroller.m-ios .N-scroll,
+.N-scroller.m-android .N-scroller-warp,
+.N-scroller.m-android .N-scroll{
+	height: auto;
+	overflow: hidden;
+}
+@-webkit-keyframes m-fadeIn{
+	0%{opacity:0}100%{opacity:1}
+}
+@keyframes m-fadeIn{
+	0%{opacity:0}100%{opacity:1}
+}
+
+
+.mui-toast-container{
+    bottom: auto !important;
+    top:50%;
+    margin-top: -30px;
+    display: -webkit-box;
+}
+.mui-toast-message {
+    width: auto;
+    max-width: 270px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 15px;
+    font-size: 14px;
+}

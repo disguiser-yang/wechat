@@ -1,0 +1,112 @@
+{
+    "a": [{ "bankName": "安徽省农村信用联社资金清算中心", "bankUrl": "../../images/remit-member/banks/yinlian.png" }],
+    "b": [
+        { "bankName": "包商银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "北京银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "渤海银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "c": [
+        { "bankName": "沧州银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "承德银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "重庆农村商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "长安银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "d": [
+        { "bankName": "德阳银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "东莞农村商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "e": [{ "bankName": "鄂尔多斯银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }],
+    "f": [
+        { "bankName": "佛山顺德农村商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "福建海峡银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "g": [
+        { "bankName": "赣州银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "广西北部湾银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "广西壮族自治区农村信用社联合社", "bankUrl": "../../remit-member/banks/yinlian.png" },
+        { "bankName": "广州农村商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "广州银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "桂林银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "h": [
+        { "bankName": "哈尔滨银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "邯郸市商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "河北银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "葫芦岛银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "湖北省农村信用社联合社结算中心", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "徽商银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "j": [
+        { "bankName": "吉林省农村信用社联合社", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "嘉兴银行股份有限公司", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "江苏常熟农村商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "江苏省农村信用社联合社", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "江苏银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "交通银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "晋城银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "k": [{ "bankName": "昆仑银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }],
+    "l": [
+        { "bankName": "莱商银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "柳州银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "龙江银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "漯河市商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "n": [
+        { "bankName": "南昌银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "南京银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "内蒙古银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "宁波鄞州农村合作银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "p": [
+        { "bankName": "攀枝花市商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "平安银行", "bankUrl": "../../images/remit-member/banks/pinan.png" }
+    ],
+    "q": [
+        { "bankName": "齐鲁银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "齐商银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "青岛银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "青海银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "s": [
+        { "bankName": "山东省农村信用社联合社", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "商丘市商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "上海农村商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "上海浦东发展银行", "bankUrl": "../../images/remit-member/banks/pufa.png" },
+        { "bankName": "上海银行", "bankUrl": "../../images/remit-member/banks/shanghai.png" },
+        { "bankName": "上饶银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "绍兴银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "深圳福田银座村镇银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "深圳农村商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "苏州银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "t": [
+        { "bankName": "台州银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "泰安市商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "w": [
+        { "bankName": "威海市商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "潍坊银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "温州银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "乌鲁木齐市商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ],
+    "x": [
+        { "bankName": "厦门银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "邢台银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "兴业银行", "bankUrl": "../../images/remit-member/banks/xinye.png" }
+    ],
+    "y": [{ "bankName": "营口银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }],
+    "z": [
+        { "bankName": "中国银行", "bankUrl": "../../images/remit-member/banks/zhongguo.png" },
+        { "bankName": "中国工商银行", "bankUrl": "../../images/remit-member/banks/gonghang.png" },
+        { "bankName": "中国农业银行", "bankUrl": "../../images/remit-member/banks/longhang.png" },
+        { "bankName": "中国建设银行", "bankUrl": "../../images/remit-member/banks/jianhang.png" },
+        { "bankName": "中国光大银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "中信银行", "bankUrl": "../../images/remit-member/banks/zhongxin.png" },
+        { "bankName": "张家港农村商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "张家口市商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "浙江稠州商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "郑州银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" },
+        { "bankName": "自贡市商业银行", "bankUrl": "../../images/remit-member/banks/yinlian.png" }
+    ]
+}

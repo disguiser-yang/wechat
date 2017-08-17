@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>优惠商家</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/sub-life/nearby-store.css">
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <header class="clearfix">
+        <div class="f-l classify first-classify">
+            <span>全城<span class="arrow-icon"></span></span>
+        </div>
+        <div class="f-l classify">
+            <span>全部<span class="arrow-icon"></span></span>
+        </div>
+    </header>
+    <aside class="type-option">
+        <div class="mui-scroll-wrapper mui-scroll-wrapper-left">
+            <div class="mui-scroll" id="channel-wrap">
+                <div class="mui-navigate-right active">全城 <span></span></div>
+                <div class="mui-navigate-right">热门商圈 <span></span></div>
+            </div>
+        </div>
+        <div class="mui-scroll-wrapper mui-scroll-wrapper-right" style="left: 50%;">
+            <div class="mui-scroll second-menu" id="city-second-menu">
+                <div id="nearby" style="display: block">
+                    <div class="active" data-distance="0">全城 <span></span></div>
+                    <div data-distance="1000">1km <span></span></div>
+                    <div data-distance="3000">3km <span></span></div>
+                    <div data-distance="5000">5km <span></span></div>
+                    <div data-distance="10000">10km <span></span></div>
+                </div>
+                <div id="hot">
+                    <div data-shopping-area-id="-1">全部<span></span></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <aside class="time-option">
+        <div class="mui-scroll-wrapper mui-scroll-wrapper-left">
+            <div class="mui-scroll" id="type-wrap">
+                <div class="mui-navigate-right active">全部分类 <span></span></div>
+            </div>
+        </div>
+        <div class="mui-scroll-wrapper mui-scroll-wrapper-right" style="left: 50%;">
+            <div class="mui-scroll second-menu" id="type-menu">
+                <div id="all-type" style="display: block">
+                    <div class="active" data-type-id="0">全部分类 <span></span></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!--下拉刷新容器-->
+    <div class="content-wrap">
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--数据列表-->
+                <div class="mui-table-view mui-table-view-chevron" id="content-list">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+    <script src="https://api.map.baidu.com/api?v=2.0&ak=xsS2zVNVwv2OZItBIWdDDgdc&s=1"></script>
+    <script src="../../lib/mui/mui.lazyload.js"></script>
+    <script src="../../lib/mui/mui.lazyload.img.js"></script>
+    <script src="../../js/sub-life/nearby-stroe.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

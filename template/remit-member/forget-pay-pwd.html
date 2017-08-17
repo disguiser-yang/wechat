@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>忘记支付密码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/remit-member/person-center.css">
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <div id="tip">
+        <div id="tip-wrap">
+            <div id="tip-box"></div>
+        </div>
+    </div>
+    <div class="login-content mt-2">
+        <div class="input-box pos-r">
+            <span class="user-phone c-666">+86</span>
+            <input type="text" class="login-phone" value="" readonly />
+        </div>
+    </div>
+    <div class="login-content mt-1">
+        <div class="input-box">
+            <input type="text" class="input-yzm" placeholder="请输入短信验证码" autocomplete="off" maxlength="6" />
+            <label class="get-yzm"><span>获取验证码</span></label>
+        </div>
+    </div>
+    <p class="verify"></p>
+    <div class="mui-button-row">
+        <button type="button" class="mui-btn my-btn-login">下一步</button>
+    </div>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../js/remit-member/forget-pay-pwd.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

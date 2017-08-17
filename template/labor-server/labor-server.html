@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>工会服务</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/public/list.css">
+    <link rel="stylesheet" href="../../css/labor-server/labor-server.css">
+</head>
+<style>
+    .mui-table-view-cell:after {
+        background-color: #fff;
+        height: 0px;
+    }
+    
+    #content-list li:last-child a::after {
+        background: #fff;
+    }
+    
+    #content-list li:last-child a,
+    #content-list-staff li:last-child a {
+        border: none!important;
+    }
+    
+    #content-list-staff>li {
+        padding-left: 30px!important;
+        padding-bottom: 0px;
+        padding-top: 0;
+    }
+    
+    #content-list-staff>li>a,
+    #content-list>li>a {
+        border-bottom: 1px solid #e5e5e5!important;
+        padding-left: 0px;
+        padding: 10px 0 10px 0;
+        padding-right: 15px;
+    }
+    
+    .list-hot,
+    .list-staff {
+        padding-right: 0!important;
+    }
+</style>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--下拉刷新容器-->
+    <div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+        <div class="mui-scroll">
+            <div class="mui-slider" id="slider">
+                <div class="mui-slider-group mui-slider-loop" id="slider-loop">
+
+                </div>
+                <div class="mui-slider-indicator" id="slider-indicator">
+
+                </div>
+            </div>
+
+            <div class="mui-content" id="mui-content">
+                <!--<div class="" style='padding:0.42rem;overflow:hidden;'>
+                    <!--我要入会-->
+                <!--<div style="overflow:hidden;">
+                    <div class="enter-apply-agreement" id="enter-apply-agreement" style="width:48.7%;display:inline-block;overflow:hidden;float:left;">
+
+                        <a class="enter-apply-a" style="">
+                            <img src="../../images/labor-server/enter-apply-agreement.png" style="display:block;width:100%;">
+                        </a>
+
+                    </div>
+                    <!--绑定会员卡-->
+                <!--<div class="bank-card" id="bank-card" style="width:48.7%;display:inline-block;overflow:hidden;float:right;">
+
+                    <a class="" href="">
+                        <img src="../../images/labor-server/bind-card.png" style="display:block;width:100%;">
+                    </a>
+
+                </div>
+
+            </div>-->
+                <!--</div>-->
+
+                <!--会员服务-->
+
+                <div class="mui-row title-column" style='margin-top:0.6rem;'>
+                    <div class='member-server-title'>
+                        <span> 会员服务</span>
+                    </div>
+                    <div class="mui-col-xs-3" id="assistance-safeguard">
+                        <div class="mui-table-view-cell">
+                            <a class="text-c a-box">
+                                <span class="icon-title mentality-icon-title1" id="member-server">
+                                        <img src="../../images/labor-server/assistance-safeguard.png">
+                                    </span>
+                                <span>互助保障</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mui-col-xs-3" id="quality-promotion">
+                        <div class="mui-table-view-cell">
+                            <a class="text-c a-box" href="">
+                                <span class="icon-title mentality-icon-title2">
+                                         <img src="../../images/labor-server/quality-promotion.png">
+                                    </span>
+                                <span>素质提升</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mui-col-xs-3" id="law-consult">
+                        <div class="mui-table-view-cell">
+                            <a class="text-c a-box" href="">
+                                <span class="icon-title mentality-icon-title3">
+                                     <img src="../../images/labor-server/law-consult-2.png">
+                                </span>
+                                <span>法律服务</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mui-col-xs-3" id="mentality-decompress">
+                        <div class="mui-table-view-cell">
+                            <a class="text-c a-box" href="">
+                                <span class="icon-title mentality-icon-title3">
+                                     <img src="../../images/labor-server/mentality-decompress.png">
+                                </span>
+                                <span>心理减压</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--数据列表-->
+            <!--热点资讯-->
+            <div class="hot-issue-title  mt-1">
+                <div class="hot-issue-wrap" id="hot-issue-wrap" style="border-bottom:1px solid #e5e5e5;">
+                    <span class="hot-issue-title-l">热点资讯</span>
+                    <div class="mui-table-view-cell">
+                        <span class="hot-issue-title-more" id="hot-issue-title-more">更多</span></div>
+
+                </div>
+            </div>
+
+            <ul class="mui-table-view mui-table-view-chevron labor-server-ul" id="content-list" style="">
+
+            </ul>
+            <!--职工风采-->
+            <div class="staff-mien-title  mt-1">
+                <div class="staff-mien-wrap" id="staff-mien-wrap" style="border-bottom:1px solid #e5e5e5;">
+                    <span class="staff-mien-title-l">职工风采</span>
+                    <div class="mui-table-view-cell">
+                        <span class="staff-mien-title-more" id="staff-mien-title-more">更多</span></div>
+
+                </div>
+            </div>
+
+            <ul class="mui-table-view mui-table-view-chevron labor-server-ul" id="content-list-staff">
+
+            </ul>
+        </div>
+    </div>
+
+    <!--轮播开始-->
+    <script type="text/html" id="carousel-loop">
+        <div class="mui-slider-item ${className}">
+            <a href=${targetUrl}>
+                <img data-lazyload=${imageUrl} />
+            </a>
+        </div>
+    </script>
+    <!--轮播模板结束-->
+
+
+    <!--热门资讯列表模板开始-->
+    <script type="text/html" id="list-hot">
+        <li class="mui-table-view-cell mui-media list list-hot" id=${issueId} data-issueType=${issueType} style='padding:0px 0px 0px 30px;'>
+            <a class='list-public-a' style='margin-right:0px;padding-left:0px;padding-top:10px;padding-bottom:10px;  border-bottom: 1px solid #c8c7cc;'>
+                <img class="mui-media-object mui-pull-right" src='${cover}' onerror="this.src='../../images/public/default2.png'" style='' />
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis'>${title}</p>
+                    <span class="c-999">${createTime}</span>
+                </div>
+            </a>
+        </li>
+    </script>
+    <!--热门资讯列表模板结束-->
+
+    <!--职工风采列表模板开始-->
+    <script type="text/html" id="list-staff">
+        <li class="mui-table-view-cell mui-media list list-staff" id=${issueId} data-issueType=${issueType} style='padding:0px 0px 0px 30px;padding-right:0px!important;'>
+            <a class='list-public-a' style='margin-right:0px; padding-left:0px;padding-top:10px;padding-bottom:10px;  border-bottom: 1px solid #c8c7cc;'>
+                <img class="mui-media-object mui-pull-right" src='${cover}' onerror="this.src='../../images/public/default2.png'" />
+                <div class="mui-media-body">
+                    <p class='mui-ellipsis'>${title}</p>
+                    <span class="c-999">${createTime}</span>
+                </div>
+            </a>
+        </li>
+    </script>
+    <!--职工风采列表模板结束-->
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+    <script src="../../lib/mui/mui.lazyload.js"></script>
+    <script src="../../lib/mui/mui.lazyload.img.js"></script>
+    <script src="../../js/public/list.js"></script>
+    <script src="../../js/labor-server/labor-server.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

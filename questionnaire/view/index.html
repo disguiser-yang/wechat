@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>问卷调查</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link href="../css/index.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="../../common/public.css">-->
+    <!--<link href="../../css/remit-member/pay-pwd.css" rel="stylesheet">
+    <link href="../../css/remit-member/set-pay-pwd.css" rel="stylesheet">
+    <link href="../../css/sub-life/puhui-pay.css" rel="stylesheet">-->
+</head>
+
+<body>
+    <!--loading-->
+    <div id="tip">
+        <div id="tip-wrap">
+            <div id="tip-box"></div>
+        </div>
+    </div>
+    <div class='main-content'>
+
+        <!--<script type="text/html" id="itemList">-->
+        <!--<div class='items-wrap'>
+                {{each list as value index}}
+                <div class='main-content-items'>
+                    <div>
+                        题目{{index+1}}： {{value.desc}}
+                    </div>
+                    {{if value.optionA}}
+                    <div>
+                        A: {{value.optionA}}
+                    </div>
+                    {{/if}} {{if value.optionB}}
+                    <div>
+                        B: {{value.optionB}}
+                    </div>
+                    {{/if}} {{if value.optionC}}
+                    <div>
+                        C: {{value.optionC}}
+                    </div>
+                    {{/if}} {{if value.optionD}}
+                    <div>
+                        D: {{value.optionD}}
+                    </div>
+                    {{/if}}
+
+                </div>
+                {{/each}}
+            </div>-->
+        <!--</script>-->
+        <script type="text/html" id="itemList">
+            <div class='items-wrap'>
+                {{each list as value index}}
+                <div class='main-content-items'>
+                    {{if value.isSingle==1}}
+                    <p class='item-title'>{{index+1}}.{{value.desc}}(多选)</p>
+                    {{/if}} {{if value.isSingle==0}}
+                    <p class='item-title'>{{index+1}}.{{value.desc}}</p>
+                    {{/if}}
+                    <div class='item-title-wrap'>
+                        {{if value.optionA}}
+                        <span class='item-span' id={{value.id}} isSingle={{value.isSingle}} text={{value.optionA}}>
+                            <i></i>
+                            <span>{{value.optionA}}</span>
+                        </span>
+                        {{/if}} {{if value.optionB}}
+                        <span class='item-span' id={{value.id}} isSingle={{value.isSingle}} text={{value.optionB}}>
+                            <i></i>
+                            <span>{{value.optionB}}</span>
+                        </span>
+                        {{/if}} {{if value.optionC}}
+                        <span class='item-span' id={{value.id}} isSingle={{value.isSingle}} text={{value.optionC}}>
+                            <i></i>
+                            <span>{{value.optionC}}</span>
+                        </span>
+                        {{/if}} {{if value.optionD}}
+                        <span class='item-span' id={{value.id}} isSingle={{value.isSingle}} text={{value.optionD}}>
+                            <i></i>
+                            <span>{{value.optionD}}</span>
+                        </span>
+                        {{/if}}
+                    </div>
+                </div>
+
+                {{/each}}
+
+            </div>
+        </script>
+
+    </div>
+    <div class='submit-btn'>
+        <a href="javascript:;" class='submit-btn-a'></a>
+    </div>
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/fontsize.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../lib/app.ui.js"></script>
+    <script type="text/javascript" src="../lib/common.js"></script>
+    <script src="../js/index.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

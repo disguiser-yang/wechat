@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>详情</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+	</head>
+	<body>
+		<div class="mui-content" id="content"></div>
+	</body>
+	<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+	<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			mui.init();
+			appui.showHUD();
+			jQuery.ajax({ 
+				url: ebase+'getAdContentById',
+				type:"POST",
+				dataType:"JSON",
+				data:ts({
+					'id':parseInt(getQueryString('id'))
+				}),
+				success: function(data){
+					console.log(data);
+					if (data.success == 1) {
+						$('#content').html(data.results.content);
+						document.title = data.results.title;
+						appui.removeHUD();
+					} else {
+						appui.removeHUD(2, '加载失败，请稍后重试');
+					}
+				},
+				error: function(jqXHR, textStatus, errorThrown){
+					appui.removeHUD(2, '网络开小差咯');
+				}
+			});
+		});
+	</script>
+</html>

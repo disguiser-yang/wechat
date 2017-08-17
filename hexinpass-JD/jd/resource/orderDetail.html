@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>订单详情</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+		<link rel="stylesheet" href="../css/orderDetail.css" />		
+	</head>
+	<body>
+		<div class="mui-content" id="content">
+			<script type="text/html" id="contentTemplateId">
+			<div class="order-info">
+				<div class="order-info-state">
+					{{if item.state == 1}}
+						{{if item.timeOut == -1}}
+						    已过期
+						{{else}}
+							待支付
+						{{/if}}
+					{{else if item.state == 2}}
+						支付成功
+					{{else if item.state == 3 || item.state == 8}}
+						出货失败
+					{{else if item.state == 4}}
+						待收货
+					{{else if item.state == 5}}
+						已完成
+					{{else if item.state == 6}}
+						已取消
+					{{/if}}
+				</div>
+				<div class="order-info-number">订单号：{{item.jdOrderId}}</div>
+				<div class="order-info-time">下单时间：{{time}}</div>
+			</div>
+			<div class="order-address">
+				<div class="order-address-imgbg">
+					<img class="order-address-img" src="../img/location.png" />
+				</div>
+				<div class="order-address-name">收货人：{{item.userName}}</div>
+				<div class="order-address-phone">{{encryptPhone}}</div>
+				<div class="order-address-address">{{item.provinceName+item.cityName+item.countyName+item.townName+item.address}}</div>
+			</div>
+			<div class="order-goodlist-title">
+				<div class="order-goodlist-titlealpha">JD</div>
+				<div class="order-goodlist-titlechar">京东</div>
+			</div>
+			<div class="order-goodlist" {{if item.state == 5}}style="padding-bottom: 0;"{{/if}}>
+				{{each item.productDetail as product index}}
+				<div class="order-goodlist-item" sku={{product.sku}}>
+					<div class="order-goodlist-item-imgbg">
+						<img class="order-goodlist-item-img" src={{imgbase+product.image_path}} />
+					</div>
+					<div class="order-goodlist-item-title">{{product.name}}</div>
+					{{if product.saleUnit != null && product.saleUnit != '' && product.saleUnit != ' '}}
+						<div class="order-goodlist-item-desc">规格：{{product.saleUnit}}&nbsp;&nbsp;&nbsp;&nbsp;重量：{{product.weight}}kg</div>
+					{{else}}
+						<div class="order-goodlist-item-desc">重量：{{product.weight}}kg</div>
+					{{/if}}
+					<div class="order-goodlist-item-num">x{{product.num}}</div>
+				</div>
+					{{if item.state == 5}}
+					<div class="order-goodlist-item-servicebg">
+						<div class="order-goodlist-item-service" order={{item.orderId}} jdorder={{item.jdOrderId}} sku={{product.sku}} num={{product.num}} price={{product.platformPrice}}>申请售后</div>
+					</div>
+					{{/if}}
+				{{/each}}
+			</div>
+			<ul class="mui-table-view order-table">
+				<li class="mui-table-view-cell order-cell">
+					<div class="order-data-left">支付方式</div>
+					<div class="order-data-right hexinpass-pay">和信通在线支付</div>
+				</li>
+			</ul>
+			<ul class="mui-table-view order-table">
+				<li class="mui-table-view-cell order-cell">
+					<div class="order-data-left">商品总额</div>
+					<div class="order-data-right">¥{{item.nakedPrice}}</div>
+				</li>
+				<li class="mui-table-view-cell order-cell">
+					<div class="order-data-left">运费</div>
+					<div class="order-data-right">¥{{item.freight}}</div>
+				</li>
+				<li class="mui-table-view-cell order-cell">
+					<div class="order-total-price">¥{{item.amount}}</div>
+					<div class="order-total-title">{{if item.state == 1 || item.state == 6}}需{{else}}已{{/if}}付款：</div>
+				</li>
+			</ul>
+			{{if item.state == 1}}
+			<ul class="mui-table-view order-table" style="margin-bottom: 10px;">
+				<li class="mui-table-view-cell order-cell">
+					<div class="order-left-time">
+						<div class="order-left-time-title">剩余付款时间：</div>
+						<div class="order-left-time-time" id="timeCounter">	
+							{{if item.timeOut == -1}}
+								该订单已过期
+							{{else}}
+								{{timeOut}}
+							{{/if}}
+						</div>
+					</div>
+					{{if item.timeOut != -1}}
+					<div class="order-operate" id="state1Operator">
+						<div class="order-operate-pay" time={{item.createTime}} money={{item.amount}}>去支付</div>
+						<div class="order-operate-cancel">取消订单</div>
+					</div>
+					{{/if}}
+				</li>
+			</ul>
+			{{/if}}
+			</script>
+		</div>
+		<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+		<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+		<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../common/js/common.js"></script>
+		<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+		<script type="text/javascript" src="../js/orderDetail.js"></script>
+	</body>
+</html>

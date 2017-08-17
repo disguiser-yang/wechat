@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>支付成功</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link href="../../css/public/hint.css" rel="stylesheet">
+    <style>
+        .random-red-pocket {
+            margin-bottom: 0.427rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pay-success">
+        <div class="leave-words-success"></div>
+        <p class="hint hint-success">支付成功</p>
+        <p class="mui-text-center price">￥0.00</p>
+        <!--<p class="mui-text-center red-tip">红包正在路上，稍后查看消息哦</p>-->
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn my-btn btn-success" id="btn-success">确  定</button>
+        </div>
+        <div class='random-red-pocket'>
+            <div class='red-pocket-img'>
+
+            </div>
+            <div class='random-red-pocket-value'>
+                <p class='random-red-pocket-value-info'>恭喜你获得<span class='pocket-value'></span>元<span class='rpType'></span></p>
+                <p class='random-red-pocket-value-describe'>红包将于次日到账</p>
+            </div>
+        </div>
+        <img src="../../images/public/guanggao.png" id="img" />
+    </div>
+</body>
+<script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script src="../../js/public/fontsize.js"></script>
+<script src="../../lib/mui/dist/js/mui.min.js"></script>
+<script src="../../js/remit-member/pay-success.js"></script>
+<script>
+</script>
+
+</html>

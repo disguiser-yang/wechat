@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>详情</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../css/public/list-detail.css">
+    </head>
+
+    <body>
+        <!--loading-->
+        <div id="load-wrap">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+        <div class="hot-content">
+
+        </div>
+
+        <!--模板开始-->
+        <script type="text/html" id="template">
+            <h3>${title}</h3>
+            <p class="author c-999"><span>${author}</span><span class="time">${createTime}</span></p>
+            <div class="hot-img-box"><img data-lazyload=${cover} /></div>
+            <div class="content-detail c-333">{{html content}}</div>
+        </script>
+        <!--模板结束-->
+
+        <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../js/public/fontsize.js"></script>
+        <script src="../../lib/mui/dist/js/mui.min.js"></script>
+        <script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+        <script src="../../lib/mui/mui.lazyload.js"></script>
+        <script src="../../lib/mui/mui.lazyload.img.js"></script>
+        <script src="../../js/public/getlist-detail.js"></script>
+        <script>
+            getDetail('/puhuihua/wechat/legal/legalIssueDetails');
+        </script>
+    </body>
+
+</html>

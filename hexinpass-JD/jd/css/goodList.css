@@ -1,0 +1,241 @@
+.home-search-holder {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	width: 100%;
+	padding: 10px 15px;
+	background-color: white;
+	transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+}
+.trans_55 {
+	transform: translate(0, -55px);
+}
+.trans_44 {
+	transform: translate(0, -44px);
+}
+input.home-search-box {
+	border-radius: 20px;
+	height: 35px;
+	background-color: RGBA(237, 238, 239, 1.00);
+	color: #878787;
+	border: none;
+	font-size: 14px;
+	margin-bottom: 0;
+	background-image: url(../img/home_search.png);
+	background-repeat: no-repeat;
+	background-size: 14px 16px;
+	background-position: 12px;
+	padding-left: 33px;
+}
+
+.good-select-box {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 55px;
+	z-index: 100;
+	background-color: white;
+	height: 44px;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 15px;
+	transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+}
+.good-select-box-type {
+	width: 25%;
+	height: 44px;
+	line-height: 44px;
+	float: left;
+	color: #666;
+	display: -webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    -webkit-box-orient: horizontal;
+    text-align: center;
+}
+.box-selected {
+	color: #FD555A;
+	font-weight: bolder;
+}
+.good-select-box-type-desc {
+	line-height: 44px;
+	height: 44px;
+	padding-right: 5px;
+}
+.good-select-box-type-order {
+	width: 9px;
+	height: 12px;
+}
+.good-select-box-type-order-up {
+	width: 9px;
+	height: 5px;
+}
+.order-up-red {
+	background: url(../img/arrowupred.png) no-repeat;
+	background-size: 100% 100%;
+}
+.order-up-gray {
+	background: url(../img/arrowup.png) no-repeat;
+	background-size: 100% 100%;
+}
+.order-down-red {
+	background: url(../img/arrowdownred.png) no-repeat;
+	background-size: 100% 100%;
+}
+.order-down-gray {
+	background: url(../img/arrowdown.png) no-repeat;
+	background-size: 100% 100%;
+}
+.good-select-box-type-order-down {
+	width: 9px;
+	height: 5px;
+	margin-top: 2px;
+}
+
+.good-top-position {
+	height: 99px;
+	width: 100%;
+}
+.good-list {
+	width:100%;
+	overflow: auto;
+	transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+}
+.good-list-item {
+	position: relative;
+	height: 130px;
+	background-color: white;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 10px;
+}
+.good-list-item-imgbg {
+	position: absolute;
+	left: 15px;
+	width:109px;
+	height: 109px;
+}
+.good-list-item-img {
+	width: 100%;
+	height: 100%;
+}
+.good-list-item-img-hot {
+	position: absolute;
+	width: 30px;
+	height: auto;
+	left: 0;
+	top: 0;
+}
+.good-list-item-title {
+	position: absolute;
+	left: 135px;
+	right: 10px;
+	top: 15px;
+	font-size: 15px;
+	display:-webkit-box;
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.good-list-item-goodrate {
+	position: absolute;
+	left: 135px;
+	right: 10px;
+	top: 60px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #999;
+}
+.good-list-item-price-bg {
+	position: absolute;
+	left: 135px;
+	right: 10px;
+	bottom: 15px;
+	height: 19px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	margin-top: 16px;
+}
+.good-list-item-price-rmb {
+	float: left;
+	color: #FD555A;
+	font-size: 13px;
+	margin-top: 0.5px;
+	padding-right: 3px;
+}
+.good-list-item-price {
+	color: #FD555A;
+	float: left;
+	font-size: 19px;
+	line-height: 19px;
+	
+}
+.good-list-item-jdprice {
+	color: #999;
+	float: left;
+	font-size: 12px;
+	line-height: 13px;
+	text-decoration: line-through;
+	padding-left: 5px;
+	margin-top: 5px;
+}
+
+
+.good-brand-bg {
+	position: fixed;
+	top: 99px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+	display: none;
+}
+.good-brand-list {
+	height: 200px;
+	background-color: white;
+	overflow: auto;
+	
+}
+.good-brand-list-item {
+	width: 50%;
+	float: left;
+	line-height: 40px;
+	font-size: 15px;
+	padding-left: 15px;
+	color: #333333;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.good-brand-list-item.brand-active {
+	color: #FD555A;
+}
+
+.good-brand-toolbar {
+	height: 45px;
+	width: 100%;
+	font-size: 18px;
+}
+.good-brand-toolbar-reset {
+	float: left;
+	width: 50%;
+	text-align: center;
+	line-height: 44px;
+	background-color: white;
+	border-top: 1px solid #E5E5E5;
+}
+.good-brand-toolbar-sure {
+	float: left;
+	width: 50%;
+	text-align: center;
+	line-height: 45px;
+	color: white;
+	background-color: #FD555A;
+}

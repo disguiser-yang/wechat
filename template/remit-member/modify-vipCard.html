@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>修改绑定会员卡</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+        <link rel="stylesheet" href="../../css/remit-member/enter-union-apply.css">
+        
+    </head>
+
+    <body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--提示-->
+    <div id="tip"><div id="tip-wrap"><div id="tip-box"></div></div></div>
+    <!--具体内容-->
+    <form class="mui-input-group" id="form-submit" enctype="multipart/form-data">
+        <div id="bind-vip">
+            <div class="mui-input-row">
+                <div class="border-btm">
+                    <label>卡号</label>
+                    <input type="text" name="cardNo" class="inputInform cardNo"  placeholder="请输入19位工会会员卡号" autocomplete="off" />
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <div class="border-btm">
+                    <label>密码</label>
+                    <input type="text" name="password" class="inputInform password" placeholder="请输入6位密码" autocomplete="off" />
+                </div>
+            </div>
+            <div class="mui-button-row records-btn">
+                <button type="button" class="mui-btn mui-btn-danger my-btn next" >下一步</button>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/form.js"></script>
+    <script src="../../lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script src="../../js/remit-member/modify-vipCard.js"></script>
+    <script>
+
+    </script>
+    </body>
+
+</html>

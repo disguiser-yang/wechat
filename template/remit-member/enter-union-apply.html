@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>申请入会</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link href="../../css/public/mui.picker.css" rel="stylesheet" />
+        <link href="../../css/public/mui.poppicker.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+        <link rel="stylesheet" href="../../css/remit-member/enter-union-apply.css">
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--提示-->
+    <div id="tip"><div id="tip-wrap"><div id="tip-box"></div></div></div>
+    <!--具体内容-->
+    <form class="mui-input-group" id="form-submit" enctype="multipart/form-data">
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>姓名</label>
+                <input type="text" name="name" class="input" value="" placeholder="请输入姓名" autocomplete="off" />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>性别</label>
+                <span class="mui-radio mui-left sex-box first-box">
+                  <input name="sex" type="radio" checked value="true" />男
+                </span>
+                <span class="mui-radio mui-left sex-box">
+                    <input name="sex" type="radio" value="false"/>女
+                </span>
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm mui-navigate-right">
+                <label>民族</label>
+                <input type="text" id='showUserPicker' name="nationality" class="" value="" placeholder="请选择民族" readonly onfocus="this.blur();" />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>身份证号</label>
+                <input type="text" name="IDcard" class="id-num input" value="" placeholder="请输入身份证号" autocomplete="off" />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>手机号</label>
+                <input type="text" name="mobile" class="phone-num input" value="" placeholder="请输入手机号" autocomplete="off" />
+            </div>
+        </div>
+        <div class="mui-input-row mt-1">
+            <div class="border-btm mui-navigate-right">
+                <label>所在单位</label>
+                <input type="text" name="department" class="" id="department" value="" placeholder="请选择所在单位" autocomplete="off" onfocus="this.blur();" />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>农村籍职工</label>
+                <span class="mui-radio mui-left sex-box first-box">
+                    <input name="village" type="radio" checked value="false"/>否
+                </span>
+                 <span class="mui-radio mui-left sex-box">
+                    <input name="village" type="radio" value="true" />是
+                </span>
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm ">
+                <label>政治面貌</label>
+                <input type="text" id='politicsPicker' name="politicsId" class="politics" placeholder="请选择政治面貌" readonly onfocus="this.blur();"/>
+            </div>
+        </div>
+        <div id="detail">
+	        <div class="mui-input-row">
+	            <div class="border-btm mui-navigate-right" >
+	                <label>区市县/产业</label>
+	                <input type="text" name="districtId" class="districtPicker" id="district" value="" placeholder="请选择" autocomplete="off" readonly onfocus="this.blur();"/>
+	            </div>
+	        </div>
+	        <div class="mui-input-row">
+	            <div class="border-btm mui-navigate-right"  >
+	                <label id="long-label">乡镇(街道)<br/>/工业园区</label>
+	                <input type="text" name="streetId" class="streetPicker" id="street" value="" placeholder="请选择" autocomplete="off" readonly onfocus="this.blur();"/>
+	            </div>
+	        </div>
+	        <div class="mui-input-row">
+	            <div class="border-btm" >
+	                <label>地址</label>
+	                <input type="text" name="address" class="" id="address" value="" placeholder="请输入联系地址" autocomplete="off" readonly/>
+	            </div>
+	        </div>
+        </div>
+        <div id="footer">
+            <div class="mui-button-row records-btn">
+                <button type="button" class="mui-btn mui-btn-danger my-btn btn-success" >提  交</button>
+            </div>
+        </div>
+    </form>
+
+    <div id="unit">
+        <div class="mui-input-row">
+            <span class="mui-icon mui-icon-closeempty close-icon"></span>
+            <header class="text-c">工作单位</header>
+        </div>
+        <div class="input-wrap">
+            <input type="text" id="search-input" placeholder="请输入搜索内容" style="width:82%">
+            <input type="button" value="确定" class="sure" >
+        </div>
+        <!--下拉刷新容器-->
+        <div id="pullrefresh" class="mui-content mui-scroll-wrapper mt-1">
+            <div class="mui-scroll">
+                <!--数据列表-->
+                <div id="list-wrap">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--无内容的输入框-->
+    <div id="import" class="cancel-import">
+         <div class="import-wrap">
+             <div id="input-box">
+                 <input type="text" id="handleSearch" placeholder="请输入您的工作单位">
+             </div>
+             <div id="button-row">
+                 <div id="cancel">取消</div><div id="submit">提  交</div>
+             </div>
+         </div>
+    </div>
+    <!--有无单位-->
+    <div id="hasUnit" >
+        <div id="has">有工作单位</div>
+        <div id="none">无工作单位</div>
+    </div>
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/picker/mui.picker.js"></script>
+    <script src="../../lib/picker/mui.poppicker.js"></script>
+    <script src="../../lib/form.js"></script>
+    <script src="../../lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script src="../../js/public/config.js"></script>
+    <script src="../../js/remit-member/enter-union-apply.js"></script>
+    <script>
+
+
+    </script>
+    </body>
+
+</html>

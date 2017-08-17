@@ -1,0 +1,80 @@
+/*参保查询*/
+.mui-input-row label~input, .mui-input-row label~select,
+.mui-input-row label~textarea  {
+    text-align: right;
+}
+.mui-input-group {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+}
+.mui-input-group .mui-input-row {
+    padding: 0 1rem;
+    height: 2.25rem;
+    background-color: white;
+}
+.mui-input-group .mui-input-row:after,
+.mui-input-group:after {
+    position: static;
+}
+.border-btm {
+    height: 100%;
+    border-bottom: 1px solid #f5f5f5;
+}
+.my-btn {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 90%;
+    font-size: .8rem;
+}
+.btn-fail{
+    border:1px solid #ccc;
+    background-color: #ccc;
+}
+.btn-success{
+    border:1px solid #EC2619;
+    background-color: #EC2619;
+}
+.mui-input-row label{
+    padding:.8rem 0;
+    width: 40%;
+    color: #333;
+    font-size: .7rem;
+}
+.mui-input-row label~input{
+    padding: 0;
+    width: 60%;
+    height: 2.3rem;
+    font-size: .7rem;
+}
+/*保险查询结果*/
+#insurance-wrap{
+    display: none;
+}
+#insurance-wrap .label{
+    padding-left: 1rem;
+    width: 30%;
+    color: #666;
+}
+#insurance-wrap .infor{
+    padding-right: 1rem;
+    width: 70%;
+}
+#insurance-wrap .tip{
+    padding-left: 1rem;
+    line-height: 1.5rem;
+    color: #666;
+}
+.personal-infor,
+.insurance-infor{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: white;
+    font-size: .65rem;
+}
+.personal-infor div,
+.insurance-infor div{
+    line-height: 1.5rem;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="dns-prefetch" href="_SERVER_">
+    <link rel="dns-prefetch" href="_CDNSERVER_">
+    <link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>和信通京东商城</title>
+    <link rel="stylesheet" href="../../common/css/mui.min.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../../common/css/appui.css" />
+</head>
+
+<body>
+    <div class="mui-content mui-fullscreen" style="overflow: auto;" id="homePageId">
+        <!-- Home Page Content -->
+        <div id="searchbox" class="home-search-holder">
+            <form id="searchForm" action="#" onsubmit="return false;">
+                <input class="home-search-box" id="homeSearchBox" type="text" placeholder="搜索商品/品牌/分类" onfocus="hideNav()" onblur="showNav()" />
+            </form>
+        </div>
+        <div class="mui-content" id="homePage">
+            <!-- Banner -->
+            <div id="banner">
+                <script type="text/html" id="homePageTemplate">
+                    <div id="slider" class="mui-slider">
+                        <div class="mui-slider-group mui-slider-loop">
+                            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#" type="1" index={{ad.length-1}} gotype={{bannerLast.goType}} adid={{bannerLast.id}} {{if bannerLast.goType==2}}url={{bannerLast.content}}{{/if}}>
+                                    <img src={{bannerLast.img}}>
+                                </a>
+                            </div>
+                            {{each ad as item index}}
+                            <div class="mui-slider-item">
+                                <a href="#" type="1" index={{index}} gotype={{item.goType}} adid={{item.id}} {{if item.goType==2}}url={{item.content}}{{/if}}>
+                                    <img src={{item.img}}>
+                                </a>
+                            </div>
+                            {{/each}}
+                            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                            <div class="mui-slider-item mui-slider-item-duplicate">
+                                <a href="#" type="1" index="0" gotype={{bannerFirst.goType}} adid={{bannerFirst.id}} {{if bannerFirst.goType==2}}url={{bannerFirst.content}}{{/if}}>
+                                    <img src={{bannerFirst.img}}>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mui-slider-indicator">
+                            {{each ad as item index}}
+                            <div class="mui-indicator"></div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </script>
+            </div>
+
+            <!-- navigation items -->
+            <div id="navigation">
+                <script type="text/html" id="navigationTemplateId">
+                    {{each btn as item index}}
+                    <div class="home-navigation-item">
+                        <a class="home-navigation-item-a" href="#" gotype={{item.goType}} adid={{item.id}} url={{item.content}} type="2" index={{index}}>
+                            <img class="home-navigation-item-img" src={{item.img}} />
+                        </a>
+                    </div>
+                    {{/each}}
+                </script>
+            </div>
+        </div>
+
+        <!-- Hot Recommened -->
+        <div id="homeRecommendTitle">
+            <div class="home-recommend-table-head">
+                <div class="home-recommend-table-line"></div>
+                <div class="home-recommend-table-desc">本期热卖推荐</div>
+                <div class="home-recommend-table-line"></div>
+            </div>
+        </div>
+        <div class="home-recommend-table" id="hotRecommendId">
+            <script type="text/html" id="hotRecommendTemplateId">
+                {{each data as item index}}
+                <div class="home-recommend-table-bg">
+                    <div class="home-recommend-table-item" sku={{item.sku}}>
+                        <div class="home-recommend-table-imgbg">
+                            <img class="home-recommend-table-img" data-lazyload={{imgbase+item.img}} src="../img/default.png" />
+                        </div>
+                        <div class="home-recommend-table-title">{{item.name}}{{item.name}}</div>
+                        <div class="home-recommend-table-price">
+                            <div class="home-recommend-table-price-rmb">¥</div>
+                            <div class="home-recommend-table-price-price">{{item.price}}</div>
+                        </div>
+                        <div class="home-recommend-table-bottom">
+                            <div class="home-recommend-table-jdprice">{{if item.price
+                                <item.jdPrice}}京东价:¥{{item.jdPrice}}{{/if}}</div>
+                                    <div class="home-recommend-table-sales">{{if item.sales>0}}已售:{{item.sales}}{{/if}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+            </script>
+            </div>
+        </div>
+        <div class="app-backtop" id="backTop"></div>
+        <script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+        <script type="text/javascript" src="../../common/js/app.ui.js"></script>
+        <script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../../common/js/common.js"></script>
+        <script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+        <script type="text/javascript" src="../../common/js/mui.lazyload.js"></script>
+        <script type="text/javascript" src="../../common/js/mui.lazyload.img.js"></script>
+        <script type="text/javascript" src="../js/home.js?v=1.0.0"></script>
+        <script>
+            function hideNav() {
+                $('nav.mui-bar', parent.document).hide();
+                // $('nav.mui-bar', parent.document).css({
+                //     'position': 'fixed',
+                //     'bottom': '0px'
+                // });
+            }
+
+            function showNav() {
+                $('nav.mui-bar', parent.document).show();
+            }
+        </script>
+</body>
+
+</html>

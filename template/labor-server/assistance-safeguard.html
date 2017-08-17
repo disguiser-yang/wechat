@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>互助保障</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../css/public/list.css">
+    </head>
+
+    <body>
+        <!--loading-->
+        <div id="load-wrap">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+        <!--下拉刷新容器-->
+        <div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+            <div class="mui-scroll">
+                <div class="mui-slider" id="slider">
+                    <div class="mui-slider-group mui-slider-loop" id="slider-loop">
+
+                    </div>
+                    <div class="mui-slider-indicator" id="slider-indicator">
+
+                    </div>
+                </div>
+
+                <div class="mui-content" id="mui-content">
+                    <div class="mui-row title-column">
+                        <div class="mui-col-xs-4" id="working-dynamic">
+                            <div class="mui-table-view-cell">
+                                <a class="text-c a-box">
+                                    <span class="icon-title mentality-icon-title1">
+                                        <img src="../../images/labor-server/working-dynamic.png">
+                                    </span>
+                                    <span>工作动态</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mui-col-xs-4" id="policy-publicity">
+                            <div class="mui-table-view-cell">
+                                <a class="text-c a-box" href="">
+                                    <span class="icon-title mentality-icon-title2">
+                                         <img src="../../images/labor-server/policy-publicity.png">
+                                    </span>
+                                    <span>政策宣传</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mui-col-xs-4" id="insured-query">
+                            <div class="mui-table-view-cell">
+                                <a class="text-c a-box" href="">
+                                <span class="icon-title mentality-icon-title3">
+                                     <img src="../../images/labor-server/insured-query.png">
+                                </span>
+                                    <span>参保查询</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--数据列表-->
+                <ul class="mui-table-view mui-table-view-chevron mt-1" id="content-list">
+
+                </ul>
+            </div>
+        </div>
+
+        <!--轮播开始-->
+        <script type="text/html" id="carousel-loop">
+            <div class="mui-slider-item ${className}">
+                <a href=${targetUrl}>
+                    <img data-lazyload=${imageUrl} />
+                </a>
+            </div>
+        </script>
+        <!--轮播模板结束-->
+
+
+        <!--列表模板开始-->
+        <script type="text/html" id="list">
+            <li class="mui-table-view-cell mui-media list" id=${issueId}>
+                <a>
+                    <img class="mui-media-object mui-pull-left" data-lazyload=${cover} />
+                    <div class="mui-media-body">
+                        <p class='mui-ellipsis'>${title}</p>
+                        <span class="c-999">${createTime}</span>
+                    </div>
+                </a>
+            </li>
+        </script>
+        <!--列表模板结束-->
+
+        <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../js/public/fontsize.js"></script>
+        <script src="../../lib/mui/dist/js/mui.min.js"></script>
+        <script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+        <script src="../../lib/mui/mui.lazyload.js"></script>
+    	<script src="../../lib/mui/mui.lazyload.img.js"></script>
+        <script src="../../js/public/list.js"></script>
+        <script src="../../js/labor-server/assistance-safeguard.js"></script>
+        <script>
+
+        </script>
+    </body>
+
+</html>

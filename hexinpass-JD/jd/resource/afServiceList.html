@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>售后服务查询</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../../common/css/appui.css" />	
+		<link rel="stylesheet" href="../css/afServiceList.css" />	
+	</head>
+	<body>
+		<div class="mui-content" id="content">
+			<div class="af-list" id="serviceList">
+				<script type="text/html" id="templateServiceList">
+					{{each list as item index}}
+					<div class="af-list-item" order={{item.AfsServiceId}}>
+						<div class="af-list-item-header">
+							<div class="af-list-item-header-order">服务单号：{{item.AfsServiceId}}</div>
+							<div class="af-list-item-header-state">{{item.AfsServiceStepName}}</div>
+						</div>
+						<!--<div class="af-list-item-desc">您的服务单已申请成功，待售后审核中</div>-->
+						<div class="af-list-item-product">
+							<div class="af-list-item-product-imgbg">
+								<img class="af-list-item-product-img" src={{imgbase+item.Image}} />
+							</div>
+							<div class="af-list-item-product-title">{{item.Name}}</div>
+							<div class="af-list-item-product-time">申请时间：{{item.CreateTime}}</div>
+						</div>
+						<div class="af-list-item-operate">
+							<div class="af-list-item-operate-progress" order="">进度查询</div>
+							{{if item.Cancel == 1 || (item.Cancel == 0 && item.State <= 22)}}
+								<div class="af-list-item-operate-cancel" order="">取消申请</div>
+							{{/if}}
+						</div>
+					</div>
+					{{/each}}
+				</script>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+	<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+	<script type="text/javascript" src="../js/asServiceList.js"></script>
+</html>

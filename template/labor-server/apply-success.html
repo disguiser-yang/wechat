@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>报名成功</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link href="../../css/public/hint.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="leave-words-success"></div>
+        <p class="hint hint-success">报名成功，请等待审核</p>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn my-btn btn-success">确  定</button>
+        </div>
+    </body>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script>
+        $("body").on('click','.btn-success',function(){
+            window.open('quality-promotion.html')
+        })
+    </script>
+</html>

@@ -1,0 +1,665 @@
+    /*普惠支付*/
+    
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    #pay-wrap {
+        height: 100%;
+        /*background-color: #ec291b;*/
+        background: url(../images/bg-pay.png);
+        /*background-size: 100%;*/
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .pay-wrap {
+        box-sizing: border-box;
+        padding: .6rem 0;
+        width: 100%;
+        padding-bottom: 0rem;
+        /*height: 100%;*/
+        /*display:none;*/
+    }
+    
+    .pay-content {
+        position: relative;
+        margin: auto;
+        /*height: 81%;*/
+        height: 18.1rem;
+        width: 13.88rem;
+        border-radius: 13px;
+        background-color: white;
+        overflow: hidden;
+    }
+    
+    .pay-content .bar-code {
+        margin: 1.634rem auto .0rem;
+        width: 10.75rem;
+        height: 3rem;
+    }
+    
+    .pay-content .bar-code #canvas {
+        width: 10.75rem;
+        height: 3rem;
+    }
+    
+    .pay-content .bar-code-num {
+        margin: 0;
+        font-size: .8rem;
+        color: #000;
+        padding-bottom: 0.2rem;
+    }
+    
+    .pay-content .QR-code {
+        margin: .0rem auto;
+        width: 8rem;
+        height: 8rem;
+    }
+    
+    .pay-content .QR-code canvas {
+        width: 8rem;
+        height: 8rem;
+    }
+    
+    .pay-content .tip {
+        margin-top: 1rem;
+        font-size: .6rem;
+        text-align: center;
+    }
+    
+    .pay-content .wallet-infor {
+        position: absolute;
+        bottom: 0;
+        box-sizing: border-box;
+        padding: 0 .6rem;
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        background-color: #f3f3f3;
+        font-size: .65rem;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    
+    .pay-content .wallet-infor>div {
+        float: left;
+    }
+    
+    .wallet-infor .balance {
+        margin-left: .5rem;
+    }
+    
+    .refresh-btn {
+        text-align: center;
+        color: white;
+        margin: 0.8rem 0rem;
+    }
+    
+    .refresh-btn .refresh-alert {
+        color: #ff99ac;
+    }
+    
+    .refresh-btn .refresh {
+        display: inline-block;
+        /*height: .7rem;
+    width: 4rem;*/
+        /*padding: 0.4rem 0rem;*/
+        /*background: url(../../images/sub-life/refreash.png);*/
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        background-size: 25%;
+        padding-left: 0.5rem;
+    }
+    
+    .refresh-btn .refresh img {
+        /*margin-right: .2rem;*/
+        width: .75rem;
+        /*height: 100%;*/
+        /*padding-bottom: 0.1rem;*/
+        vertical-align: bottom;
+    }
+    /*选择支付类型*/
+    
+    .close-icon {
+        position: absolute;
+        /*left: .5rem;
+    top: 0.55rem;*/
+        left: 0rem;
+        top: 0rem;
+        height: 2rem;
+        width: 2rem;
+        background: url(../../images/remit-member/icon-close.png);
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .select-type-wrap {
+        position: fixed;
+        bottom: -18rem;
+        width: 100%;
+        background-color: #f5f5f5;
+        display: none;
+    }
+    
+    .select-type-wrap header {
+        border-bottom: 1px solid #ddd;
+        line-height: 2rem;
+        text-align: center;
+        background-color: white;
+    }
+    
+    .select-type-wrap .tip {
+        padding-left: .3rem;
+        font-size: .55rem;
+        line-height: 1.5rem;
+        color: #666;
+    }
+    
+    .select-type-wrap .type>div {
+        padding-left: 1.2rem;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .select-type-wrap .type:last-child>div {
+        border: none;
+    }
+    
+    .select-type-wrap .balance>div {
+        background: url("../../images/remit-member/ic_balance@2x.png") no-repeat .1rem 50%;
+        background-size: auto 45%;
+    }
+    
+    .select-type-wrap .add-card>div {
+        background: url("../../images/remit-member/ic_Add%20bank%20card@2x.png") no-repeat .1rem 50%;
+        background-size: auto 40%;
+    }
+    
+    .select-type-wrap .bank-card>div {
+        background: url("../../images/remit-member/banks/yinlian.png") no-repeat 0 53%;
+        background-size: auto 50%;
+    }
+    
+    .select-type-wrap .active {
+        background: url("../../images/remit-member/ic_Hook@2x.png") no-repeat 95% 50%;
+        background-size: auto 15%;
+    }
+    
+    .select-type-wrap .type {
+        line-height: 2rem;
+        padding-left: .5rem;
+        background-color: white;
+    }
+    
+    .select-type-wrap .select-type-box {
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .bank {
+        display: none;
+        max-width: 80%;
+    }
+    
+    .change-pay-type {
+        padding-right: .5rem;
+        /*background: url("../../images/remit-member/ic_Arrow@2x.png") no-repeat 100% 50%;*/
+        background-size: auto 30%;
+        padding-left: 1rem;
+    }
+    
+    .change-pay-type span {
+        color: #fe0130;
+    }
+    
+    .bank-server {
+        background-color: white;
+        text-align: center;
+        font-size: .5rem;
+        color: #999;
+        line-height: 3rem;
+    }
+    
+    .bank-name {
+        display: inline-block;
+        max-width: 74%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: bottom;
+    }
+    
+    .identify {
+        padding-bottom: .38rem;
+        /*text-align: center;*/
+        color: white;
+        width: 14.25rem;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .identify img {
+        height: 1.5rem;
+        vertical-align: middle;
+        /*margin-right: .6rem;*/
+    }
+    /*免密支付设置*/
+    
+    .no-password-wrap {
+        position: fixed;
+        bottom: -18rem;
+        width: 100%;
+        background-color: #ec291b;
+        /*display: none;*/
+    }
+    
+    .no-password-wrap>div {
+        padding: 0 .3rem;
+    }
+    
+    .no-password-wrap>div p {
+        margin: 0;
+        width: 100%;
+        line-height: 1.8rem;
+        background-color: white;
+        text-align: center;
+        color: #333;
+    }
+    
+    .no-password-wrap>div .help {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border-bottom: 1px solid #ececec;
+    }
+    
+    .no-password-wrap>div .password-set {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        margin-bottom: .2rem;
+    }
+    
+    .refresh-btn .set {
+        /*padding: .6rem .4rem;*/
+        padding: .4rem .4rem;
+        display: inline-block;
+    }
+    
+    .no-password-wrap>div .cancel {
+        margin-bottom: .2rem;
+        border-radius: 3px;
+    }
+    
+    .no-password-box {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .2);
+    }
+    /*同意协议*/
+    
+    .mui-checkbox input[type=checkbox] {
+        position: static;
+        /*margin-left: .8rem;*/
+        width: .8rem;
+        height: .8rem;
+    }
+    
+    p.agreement {
+        margin-top: .5rem;
+        font-size: .6rem
+    }
+    
+    .mui-checkbox input[type=checkbox]:before {
+        font-size: .8rem;
+    }
+    
+    .mui-checkbox input[type=checkbox]:checked:before {
+        color: #ec291b;
+    }
+    
+    #all-canbe-accept {
+        margin: 0rem auto 0rem;
+        height: 1.2rem;
+        line-height: 1.2rem;
+    }
+    
+    .identify .gonghui-icon {
+        width: 4.55rem;
+        height: 1.49rem;
+        float: left;
+        /*display: block;*/
+    }
+    
+    .identify .hexinpass {
+        width: 4.5rem;
+        height: 1.3rem;
+        float: right;
+    }
+    
+    #QR-code {
+        margin-top: 0rem;
+    }
+    
+    .provide {
+        margin: 0;
+        text-align: center;
+        color: #ff99ac;
+        font-size: 0.55rem;
+        /*padding-top: 0.5rem;*/
+    }
+    
+    .provide .link-to-about-us i {
+        margin: 0 0.3rem;
+        margin-bottom: 0.05rem;
+        display: inline-block;
+        width: 0.21rem;
+        height: 0.38rem;
+        background: url(../images/arr-right.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .open-puhui-wallet {
+        padding: 0.64rem;
+    }
+    
+    .open-puhui-wallet .info {
+        font-size: 0.68rem;
+        color: #000000;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .set-pay-pwd .open-step-1 {
+        color: #a8abb4;
+    }
+    
+    .open-puhui-wallet .open-step-1 {
+        text-align: center;
+        margin-top: 1.7rem;
+        font-size: 0.64rem;
+        color: #818495;
+    }
+    
+    .open-puhui-wallet .open-step-2 {
+        text-align: center;
+        margin-top: 1.06rem;
+        font-size: 0.64rem;
+        color: #818495;
+    }
+    
+    .open-puhui-wallet .open-step-3 {
+        text-align: center;
+        margin-top: 1.06rem;
+        font-size: 0.64rem;
+        color: #818495;
+    }
+    
+    .open-btn {
+        margin-top: 3rem;
+    }
+    
+    .set-pay-pwd .open-step-1 {
+        margin-top: 1rem;
+    }
+    
+    .set-pay-pwd .open-step-2 {
+        text-align: left;
+        margin-top: 1.92rem;
+        color: #000;
+        text-indent: 1em;
+    }
+    
+    .open-btn a {
+        display: block;
+        width: 12.5rem;
+        height: 1.7rem;
+        background-color: #fe0130;
+        text-align: center;
+        color: #fff;
+        line-height: 1.7rem;
+        font-size: 0.68rem;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
+    
+    .open-btn a:active {
+        background-color: #fe5d64;
+    }
+    
+    .hexinpass-icon-wrap {
+        padding-bottom: 0.2rem;
+    }
+    
+    .pwd-describe {
+        margin: 0.4rem 0 0.4rem 1rem;
+        color: #888888;
+        font-size: 0.55rem;
+    }
+    
+    #btn-success {
+        margin-bottom: 0.85rem;
+    }
+    
+    .progress-bar {
+        height: 2.13rem;
+        line-height: 2.13rem;
+        background: #fff;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 0.64rem;
+    }
+    
+    .progress-bar div {
+        width: 33.3%;
+        text-align: center;
+        display: inline-block;
+        float: left;
+    }
+    
+    .actived {
+        color: #ec2619;
+    }
+    
+    #hint-success {
+        margin-top: 1rem;
+    }
+    
+    .convenient-icon {
+        width: 4.08rem;
+        height: 4.08rem;
+        margin: 2.32rem auto 1rem;
+        background: url('../../images/remit-member/convenient-icon.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    
+    .convenient-icon {
+        width: 4.08rem;
+        height: 4.08rem;
+        margin: 2.32rem auto 1rem;
+        background: url('../../images/remit-member/success.png');
+        background-size: 99%;
+        background-repeat: no-repeat;
+    }
+    
+    .convenient-content {
+        margin-bottom: 1rem;
+    }
+    
+    .convenient-content p {
+        margin: 0 2rem;
+        text-align: center;
+    }
+    
+    #btn-convenient-pay {
+        background: #ed3e35;
+        border: 1px solid #ed3e35;
+        margin-bottom: 0.87rem;
+    }
+    
+    #convenient-pay-wrap #skip {
+        margin: 0;
+        text-align: center;
+        font-size: 0.6rem;
+        padding: 1rem 0rem;
+    }
+    
+    #member-365 {
+        margin-top: 0.3rem;
+    }
+    
+    #next-step-wrap button {
+        margin-bottom: 0.2rem;
+        margin-top: 0.2rem;
+    }
+    
+    .float-mask {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, .2);
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        z-index: 0;
+        display: none;
+    }
+    
+    #change-pay-wrap {
+        position: absolute;
+        right: 0.6rem;
+        top: 0rem;
+    }
+    
+    .convenient-content-pocket {
+        width: 13.9rem;
+        height: 13.37rem;
+        background-image: url(../../images/remit-member/pocket-money-1.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 1.83rem auto 0rem;
+    }
+    
+    .identify {
+        position: relative;
+    }
+    
+    .puhui-store {
+        position: absolute;
+        right: 0.5rem;
+        /*font-size: 0.51rem;*/
+        top: 0.27rem;
+        padding-right: 0.4rem;
+    }
+    
+    .puhui-store i {
+        height: 100%;
+        width: 0.36rem;
+        display: block;
+        position: absolute;
+        background: url(../../images/remit-member/icon-arr-right.png);
+        background-repeat: no-repeat;
+        background-size: 0.36rem 0.68rem;
+        right: 0rem;
+        top: 0rem;
+        background-position: center;
+    }
+    
+    .hexinpass-icon-wrap img {
+        width: 4.5rem;
+        height: 1.30rem;
+        margin: 0 auto;
+        display: block;
+        /*margin-bottom: 0.2rem;*/
+    }
+    
+    .alert-info {
+        display: none;
+        height: 2.3rem
+    }
+    
+    .pwd-wrap input {
+        font-size: 0.76rem;
+    }
+    
+    #pwd-input-wrap input {
+        font-size: 1.4rem;
+    }
+    
+    .open-puhui-wallet-icon i {
+        width: 2.56rem;
+        height: 2.56rem;
+        display: block;
+        background-image: url(../images/icon-success.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 1.8rem auto 1rem;
+    }
+    
+    .open-puhui-wallet-success {
+        padding: 0 0.64rem;
+    }
+    
+    .open-puhui-wallet-success p {
+        text-align: center;
+        color: #818495;
+    }
+    
+    .puhui-red-bag-wrap {
+        height: 2.13rem;
+        margin-top: 2.88rem;
+    }
+    
+    .puhui-red-bag-wrap .puhui-left {
+        height: 2.13rem;
+        width: 1.67rem;
+        float: left;
+    }
+    
+    .puhui-red-bag-wrap .puhui-left img {
+        height: 2.13rem;
+        width: 1.67rem;
+    }
+    
+    .puhui-red-bag-wrap .puhui-right {
+        height: 2.13rem;
+        /*width: 1.67rem;*/
+        padding-left: 0.85rem;
+        float: left;
+    }
+    
+    .puhui-red-bag-wrap .puhui-right p {
+        text-align: left;
+    }
+    
+    .puhui-red-bag-wrap .puhui-right-amount {
+        color: #f15c53;
+        font-size: 0.76rem;
+    }
+    
+    .puhui-red-bag-wrap .puhui-right-info {
+        padding-top: 0.1rem;
+    }
+    
+    .open-puhui-wallet-success .open-btn {
+        margin-top: 2.56rem;
+    }
+    
+    .no-enough-money p.alert-info-money {
+        margin-top: 5.72rem;
+        color: #818495;
+        text-align: center;
+    }
+    
+    .no-enough-money p.alert-tip {
+        text-align: center;
+        color: #363a45;
+        margin-top: 1.28rem;
+    }

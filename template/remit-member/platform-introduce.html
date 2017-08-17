@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>成都职工平台介绍</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="platform-introduce-wrap">
+        <div class="platform-introduce-detail">
+            <p>“成都职工”移动互联网+普惠平台旨在为广大工会会员提供基于移动互联网，线上线下互联互通的普惠服务，同时为广大会员提供更便捷更实惠的优质生活消费增值服务。使用“成都职工”普惠钱包，在平台上健康阳光诚信联盟商家进行扫码消费，每一笔消费均可获得总工会普惠平台提供的不同程度的红包返利，更可享有全年365天每笔消费随机立送，最高免单的特权！平台还将持续推出劲爆活动，使您的生活更有幸福感！
+            </p>
+            <p>成都职工普惠平台是由本土最大的第三方支付机构四川商通实业有限公司承建并运营。
+            </p>
+        </div>
+
+        <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../js/public/fontsize.js"></script>
+        <script src="../../lib/mui/dist/js/mui.min.js"></script>
+</body>
+
+</html>
+<style>
+    .platform-introduce-wrap {
+        padding: 0.6rem;
+        color: #878787;
+    }
+    
+    .platform-introduce-wrap p {
+        line-height: 1.05rem;
+        font-size: 0.65rem;
+        text-indent: 2em;
+    }
+</style>
+<script>
+    $(function() {
+        pushHistory();
+        window.addEventListener("popstate", function(e) {
+            //监听到了浏览器的返回按钮事件
+
+            window.location.href = 'about-us.html';
+
+        }, false);
+
+        function pushHistory() {
+            window.history.pushState('', "title", "#");
+        }
+
+    });
+</script>

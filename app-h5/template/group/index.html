@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>拼团嗨购</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link href="../../css/index.css" rel="stylesheet">
+    <!--<link href="../../css/remit-member/pay-pwd.css" rel="stylesheet">
+    <link href="../../css/remit-member/set-pay-pwd.css" rel="stylesheet">
+    <link href="../../css/sub-life/puhui-pay.css" rel="stylesheet">-->
+</head>
+
+<body>
+    <!--loading-->
+    <div class='main-content'>
+        <!--首页-->
+        <div class='group-wrap' style="display:block;" class=''>
+
+            <div class='month-selected-wrap indexListMonth'>
+                <script type="text/html" id="indexList">
+                    <div class='month-selected-title'>
+                        本月精选
+                    </div>
+                    <div class='month-selected-content'>
+                        {{each list as value index}}
+                        <div class='month-selected-content-item'>
+                            <div class='month-selected-content-item-img' sku={{value.sku}}>
+                                <a href="detail.html?sku={{value.sku}}">
+                                    <img src={{value.thumbnailImage}} alt="">
+                                </a>
+                            </div>
+                            <div class='month-selected-content-item-info'>
+                                <p class='item-info-title'>{{value.name}}</p>
+                                <p class='item-info-price'>
+                                    <span class='price'>  
+                            <span class='label'>&yen; </span>
+                                    <span class='price-num'>{{value.shopPrice}}</span>
+                                    <span class='price-previous'>
+                            官方价：&nbsp;&yen;<span>{{value.price}}</span>
+                                    </span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        {{/each}}
+
+                    </div>
+
+                </script>
+            </div>
+
+            <div class='month-selected-wrap  week-wrap'>
+                <script type="text/html" id='indexListMonth'>
+                    <div class='month-selected-title week-wrap-title'>
+                        每周上新
+                    </div>
+                    <div class='month-selected-content'>
+                        {{each list as value index}}
+                        <div class='month-selected-content-item'>
+                            <div class='month-selected-content-item-img' sku={{value.sku}}>
+                                <a href="">
+                                    <img src={{value.thumbnailImage}} alt="">
+                                </a>
+                            </div>
+                            <div class='month-selected-content-item-info'>
+                                <p class='item-info-title'>{{value.name}}</p>
+                                <p class='item-info-price'>
+                                    <span class='price'>  
+                            <span class='label'>&yen; </span>
+                                    <span class='price-num'>{{value.shopPrice}}</span>
+                                    <span class='price-previous'>
+                            官方价：&nbsp;&yen;<span>{{value.price}}</span>
+                                    </span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </script>
+            </div>
+        </div>
+        <!--首页end-->
+        <!--我的订单-->
+        <div class='my-order-wrap' style='display:none;'>
+            <div class='my-order-content'>
+                <div class='no-order-content hide'>
+                    <div class='no-order'>
+                    </div>
+                    <p>暂无相关订单</p>
+                </div>
+                <div class='order-content'>
+                    <div class='order-item'>
+                        <div class='order-item-title'>
+                            订单号：<span>3972459796253</span>
+                        </div>
+                        <a href="">
+                            <div class='order-item-detail'>
+                                <div class='order-itme-detail-img'>
+                                    <img src="../../images/1.jpg" alt="">
+                                </div>
+                                <div class='order-itme-detail-info'>
+                                    <p class='detail-info-title'>雅诗兰黛红石榴套组 红石榴水+洁面+凝霜补水保湿滋养</p>
+                                    <p class='detail-info-title-specification'>
+                                        洁面50ml／水100ml／面霜30ml
+                                    </p>
+                                </div>
+                                <div class='order-itme-detail-price'>
+                                    <p class='detail-price'>
+                                        &yen;29.9
+                                    </p>
+                                    <p class='detail-number'>
+                                        X2
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class='order-item-number'>
+                            <p class='order-number-detail'>共2件 合计 59.8</p>
+                        </div>
+                    </div>
+                    <div class='order-item'>
+                        <div class='order-item-title'>
+                            订单号：<span>3972459796253</span>
+                        </div>
+                        <a href="">
+                            <div class='order-item-detail'>
+                                <div class='order-itme-detail-img'>
+                                    <img src="../../images/1.jpg" alt="">
+                                </div>
+                                <div class='order-itme-detail-info'>
+                                    <p class='detail-info-title'>雅诗兰黛红石榴套组 红石榴水+洁面+凝霜补水保湿滋养</p>
+                                    <p class='detail-info-title-specification'>
+                                        洁面50ml／水100ml／面霜30ml
+                                    </p>
+                                </div>
+                                <div class='order-itme-detail-price'>
+                                    <p class='detail-price'>
+                                        &yen;29.9
+                                    </p>
+                                    <p class='detail-number'>
+                                        X2
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class='order-item-number'>
+                            <p class='order-number-detail'>共2件 合计 59.8</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--我的订单end-->
+        <!--我的-->
+        <div class='mine-wrap' style="display:none;">
+            <div class='mine-top-title'>
+                <div class='mine-top-title-img'>
+                    <img src="../../images/1.jpg" alt="">
+                </div>
+                <p class='name'>小瓶子</p>
+            </div>
+            <div class='mine-option'>
+                <div class='mine-option-address'>
+                    <span>
+                    <i class='icon-address left-icon'></i>我的收货地址
+                    <i class='right-icon'></i>
+                    </span>
+                </div>
+                <div class='mine-option-service'>
+                    <a href="tel:028-8888888">
+                        <span>
+                        <i class='icon-service left-icon'></i>
+                    联系客服
+                    <i class='right-icon'></i>
+                    </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--我的end-->
+    </div>
+
+    <div class='tab-bar-bottom'>
+        <div class='tab-bar-items tab-bar-item1 actived'>
+            <span class='tab-bar-item1-span'></span>
+        </div>
+        <div class='tab-bar-items tab-bar-item2'>
+            <span class='tab-bar-item2-span'></span>
+        </div>
+        <div class='tab-bar-items tab-bar-item3'>
+            <span class='tab-bar-item3-span'></span>
+        </div>
+    </div>
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../js/public/config.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="../../common/js/app.ui.js"></script>
+    <script type="text/javascript" src="../../common/js/common.js"></script>
+    <script src="../../js/index.js"></script>
+</body>
+
+</html>

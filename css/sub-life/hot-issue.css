@@ -1,0 +1,35 @@
+/*轮播图*/
+.mui-slider-item img{
+    width: 100%;
+    height: 15.5rem;
+}
+
+/*热点咨询*/
+.mui-table-view .mui-media-object {
+    max-width: 11rem;
+    height: 9rem;
+    border-radius: 5px;
+    line-height: 9rem;
+}
+.mui-table-view-cell p{
+    margin-bottom: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/*热点咨询详情页*/
+.hot-content{
+    padding: 1rem;
+}
+.hot-content>h3{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+.hot-img-box{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.hot-img-box>img{
+    width: 100%;
+}

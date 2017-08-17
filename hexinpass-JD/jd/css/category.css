@@ -1,0 +1,99 @@
+.mui-row.mui-fullscreen>[class*="mui-col-"] {
+	height: 100%;
+}
+
+.mui-col-xs-3,
+.mui-col-xs-9 {
+	overflow-y: auto;
+	height: 100%;
+	border-right: none;
+}
+.mui-col-xs-3 {
+	background-color: RGBA(246, 247, 248, 1.00);
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+	color: #FD555A;
+}
+.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item, .mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item {
+	background-color: RGBA(246, 247, 248, 1.00);
+}
+.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item, .mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item.mui-active {
+	border-bottom: 1px solid white;
+}
+
+.mui-segmented-control .mui-control-item {
+	line-height: 50px;
+	width: 100%;
+}
+
+.mui-control-content {
+	display: block;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+	background-color: #fff;
+}
+
+.mui-table-view-cell {
+	padding: 0 10px;
+}
+.mui-table-view:before {
+	height: 0; 
+	background-color: white;
+}
+.mui-table-view:after {
+	height: 0; 
+	background-color: white;
+}
+
+.category-cell-title {
+	height: 40px;
+	width: 100%;
+	display: -webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    -webkit-box-orient: horizontal;
+    text-align: center;
+}
+.category-cell-title-line {
+	background-color: #FD555A;
+	width: 20px;
+	height: 1px;
+}
+.category-cell-title-text {
+	color: #FD555A;
+	font-size: 15px;
+	padding: 0 8px;	
+}
+.category-cell-item {
+	width: 33.33%;
+	height: 90px;
+	float: left;
+	margin: 10px 0;
+}
+.category-cell-item-imgbg {
+	width: 70px;
+	height: 70px;
+	margin: 0 auto;
+}
+.category-cell-item-img {
+	width: 100%;
+	height: 100%;
+}
+.category-cell-item-txt {
+	width:100%;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	color: #333;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.mui-table-view-cell.mui-active {
+	background-color: white;
+}
+.mui-table-view-cell:after {
+	background-color: white;
+}

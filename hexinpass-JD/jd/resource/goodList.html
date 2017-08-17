@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>商品列表</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../css/goodList.css" />		
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+	</head>
+	<body>		
+		<div class="mui-content" id="scrollList"> 
+			<div id="searchbox" class="home-search-holder">
+				<form id="searchForm" action="#" onsubmit="return false;"> 
+					<input class="home-search-box" id="keyWord" type="text" placeholder="搜索商品/品牌/分类" />
+					<input type="hidden" id="catId" />
+					<input type="hidden" id="order" value="4" />
+					<input type="hidden" id="brands" />
+					<input type="hidden" id="pageIndex" type="number" />
+				</form>
+			</div>
+			<div class="good-select-box" id="goodSelectBox">
+				<div class="good-select-box-type box-selected" id="hotSelectId">热门</div> 
+				<div class="good-select-box-type" id="priceSelectId" type="all">
+					<div class="good-select-box-type-desc">价格</div>
+					<div class="good-select-box-type-order">
+						<div class="good-select-box-type-order-up order-up-gray"></div>
+						<div class="good-select-box-type-order-down order-down-gray"></div> 
+					</div>
+				</div>
+				<!--<div class="good-select-box-type" id="markSelectId" type="all">
+					<div class="good-select-box-type-desc">评分</div>
+					<div class="good-select-box-type-order">
+						<div class="good-select-box-type-order-up" style="display: none;"></div>
+						<div class="good-select-box-type-order-down"></div>
+					</div>
+				</div>-->
+				<div class="good-select-box-type" id="saleSelectId" type="all">
+					<div class="good-select-box-type-desc">销量</div>
+					<div class="good-select-box-type-order">
+						<div class="good-select-box-type-order-up order-up-gray"></div>
+						<div class="good-select-box-type-order-down order-down-gray"></div>
+					</div>
+				</div>
+				<div class="good-select-box-type" show="0" id="brandSelectId">品牌</div>
+			</div>
+			<div class="good-top-position" id="goodTopPosition"></div>
+			<div class="good-list" id="goodListId">
+				<script type="text/html" id="goodListTemplateId">
+					{{each list as item index}}
+					    	<div class="good-list-item" sku={{item.sku}}>
+							<div class="good-list-item-imgbg">
+								<img class="good-list-item-img" data-lazyload={{imgbase+item.img}} src="../img/default.png" />
+								{{if item.isHot}}
+									<img class="good-list-item-img-hot" src="../img/hot.png" />
+								{{/if}}
+							</div>
+							<div class="good-list-item-title">{{item.name}}</div>
+							<div class="good-list-item-goodrate">{{item.goodRateString}}%好评率&nbsp;&nbsp;&nbsp;&nbsp;{{if item.sales > 0}}已售:{{item.sales}}{{/if}}</div>
+							<div class="good-list-item-price-bg">
+								<div class="good-list-item-price-rmb">¥ </div>
+								<div class="good-list-item-price">{{item.price}}</div>
+								{{if item.price < item.jdPrice}}
+									<div class="good-list-item-jdprice">京东价:¥{{item.jdPrice}}</div>
+								{{/if}}
+							</div>
+						</div>
+					{{/each}}	
+				</script>
+			</div>
+			<div class="app-backtop" id="backTop"></div>
+			<!-- brands select box -->
+			<div class="good-brand-bg" id="goodBrandListBg">
+				<div class="good-brand-list" id="goodBrandListId">
+					<script type="text/html" id="goodBrandTemplateId">
+						{{each list as item value}}
+							<div class="good-brand-list-item">{{item}}</div>
+						{{/each}}
+					</script>
+				</div>
+				<div class="good-brand-toolbar" id="goodBrandToolBar">
+					<div class="good-brand-toolbar-reset">重置</div>
+					<div class="good-brand-toolbar-sure">确定</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+		<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+		<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../common/js/common.js"></script>
+		<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+		<script type="text/javascript" src="../../common/js/mui.lazyload.js"></script>
+		<script type="text/javascript" src="../../common/js/mui.lazyload.img.js"></script> 
+		<script type="text/javascript" src="../js/goodList.js"></script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>撤销成功</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link href="../../css/public/hint.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="leave-words-success"></div>
+        <p class="hint hint-success">撤销成功</p>
+        <p class="mui-text-center price">￥0.00</p>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn my-btn btn-success" id="btn-success">确  定</button>
+        </div>
+    </body>
+
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script>
+	    var searchKey=window.location.search;
+	    var strs=searchKey.split("=");
+	    document.body.querySelector(".price").innerText='￥'+strs[1];
+        //支付成功跳到钱包
+        mui("body").on('tap','#btn-success',function(){
+            window.location.href='puhui-wallet.html';
+        });
+        pushHistory();
+        window.addEventListener("popstate", function(e) {
+            //监听到了浏览器的返回按钮事件
+        	window.location.href="puhui-wallet.html";
+        }, false);
+        function pushHistory() {
+            window.history.pushState('', "title", "");
+        }
+    </script>
+</html>

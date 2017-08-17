@@ -1,0 +1,10 @@
+#main-content {
+    height: 28rem!important;
+    background-image: url(../images/bg-s.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+
+.main-content-tip-img img {
+    width: 100%;
+}

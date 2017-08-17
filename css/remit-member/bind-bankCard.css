@@ -1,0 +1,482 @@
+/*入会申请*/
+
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea {
+    text-align: right;
+}
+
+.mui-input-group {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: transparent;
+}
+
+.mui-input-group .mui-input-row {
+    padding: 0 1rem;
+    height: 2.25rem;
+    background-color: white;
+}
+
+.mui-input-group .mui-input-row:after,
+.mui-input-group:after {
+    position: static;
+}
+
+.border-btm {
+    height: 100%;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.my-btn {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 90%;
+    font-size: .8rem;
+}
+
+.btn-fail {
+    border: 1px solid #ccc;
+    background-color: #ccc;
+}
+
+.btn-success {
+    border: 1px solid #EC2619;
+    background-color: #EC2619;
+}
+
+.submit,
+.up {
+    margin-top: 0;
+}
+
+.mui-input-row label {
+    padding: .8rem 0;
+    width: 40%;
+    color: #333;
+    font-size: .7rem;
+}
+
+.mui-input-row label~input {
+    padding: 0;
+    width: 60%;
+    height: 2.3rem;
+    font-size: .7rem;
+}
+
+.sex-box {
+    display: inline-block;
+    padding-left: 1.3rem;
+    width: 3rem;
+    height: 100%;
+    line-height: 2.3rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.tip {
+    padding: 1rem .5rem .4rem .5rem;
+    font-size: .6rem;
+    color: #8f8f94;
+}
+
+.mui-input-row .yzm {
+    padding: .4rem 0;
+}
+
+.yzm span {
+    padding: .4rem .6rem;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #EC2619;
+    text-align: center;
+    font-size: .65rem;
+    color: white;
+}
+
+.mui-checkbox input[type=checkbox] {
+    position: static;
+    margin-left: .8rem;
+    width: .8rem;
+    height: .8rem;
+}
+
+
+/*同意协议*/
+
+p.agreement {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    font-size: .6rem
+}
+
+.mui-checkbox input[type=checkbox]:before {
+    font-size: .8rem;
+}
+
+.mui-checkbox input[type=checkbox]:checked:before {
+    color: #ec291b;
+}
+
+
+/*上传身份证照片*/
+
+.upload-wrap {
+    padding-bottom: .3rem;
+    margin-top: .7rem;
+    background-color: white;
+    /*margin-bottom: 1rem;*/
+}
+
+.upload-wrap p {
+    /*padding-left: 7%;*/
+    color: #333;
+    font-size: .7rem;
+    padding: 1rem 0 .5rem 7%;
+}
+
+.upload-wrap .tip {
+    padding-left: 7%;
+    padding-top: .5rem;
+    /*color: #8f8f94;*/
+}
+
+.IDCard-box {
+    float: left;
+    position: relative;
+    width: 39.5%;
+    height: 4rem;
+}
+
+.IDCard-box:first-child {
+    margin-left: 7%;
+    margin-right: 3.5%;
+}
+
+.IDCard-box:last-child {
+    margin-left: 3.5%;
+    margin-right: 7%;
+}
+
+.IDCard-box>div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background: url("../../images/remit-member/ic_add@2x.png") no-repeat 50% 20%;
+    background-size: auto 50%;
+    line-height: 6rem;
+    text-align: center;
+    color: #8f8f94;
+    /*background-size: 100% 100%;*/
+}
+
+.IDCard-box input[type=file] {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+
+/*显示银行卡*/
+
+.bank-card-wrap {
+    margin: .5rem;
+    padding: .8rem .5rem;
+    border-radius: 5px;
+    background: url("../../images/remit-member/picture_card@2x.png") no-repeat;
+    background-size: 100%;
+    height: 100%;
+}
+
+.bank-card-wrap .bank-card-box {
+    /*margin-top: 1rem;*/
+    float: left;
+}
+
+.bank-card-wrap .bank-card-box p {
+    margin-bottom: .2rem;
+    color: white;
+    font-size: .7rem;
+}
+
+.bank-card-wrap .bank-card-box .card-num {
+    margin-top: .8rem;
+}
+
+.bank-card-wrap .bank-card-box .card-type {
+    font-size: .6rem;
+}
+
+.bank-logo {
+    margin-left: .125rem;
+    width: 80%;
+}
+
+.bank-card-wrap .bank-card-box img {
+    width: 100%;
+}
+
+.bank-card-box:first-child {
+    width: 20%;
+}
+
+.bank-card-box:last-child {
+    width: 80%;
+}
+
+.card {
+    position: relative;
+    margin-top: .7rem;
+    padding-left: .5rem;
+    width: 100%;
+    line-height: 1.6rem;
+    background-color: white;
+}
+
+.bank-server {
+    padding-left: .5rem;
+    /*line-height: 2rem;*/
+    font-size: .5rem;
+    color: #999;
+}
+
+
+/*选择银行卡的所有*/
+
+#bank-index-list {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: -18rem;
+    background-color: white;
+    /*transition: right .5s linear;*/
+}
+
+
+/*.index-list{*/
+
+
+/*position: absolute;*/
+
+
+/*top: 2rem;*/
+
+
+/*right: 0;*/
+
+
+/*background-color: #f5f5f5;*/
+
+
+/*color: #ec291b;*/
+
+
+/*text-align: center;*/
+
+
+/*font-size: .6rem;*/
+
+
+/*}*/
+
+
+/*.index-list li{*/
+
+
+/*margin-bottom: .2rem;*/
+
+
+/*}*/
+
+ul {
+    padding: 0 0 6rem;
+    margin: 0;
+    height: 28rem;
+    overflow-y: auto;
+    /*padding-left: .5rem;*/
+}
+
+.content-list li {
+    list-style: none;
+    padding-left: 1rem;
+    line-height: 1.5rem;
+    border-bottom: 1px solid #efefef;
+}
+
+li.index {
+    line-height: 1rem;
+    background-color: #f5f5f5;
+    color: #ec291b;
+}
+
+
+/*li.first{
+    margin-top: 2rem;
+}*/
+
+.content-list li:nth-child(2) {
+    /*margin-top: 2rem;*/
+}
+
+.content-list .header {
+    position: fixed;
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    background-color: white;
+    text-align: center;
+}
+
+.mui-input-row .bankName {
+    padding-right: .5rem;
+}
+
+.close-icon {
+    position: absolute;
+    left: .5rem;
+    top: 0.55rem;
+}
+
+
+/*上海银行的提示*/
+
+.bind-bank-wrap {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.bank-tip-wrap {
+    position: relative;
+    width: 100%;
+    /*margin-top: 4.76rem;*/
+    margin-top: 3.3rem;
+    /*background-color: white;*/
+}
+
+.bank-tip-wrap i {
+    position: absolute;
+    top: .3rem;
+    right: .5rem;
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url("../../images/remit-member/down.png") no-repeat 50% 50%;
+    background-size: 50% auto;
+}
+
+.bank-tip {
+    padding: .5rem;
+    width: 93%;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .55rem;
+}
+
+.bank-tip-detail {
+    padding-top: 0;
+    width: 100%;
+    white-space: normal;
+}
+
+.searchBar {
+    height: 44px;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.searchBar .mui-input-row {
+    width: 85%;
+    display: inline-block;
+}
+
+.searchBar .cancel-icon {
+    width: 15%;
+    display: inline-block;
+    float: right;
+    height: inherit;
+    text-align: center;
+    height: 34px;
+    line-height: 34px;
+}
+
+
+/*.mui-placeholder span {
+    font-size: 0.6rem;
+}*/
+
+
+/*#bank-index-list .searchBar div.mui-search span.mui-placeholder span:last-child {
+    font-size: 0.6rem!important;
+}*/
+
+.nation-notice {
+    background: #f9f5d9;
+    color: #777251;
+    font-size: 0.55rem;
+    padding: 0.6rem;
+}
+
+#form-submit {
+    margin-top: 0.7rem;
+}
+
+#bank-tip {
+    text-align: center;
+}
+
+.mask-pop {
+    display: none;
+    padding: 0.6rem;
+    padding-bottom: 0rem;
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mask-pop-content {
+    height: 86%;
+    background-color: #f5f5f5;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+.mask-pop-close {
+    position: relative;
+    height: 14%;
+    /*background-color: rebeccapurple;*/
+}
+
+.mask-pop-close-btn {
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url(../../images/remit-member/close.png);
+    background-size: 100%;
+    /*margin: auto;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*z-index: 9999;*/
+    transform: translate(-50%, -50%)
+}

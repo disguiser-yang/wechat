@@ -1,0 +1,21 @@
+.version p {
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.version-icon {
+    width: 2.67rem;
+    height: 2.67rem;
+    background: url(../../images/remit-member/about-us-version.png);
+    background-size: 100%;
+    margin: 1.2rem auto 0.5rem;
+    background-repeat: no-repeat;
+}
+
+.mui-input-row .border-btm label {
+    color: #333333;
+}
+
+#form-submit .mui-input-row {
+    padding: 0 0rem 0 1rem;
+}

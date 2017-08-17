@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>关于四川商通</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="service-provider-introduce-wrap">
+        <div class="service-provider-introduce-detail">
+            <p>成都市总工会“成都职工”普惠平台是由中西部地区首批获得央行颁发第三方支付业务许可证，本土最大的第三方支付机构——四川商通实业有限公司建设运营。平台充分利用“移动互联网+定点支付”模式为广大工会职工提供基于总工会普惠服务基础之上的更便捷更实惠的生活消费增值服务，以增强工会职工幸福感。
+            </p>
+            <p>在人民银行的严格牌照资质管理下，四川商通实业有限公司成立十年来一直合规经营并不断创新，旗下“和信通”消费服务平台在川内家喻户晓，目前已建立了涵盖百货超市、电影院线、餐饮娱乐、汽车服务、休闲娱乐、旅游票务、家居装修、零售专卖、医疗保健、文化教育等二十多个领域的健康阳光优质<span class='link-to-wuliangye'><a href="http://phfw.cdzgh.com/puhuihua/static/wuliangye/html/wujiu.html">联盟商户</a></span>体系。
+            </p>
+        </div>
+
+        <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+        <!--<script src="../../js/public/fontsize-84351b1015.js"></script>-->
+        <script src="../../js/public/fontsize.js"></script>
+        <script src="../../lib/mui/dist/js/mui.min.js"></script>
+</body>
+
+</html>
+<style>
+    /*.service-provider-introduce-wrap {
+        padding: 0.6rem;
+        color: #878787;
+    }*/
+    
+    .service-provider-introduce-wrap {
+        padding: 0.6rem;
+        color: #878787;
+    }
+    
+    .service-provider-introduce-wrap p {
+        line-height: 1.05rem;
+        font-size: 0.65rem;
+        text-indent: 2em;
+    }
+    
+    .link-to-wuliangye a {
+        color: #878787;
+    }
+</style>
+<script>
+    $(function() {
+        pushHistory();
+        var searchKey = window.location.search;
+        var isEnter = searchKey.split("=")[1];
+        // mui("body").on('tap', '.link-to-wuliangye', function() {
+        //     mui.toast('1111')
+        //     location.href = 'http://phfw.cdzgh.com/puhuihua/static/wuliangye/html/wujiu.html'
+        // });
+        window.addEventListener("popstate", function(e) {
+            //监听到了浏览器的返回按钮事件
+            if (isEnter == 'puhui-pay') {
+                window.location.href = 'puhui-pay.html';
+            } else {
+
+                window.location.href = 'about-us.html';
+            }
+
+        }, false);
+
+        function pushHistory() {
+            window.history.pushState('', "title", "#");
+        }
+
+    });
+</script>

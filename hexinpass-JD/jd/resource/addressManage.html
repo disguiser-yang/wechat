@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>收货地址管理</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" /> 
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+		<link rel="stylesheet" href="../css/addressManage.css" />		
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="address-list">
+				<script type="text/html" id="addressList">
+					{{each list as value index}}
+						<div class="address-list-cell"> 
+							<div class="address-list-cell-name">{{value.name}}</div>
+							<div class="address-list-cell-phone">{{value.mobile}}</div>
+							{{if value.townName == 0}}
+								<div class="address-list-cell-address">{{value.provinceName+' '+value.cityName+' '+value.countyName+' '+value.address}}</div>
+							{{else}}
+								<div class="address-list-cell-address">{{value.provinceName+' '+value.cityName+' '+value.countyName+' '+value.townName+' '+value.address}}</div>
+							{{/if}}
+							<div class="address-list-cell-operation" index={{value.id}}>
+								{{if value.main==1}}
+									<div class="mui-icon appui-icon-hud appui-icon-hud-select address-list-item-check"></div>
+								{{else}}
+									<div class="mui-icon appui-icon-hud appui-icon-hud-unselect address-list-item-check"></div>
+								{{/if}}								
+								<div class="address-list-cell-operation-default">设为默认</div>
+								<div class="address-list-cell-operation-delete">
+									<img class="address-list-cell-operation-imgdelete" src="../img/trash.png" />
+									<div class="address-list-cell-operation-text">删除</div>
+								</div>
+								<div class="address-list-cell-operation-edit">
+									<img class="address-list-cell-operation-imgedit" src="../img/note.png" />
+									<div class="address-list-cell-operation-text">编辑</div>
+								</div>  
+							</div>
+						</div>
+					{{/each}}
+				</script>
+			</div>
+			<div class="address-add" id="addressAddBtn">新增地址</div>
+   		</div>
+   		<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+		<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+		<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../common/js/common.js"></script>
+		<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+		<script type="text/javascript">document.write("<script type='text/javascript' src='../js/addressManage.js?v="+new Date().getTime()+"'></s" + "cript>");</script>
+   		<!--<script type="text/javascript" src="../js/addressManage.js"></script>-->
+	</body>
+</html>

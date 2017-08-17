@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<meta charset="utf-8">
+		<title>普法宣传</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+		<link rel="stylesheet" href="../../common/public.css">
+		<link rel="stylesheet" href="../../css/public/tab-list.css">
+
+	</head>
+
+	<body>
+		<!--loading-->
+		<div id="load-wrap">
+			<div class="spinner">
+				<div class="double-bounce1"></div>
+				<div class="double-bounce2"></div>
+			</div>
+		</div>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+			
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll mui-row" id="tab-row" onclick="sleep(500)">
+						<a class="mui-control-item" >
+							
+						</a>
+						
+						
+					</div>
+				</div>
+				
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+								
+								</ul>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+
+		<!--列表列表模板开始-->
+		<script type="text/html" id="list">
+			<li class="mui-table-view-cell mui-media list" id=${issueId} data-issueType=${issueType}>
+				<a>
+					<img class="mui-media-object mui-pull-left" data-lazyload=${cover} />
+					<div class="mui-media-body">
+						<p class='mui-ellipsis'>${title}</p>
+						<span class="c-999 font-1">${createTime}</span>
+					</div>
+				</a>
+			</li>
+		</script>
+		<!--列表模板结束-->
+		
+		<script src="../../js/public/fontsize.js"></script>
+		<script src="../../lib/mui/dist/js/mui.min.js"></script>
+		<script src="../../lib/mui/mui.pullToRefresh.js"></script>
+		<script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+		<script src="../../lib/mui/mui.lazyload.js"></script>
+        <script src="../../lib/mui/mui.lazyload.img.js"></script>
+		<script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+		<script src="../../js/labor-server/law-publicity-list.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>使用帮助</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="le-mobile-web--capable" content="yes">
+    <meta name="le-mobile-web--status-bar-style" content="black">
+    <link href="../../css/remit-member/uer-help.css" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="c-333 agreement-content user-help">
+        <p><span class="c-bold">一、如何使用付款</span></p>
+        <p>打开“付款”后，用户向商户展示二维码及条码，商家使用扫码枪快速扫描用户的二维码或条码即可完成交易。</p>
+        <p><span class="c-bold">二、付款安全及用户条款</span></p>
+        <p>1、二维码/条码具有时效性且一次有效；</p>
+        <p>2、每个用户只能对一台手机开通“刷卡”；</p>
+        <p>2、系统会对可疑交易进行拦截。</p>
+        <p>详见<a class="c-red" href="no-password-agreement.html?enter=userhelp">《成都职工平台免密支付协议》</a></p>
+    </div>
+
+    <!--<script src="../../lib/jquery/1.9.1/jquery.min.js"></script>-->
+    <script src="../../js/public/fontsize.js"></script>
+    <!--<script src="../../lib/mui/dist/js/mui.min.js"></script>-->
+    <script>
+        window.onpageshow = function(e) {
+            //alert('pageshow bind-bankCard'+e.persisted );
+            pushHistory();
+        };
+        window.addEventListener("popstate", function(e) {
+            //监听到了浏览器的返回按钮事件
+            window.location.href = 'puhui-pay.html';
+
+        }, false);
+
+        function pushHistory() {
+            if (isiOS && !window.__wxjs_is_wkwebview) {
+                window.history.replaceState({}, "", "");
+            } else {
+                window.history.pushState({}, "", "");
+            }
+        }
+    </script>
+</body>
+
+</html>

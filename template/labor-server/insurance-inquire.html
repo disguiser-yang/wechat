@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>参保查询</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+        <link rel="stylesheet" href="../../css/labor-server/insurance-inquire.css">
+        <style>
+
+
+        </style>
+    </head>
+
+    <body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--提示-->
+    <div id="tip"><div id="tip-wrap"><div id="tip-box"></div></div></div>
+    <!--具体内容-->
+    <form class="mui-input-group" id="form-submit" enctype="multipart/form-data">
+        <div class="add-infor-wrap">
+            <div class="mui-input-row">
+                <div class="border-btm">
+                    <label>姓名</label>
+                    <input type="text" name="custName" class="custName"  placeholder="请输入姓名" autocomplete="off" />
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <div class="border-btm">
+                    <label>身份证号</label>
+                    <input type="text" name="idNo" class="idNo" placeholder="请输入身份证号" autocomplete="off" />
+                </div>
+            </div>
+        </div>
+        <div class="mui-button-row records-btn">
+            <button type="button" class="mui-btn mui-btn-danger my-btn btn-fail next" >确 认</button>
+        </div>
+    </form>
+    <div id="insurance-wrap">
+        <div class="tip mt-1">提示：查询结果只能查询七天前的结果</div>
+        <div class="personal-infor">
+            <div class="clearfix">
+                <div class="f-l label">姓名</div>
+                <div class="f-l infor">小瓶子</div>
+            </div>
+            <div class="clearfix">
+                <div class="f-l label">身份证号</div>
+                <div class="f-l infor">511381199020145555</div>
+            </div>
+            <div class="clearfix">
+                <div class="f-l label">单位名称</div>
+                <div class="f-l infor">四川商通实业有限公司</div>
+            </div>
+        </div>
+        <div class="insurance-infor mt-1">
+            <div class="clearfix">
+                <div class="f-l label">险种名称</div>
+                <div class="f-l infor">小瓶子</div>
+            </div>
+            <div class="clearfix">
+                <div class="f-l label">免责期</div>
+                <div class="f-l infor">2016-12-16</div>
+            </div>
+            <div class="clearfix">
+                <div class="f-l label">参保金额</div>
+                <div class="f-l infor">四川商通实业有限公司</div>
+            </div>
+            <div class="clearfix">
+                <div class="f-l label">参保份数</div>
+                <div class="f-l infor">1份</div>
+            </div>
+            <div class="clearfix">
+                <div class="f-l label">赔付额度</div>
+                <div class="f-l infor">20000元</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/form.js"></script>
+    <script src="../../lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script src="../../js/labor-server/insurance-inquire.js"></script>
+    <script>
+
+    </script>
+    </body>
+
+</html>

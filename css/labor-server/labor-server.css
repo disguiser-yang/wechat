@@ -1,0 +1,76 @@
+/*.mui-col-xs-6 .mui-table-view-cell a img {
+    width: 7.28rem;
+    height: 2.35rem;
+}*/
+
+.mui-content .enter-apply-agreement {
+    display: inline-block;
+    width: 50%;
+    overflow: hidden;
+}
+
+#enter-apply-agreement .mui-table-view-cell {
+    padding: 0.42rem 0.21rem 0.4rem 0.55rem;
+}
+
+#enter-apply-agreement a img {
+    width: 7.28rem;
+    height: 2.35rem;
+}
+
+#bank-card .mui-table-view-cell {
+    padding: 0.42rem 0.21rem 0.4rem 0.4rem;
+}
+
+.member-server-title {
+    padding: 0.21rem 0 0rem 15px;
+    margin-bottom: 2px;
+}
+
+.member-server-title span {
+    border-left: 2px solid #fd4949;
+    font-size: 0.6rem;
+    padding-left: 4px;
+}
+
+.hot-issue-title,
+.staff-mien-title {
+    background: #fff;
+    padding: 0 0 0 15px;
+}
+
+.hot-issue-title-more,
+.staff-mien-title-more {
+    float: right;
+    color: #d2d2d2;
+}
+
+.hot-issue-title .mui-table-view-cell {
+    padding: 0px;
+    margin: 0px;
+    display: inline;
+}
+
+.staff-mien-title .mui-table-view-cell {
+    padding: 0px;
+    margin: 0px;
+    display: inline;
+}
+
+#hot-issue-wrap,
+#staff-mien-wrap {
+    padding: 0.4rem 0rem;
+    padding-right: 15px;
+}
+
+.mui-table-view-cell .text-c .icon-title {
+    display: block;
+    width: 74%;
+    margin: auto;
+}
+
+.mui-table-view-cell a.list-public-a {
+    /*padding: 0px;*/
+    padding-right: 15px;
+    margin: 0px;
+}

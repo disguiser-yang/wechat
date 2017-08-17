@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang=zh-CN>
+
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no">
+    <meta name=format-detection content="telephone=no">
+    <meta name="x5-orientation" content="portrait">
+    <title>宣传视频</title>
+    <!-- begin REM Zoom 计算 -->
+    <script type="text/javascript">
+        (function(win) {
+            var remCalc = {};
+            var docEl = win.document.documentElement,
+                tid,
+                hasRem = true,
+                hasZoom = true,
+                designWidth = 750;
+
+            function refresh() {
+                var width = docEl.getBoundingClientRect().width;
+                // if (width > 640) { width = 640 }
+                if (hasRem) {
+                    var rem = width / 10;
+                    docEl.style.fontSize = rem + "px";
+                    remCalc.rem = rem;
+                    var actualSize = parseFloat(window.getComputedStyle(document.documentElement)["font-size"]);
+                    if (actualSize !== rem && actualSize > 0 && Math.abs(actualSize - rem) > 1) {
+                        var remScaled = rem * rem / actualSize;
+                        docEl.style.fontSize = remScaled + "px"
+                    }
+                }
+                if (hasZoom) {
+                    var style = document.getElementById('J__style')
+                    if (!style) {
+                        style = document.createElement('style')
+                        style.id = 'J__style'
+                    }
+                    style.innerHTML = '.__z{zoom:' + width / designWidth + '}'
+                    document.getElementsByTagName('head')[0].appendChild(style)
+                }
+            }
+
+            function dbcRefresh() {
+                clearTimeout(tid);
+                tid = setTimeout(refresh, 100)
+            }
+            win.addEventListener("resize", function() {
+                dbcRefresh()
+            }, false);
+
+            win.addEventListener("pageshow", function(e) {
+                if (e.persisted) {
+                    dbcRefresh()
+                }
+            }, false);
+            refresh();
+            if (hasRem) {
+                remCalc.refresh = refresh;
+                remCalc.rem2px = function(d) {
+                    var val = parseFloat(d) * this.rem;
+                    if (typeof d === "string" && d.match(/rem$/)) {
+                        val += "px"
+                    }
+                    return val
+                };
+                remCalc.px2rem = function(d) {
+                    var val = parseFloat(d) / this.rem;
+                    if (typeof d === "string" && d.match(/px$/)) {
+                        val += "rem"
+                    }
+                    return val
+                };
+                win.remCalc = remCalc
+            }
+        })(window);
+    </script>
+    <!-- end REM Zoom 计算 -->
+    <!--<link href="./css/app.css" rel="stylesheet">-->
+</head>
+
+<body>
+    <div id=o2_loading class=loading>
+        <div class=btns> <a class="btn begin">开始播放视频</a> </div>
+    </div>
+    <div id=o2_main class=main style='padding-top:60%;'>
+        <div class=wrapper id='videowrap'> <video id=video class=video preload=auto playsinline src=./propaganda.mp4 width=1 height=1 type=video/mp4></video> </div>
+        <div class="btns control">
+            <a class="btn skip">停止播放</a> </div>
+        <div class=poster></div>
+    </div>
+    <div id=o2_end class="end hide">
+        <div class=btns> <a class="btn replay">再看一次</a> </div>
+    </div>
+    <!--<div class=tip></div>-->
+    <script type="text/javascript" src="bundle.js"></script>
+</body>
+<style>
+    * {
+        -webkit-tap-highlight-color: transparent;
+        outline: 0;
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline
+    }
+    
+    body,
+    html {
+        width: 100%;
+        height: 100%
+    }
+    
+    blockquote,
+    body,
+    button,
+    dd,
+    dl,
+    dt,
+    fieldset,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    input,
+    legend,
+    li,
+    ol,
+    p,
+    pre,
+    td,
+    textarea,
+    th,
+    ul {
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline
+    }
+    
+    img {
+        border: 0 none;
+        vertical-align: top
+    }
+    
+    em,
+    i {
+        font-style: normal
+    }
+    
+    ol,
+    ul {
+        list-style: none
+    }
+    
+    button,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    select {
+        font-size: 100%;
+        font-family: inherit
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0
+    }
+    
+    a {
+        text-decoration: none
+    }
+    
+    a,
+    body {
+        color: #666
+    }
+    
+    body {
+        margin: 0 auto;
+        min-width: 320px;
+        max-width: 750px;
+        height: 100%;
+        font-size: 14px;
+        font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%!important;
+        text-size-adjust: 100%!important
+    }
+    
+    input[type=text],
+    textarea {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none
+    }
+    
+    .hide {
+        display: none!important
+    }
+    
+    .IIV::-webkit-media-controls-play-button,
+    .IIV::-webkit-media-controls-start-playback-button {
+        opacity: 0;
+        pointer-events: none;
+        width: .06667rem
+    }
+    
+    body {
+        position: relative;
+        overflow: hidden
+    }
+    
+    .end,
+    .loading,
+    .main {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center
+    }
+    
+    .main {
+        display: none;
+        background-color: #000
+    }
+    
+    .main .wrapper .video.show {
+        width: 100%;
+        height: 100%
+    }
+    
+    .main .control {
+        position: absolute;
+        height: 20%;
+        width: 100%;
+        /*bottom: 0*/
+        /*top: 10%;*/
+        margin-top: 10%;
+    }
+    
+    .main .control .btn {
+        display: none
+    }
+    
+    .main .poster {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #000
+    }
+    
+    .btns {
+        width: 100%;
+        text-align: center
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: .26667rem .53333rem;
+        border: 1px solid #fff
+    }
+    
+    .btn,
+    .tip {
+        color: #fff
+    }
+    
+    .tip {
+        position: fixed;
+        top: 2.66667rem;
+        right: .26667rem;
+        font-size: 14px;
+        background: #000
+    }
+</style>
+
+</html>

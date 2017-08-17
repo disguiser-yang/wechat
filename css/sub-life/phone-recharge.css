@@ -1,0 +1,234 @@
+.login-content {
+    padding-top: .3rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    background-color: white;
+}
+
+.input-box {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    border-bottom: 1px solid #f5f5f5;
+    background: url("../../images/sub-life/2_42.png") 100% 40% no-repeat;
+    background-size: 1.2rem;
+}
+
+.input-box input {
+    margin-bottom: initial;
+    width: 77%;
+    height: auto;
+    border: none;
+    padding: .3rem .6rem 0;
+    font-size: 1rem;
+}
+
+.input-box .tip {
+    padding-left: .75rem;
+    height: .9rem;
+    font-size: .65rem;
+    color: #ccc;
+}
+
+.recharge-money-box {
+    padding-bottom: .5rem;
+    padding-top: 1.4rem;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.recharge-money {
+    margin: auto;
+    margin-bottom: 1rem;
+    width: 80%;
+    height: 2.8rem;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 2.8rem;
+    font-size: .8rem;
+    color: #333;
+}
+
+.recharge-money.active {
+    background-color: #EC2619;
+    color: white;
+}
+
+.recharge-tip {
+    padding: .7rem;
+}
+
+.recharge-tip p {
+    margin-bottom: .3rem;
+    font-size: .6rem;
+}
+
+.recharge-tip-title {
+    padding-left: 1.2rem;
+    background: url("../../images/sub-life/2_54.png") no-repeat;
+    background-size: auto 100%;
+}
+
+#other-price {
+    display: none;
+}
+
+#other-price input[type=text] {
+    width: 92%;
+    border: none;
+}
+
+
+/*手机充值，底部弹出框样式*/
+
+.mui-input-row label~input {
+    text-align: right;
+}
+
+.mui-input-group {
+    position: fixed;
+    width: 100%;
+    bottom: -15rem;
+    z-index: 5;
+}
+
+.mui-input-group .mui-input-row {
+    padding: 0 1rem;
+    height: 2.25rem;
+    background-color: white;
+}
+
+.mui-input-group .mui-input-row:after,
+.mui-input-group:after {
+    position: static;
+}
+
+.mui-input-row label {
+    padding: .8rem 0;
+    width: 25%;
+}
+
+.mui-input-row input {
+    height: 2.3rem;
+}
+
+.border-btm {
+    height: 100%;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.my-btn {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid #EC2719;
+    width: 90%;
+    background-color: #EC2719;
+    font-size: .8rem;
+}
+
+.mui-input-row label~input {
+    width: 75%;
+}
+
+.mui-input-group .mui-button-row {
+    height: auto;
+}
+
+form header,
+#keyboard header {
+    height: inherit;
+    line-height: 2.5rem;
+    font-size: .75rem;
+}
+
+form .mui-icon,
+#keyboard .mui-icon {
+    position: absolute;
+    top: .6rem;
+    font-size: 1.3rem;
+}
+
+
+/* 支付密码 */
+
+#pay-keyboard-wrap {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    right: -20rem;
+    width: 100%;
+    height: 100%;
+    /*background-color: #6d6d72;*/
+    /* transition:right .3s linear; */
+}
+
+.pwd-row {
+    margin-top: .7rem;
+    margin-bottom: .7rem;
+}
+
+.pwd-row input {
+    margin-bottom: 0;
+    padding: 0;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: inherit;
+    border-left: none;
+    text-align: center;
+    font-size: 2rem;
+    border-color: #e6e6e6;
+}
+
+.pwd-row input:first-child {
+    border-left: 1px solid #e6e6e6;
+}
+
+#keyboard {
+    /*position: fixed;*/
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: .3s linear;
+}
+
+#keyboard>span {
+    display: inline-block;
+    width: 33.3%;
+    height: 2.2rem;
+    border: 1px solid #e6e6e6;
+    border-right: 0;
+    border-bottom: 0;
+    background-color: white;
+    line-height: 2.2rem;
+    text-align: center;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+#keyboard .border-none {
+    border-left: none;
+}
+
+#keyboard .del {
+    background-color: #e6e6e6;
+}
+
+.single-del {
+    background: url("../../images/public/del.png") no-repeat 50% 50%;
+    background-size: 1.5rem;
+}
+
+#switch {
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background: url("../../images/remit-member/down.png") no-repeat 50% 50%;
+    background-size: 1rem;
+    background-color: white;
+}
+
+#keyboard {
+    background-color: white;
+}

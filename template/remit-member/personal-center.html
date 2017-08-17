@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>个人信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/remit-member/person-center.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--提示-->
+    <div id="tip">
+        <div id="tip-wrap">
+            <div id="tip-box"></div>
+        </div>
+    </div>
+    <!--具体内容-->
+    <form class="mui-input-group" enctype="multipart/form-data" id="form-submit">
+        <!--<div class="mui-input-row vip-infor">会员信息</div>-->
+        <div class="mui-input-row input-file">
+            <span>头像</span>
+            <a class="f-r mui-navigate-right">
+                <span id="headImg"></span>
+            </a>
+            <input type="file" id="file">
+        </div>
+        <div class="mui-input-row" id="nick-name">
+            <div class="border-btm">
+                <label>昵称</label>
+                <div class="detail nickname padding-r"></div>
+                <a class="f-r mui-navigate-right">
+                </a>
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label id='simulation'>手机号</label>
+                <div class="detail phone"></div>
+            </div>
+        </div>
+
+        <div id="vip-infor" style="display: none">
+            <div class="mui-input-row vip-infor">会员信息</div>
+            <div class="mui-input-row">
+                <div class="border-btm">
+                    <label>姓名</label>
+                    <div class="detail name"></div>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <div class="border-btm">
+                    <label>性别</label>
+                    <div class="detail gender"></div>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <div class="border-btm">
+                    <label>民族</label>
+                    <div class="detail nationality"></div>
+                </div>
+            </div>
+            <div class="mui-input-row">
+                <label>所属工会</label>
+                <div class="detail unionName"></div>
+            </div>
+            <div class="mui-button-row records-btn" style="display: none;">
+                <button type="button" class="mui-btn mui-btn-danger my-btn">普惠记录</button>
+            </div>
+        </div>
+
+    </form>
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/mine/dealImage.js"></script>
+    <script src="../../lib/form.js"></script>
+    <script src="../../js/remit-member/personal-center.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

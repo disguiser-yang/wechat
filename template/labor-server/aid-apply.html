@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>援助申请</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../css/labor-server/aid-apply.css">
+
+    </head>
+    <body>
+     <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <header>成都市总工会职工法律援助案件受理审批程序</header>
+    <div class="flow-path-wrap">
+        <div class="flow-path">
+            <div class="flow">法律援助申请人</div>
+            <span></span>
+            <div class="flow">职工法律援助中心窗口</div>
+            <span></span>
+            <div class="clearfix two-selected">
+                <div class="f-l flow">由职工法律援助中心为申请人指定律师</div>
+                <div class="f-r flow">申请人自行选择律师（在工会律师团或其他律师事务所聘请律师）</div>
+            </div>
+            <span></span>
+            <div class="flow">职工法律援助中心与律师签订委托协议书</div>
+            <span></span>
+            <div class="flow">申请人与律师签订授权委托书</div>
+            <span></span>
+            <div class="flow">律师在申请人授权范围内为其提供法律服务（包括但不限于参与调解、仲裁、诉讼、调查取证）</div>
+            <span></span>
+            <div class="flow">结案后15日内，律师向法律工作部提交结案的司法文书及其他相关材料，同时填写办案小结，并按照一案一卷，一卷一号的原则将案件相关材料归档。案卷报法律工作部存档后，市总工会向承办律师支付法律援助费用。</div>
+        </div>
+    </div>
+    <div class="flow-detail-wrap">
+        <div class="flow-detail">
+            <header>审查的内容：<i></i></header>
+            <p>一、法律援助范围：</p>
+            <p class="detail">（一）劳动争议案件；</p>
+            <p class="detail">（二）因劳动权涉及的人身权、民主权益、财产权等案件；</p>
+            <p class="detail">（三）职工法律援助中心认为需要提供法律援助的其他事项。</p>
+            <p>二、法律援助申请条件：</p>
+            <p class="detail">（一）职工家庭人均收入低于本地区最低生活保障线，且合法权益受到严重侵害的；</p>
+            <p class="detail">（二）工会工作者因履行职责合法权益受到严重侵犯的案件；</p>
+            <p class="detail">（三）工会组织合法权益受到侵犯的案件；</p>
+            <p class="detail">（四）农民工追讨工资和请求工伤赔偿的案件，不审查经济困难条件；</p>
+            <p class="detail">（五）其他有特殊困难的职工。</p>
+            <p>三、申请人需提交以下材料：</p>
+            <p class="detail">（一）居民身份证、工作证或有关身份证明；</p>
+            <p class="detail">（二）所在单位工会或街道社区开具的困难证明；</p>
+            <p class="detail">（三）与案件相关的全部材料；</p>
+            <p class="detail">（四）职工法律援助中心认为需要提供的其他材料。</p>
+        </div>
+    </div>
+    </body>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script>
+        var i=1;
+        mui("body").on('tap','.flow-detail header i',function(){
+            if(i%2){
+                $(this).css('transform','rotate(0)');
+                $('.flow-detail-wrap .flow-detail').css( 'height','auto')
+            }else{
+                $(this).css('transform','rotate(90deg)');
+                $('.flow-detail-wrap .flow-detail').css('height','7rem')
+            }
+            i++;
+        });
+        mui('.mui-scroll-wrapper').scroll({
+            deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+        });
+    </script>
+</html>

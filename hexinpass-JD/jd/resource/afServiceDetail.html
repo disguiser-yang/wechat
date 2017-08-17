@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>售后服务详情</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+		<link rel="stylesheet" href="../css/orderTrack.css" />
+		<style type="text/css">
+			#content {
+				font-size: 16px;
+			}
+			.af-detail-header {
+				background-color: white;
+				padding: 10px;
+				color: #333;
+				margin-top: 10px;
+			}
+			.af-detail-header-row {
+				padding: 2px 0;
+			}
+			.track-list-item-operator {
+				float: left;
+				margin-left: 10%;
+				font-size: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content" id="content">
+			<script type="text/html" id="contentTemplateId">
+				<div class="af-detail-header">
+					<div class="af-detail-header-row">服务单号：{{data.afsServiceId}}</div>
+					<div class="af-detail-header-row">申请时间：{{data.afsApplyTime}}</div>
+				</div>
+				{{if data.approveNotes != null && data.approveNotes != ''}}
+				<div class="af-detail-header" style="color: #666;">{{data.approveNotes}}</div>
+				{{/if}}
+				<div class="track-list"> 
+					<div class="track-header">处理流程</div>
+					{{each list as item index}}
+						{{if index == 0}}
+							<div class="track-list-item">
+								<div class="track-list-item-point">
+									<div class="track-list-item-circlebg">
+										<div class="track-list-item-circle" style="background-color: #FD555A;"></div>
+									</div>
+									<div class="track-list-item-line"></div>
+								</div>
+								<div class="track-list-item-detail">
+									<div class="track-list-item-desc" style="color: #FD555A;">{{item.context}}</div>
+									<div class="track-list-item-time">{{item.createDate}}</div>
+								</div>
+								<div class="track-list-item-operator">经办人：{{item.createName}}</div>
+								{{if index != list.length-1}}
+								<div class="track-list-item-seperate"></div>
+								{{/if}}
+							</div>
+						{{else}}
+							<div class="track-list-item">
+								<div class="track-list-item-point">
+									<div class="track-list-item-circlebg">
+										<div class="track-list-item-circle"></div>
+									</div>
+									<div class="track-list-item-line"></div>
+								</div>
+								<div class="track-list-item-detail">
+									<div class="track-list-item-desc">{{item.context}}</div>
+									<div class="track-list-item-time">{{item.createDate}}</div>
+								</div>
+								<div class="track-list-item-operator">经办人：{{item.createName}}</div>
+								{{if index != list.length-1}}
+								<div class="track-list-item-seperate"></div>
+								{{/if}}
+							</div>
+						{{/if}}
+					{{/each}}					
+				</div>
+			</script>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+	<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+	<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			mui.init();
+			
+			var orderId = getQueryString('order');
+			if (orderId != null) {
+				requestData(orderId);
+			}
+		});
+		
+		function requestData(orderId) {
+			appui.showHUD();
+			jQuery.ajax({ 
+				url: ebase+'getCustomerServiceDetail',
+				type:"POST",
+				dataType:"JSON",
+				data:ts({
+					'afsServiceId':parseInt(orderId)
+				}),
+				success: function(data){
+					console.log(data); 
+					if (data.success == 1) {
+						appui.removeHUD();
+						_templatePage('#content', 'contentTemplateId', {data:data.results, list:data.results.serviceTrackInfoDTOs.reverse()}, true);
+						$('.track-list-item-circle').each(function(index, ele){
+							var h = $(this).parent().parent().parent().height();
+							this.style.marginTop = (h - 10)/2+'px';
+							if (index == 0) {
+								$(this).parent().next().css('top', h/2+15+'px');
+							}
+						});
+					} else {
+						appui.removeHUD(2, '请求失败，请稍后再试');
+					}
+				},
+				error: function(jqXHR, textStatus, errorThrown){
+					appui.removeHUD(2, '网络开小差咯');
+				}
+			});
+		}
+	</script>
+</html>

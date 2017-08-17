@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>更换绑定的银行卡</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+    <link rel="stylesheet" href="../../css/remit-member/bind-bankCard.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--提示-->
+    <div id="tip">
+        <div id="tip-wrap">
+            <div id="tip-box"></div>
+        </div>
+    </div>
+    <!--具体内容-->
+    <form class="mui-input-group" id="form-submit" enctype="multipart/form-data" style="margin-top: 1rem">
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>姓名</label>
+                <input type="text" name="custName" class="custName input" value="" readonly disabled="disabled" />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm mui-navigate-right select-card">
+                <label>选择银行</label>
+                <input type="text" name="bankName" class="bankName inputInform" placeholder="请选择银行" readonly />
+                <input type="hidden" id="bankName" />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>银行卡号</label>
+                <input type="text" name="cardNo" class="cardNo inputInform" placeholder="请输入储蓄卡号" autocomplete="off" />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label>银行预留手机号</label>
+                <input type="text" name="reservedPhone" class="reservedPhone inputInform" placeholder="请输入银行预留手机号" autocomplete="off" />
+            </div>
+        </div>
+        <div class="tip">修改绑定银行卡需要短信确认，验证码已经发送至银行预留手机号，请按提示操作。</div>
+        <div class="mui-input-row">
+            <div class="border-btm">
+                <label class="yzm"><span>获取验证码</span></label>
+                <input type="text" name="securityCode" class="securityCode inputInform" id="" value="" placeholder="填写验证码" autocomplete="off" />
+            </div>
+        </div>
+        <div class="mui-button-row records-btn" style="margin-top: 2rem">
+            <button type="button" class="mui-btn mui-btn-danger my-btn btn-fail">提 交</button>
+        </div>
+    </form>
+    <div id="bank-index-list">
+        <div class='searchBar'>
+            <div class="mui-input-row mui-search">
+                <input type="search" class="mui-input-clear" placeholder="搜索" id='searchBank' oninput="search(this.value);" onblur=reGetBankInfo(); style='font-size:0.6rem;'>
+            </div>
+            <div class='cancel-icon'> 取消 </div>
+        </div>
+        <ul class="content-list">
+
+            <!--<li class="header">
+                <span class="mui-icon mui-icon-closeempty close-icon"></span> 选择银行
+
+            </li>-->
+
+        </ul>
+    </div>
+
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/form.js"></script>
+    <script src="../../lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script src="../../js/remit-member/modify-bankCard.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

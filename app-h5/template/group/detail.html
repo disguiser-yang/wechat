@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../lib/swiper/swiper-3.4.2.min.css">
+    <link href="../../css/detail.css" rel="stylesheet">
+    <!--<link href="../../css/remit-member/pay-pwd.css" rel="stylesheet">
+    <link href="../../css/remit-member/set-pay-pwd.css" rel="stylesheet">
+    <link href="../../css/sub-life/puhui-pay.css" rel="stylesheet">-->
+</head>
+
+<body>
+    <!--loading-->
+    <div class='main'>
+
+        <div class='main-content'>
+            <div class='product-title'>
+                <div class="swiper-container">
+
+                    <div class="swiper-wrapper">
+                        <script type="text/html" id="swiperList">
+                            {{each list as value index}}
+                            <div class="swiper-slide">
+                                <img src="../../images/1.jpg" alt="">
+                            </div>
+                            {{/each}}
+                        </script>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+
+                </div>
+                <div class='product-describe'>
+                    <div class='describe-title'>
+                        透底后盖机械男表
+                    </div>
+                    <div class='describe-price'>
+                        <span class='describe-price-promotion'> 
+                        &yen;<span class='describe-price-promotion-number' >100.00</span>
+                        </span>
+                        <span class='describe-price-official'>官方价：&yen;1800.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class='product-parameter'>
+                <p class='product-parameter-name'>
+                    商品参数
+                </p>
+                <p class='product-parameter-items'>
+                    <span class='parameter-items-name'>
+                    商品名称
+                </span>
+                    <span class='parameter-items-value'>
+                    透底后盖机械男表
+                </span>
+                </p>
+                <p class='product-parameter-items'>
+                    <span class='parameter-items-name'>
+                    品牌
+                </span>
+                    <span class='parameter-items-value'>
+                    透底
+                </span>
+                </p>
+                <p class='product-parameter-items'>
+                    <span class='parameter-items-name'>
+                    款式
+                </span>
+                    <span class='parameter-items-value'>
+                    4445
+                </span>
+                </p>
+                <p class='product-parameter-items'>
+                    <span class='parameter-items-name'>
+                    机芯类型
+                </span>
+                    <span class='parameter-items-value'>
+                    好的
+                </span>
+                </p>
+            </div>
+
+            <div class='product-detail-des'>
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class='buy-option-bg-mask'>
+        </div>
+        <div class='buy-option-wrap'>
+            <span class='close-icon'></span>
+            <div class='option-top-img'>
+                <div class='option-top-img-box'>
+                    <img src="../../images/1.jpg" alt="">
+                </div>
+                <div class='option-top-title-box'>
+                    <p class='option-top-title-box-price'>&yen;100.00</p>
+                    <p class='option-top-title-box-tip'>请选择颜色分类</p>
+                </div>
+            </div>
+
+            <div class='option-items-wrap'>
+                <div class='option-item'>
+                    <p class='option-item-title'>颜色</p>
+                    <div class='options-wrap'>
+                        <span class='options-wrap-item'>44</span>
+                        <span class='options-wrap-item'>464664</span>
+                        <span class='options-wrap-item'>4464665</span>
+
+                    </div>
+                </div>
+                <div class='option-item'>
+                    <p class='option-item-title'>尺寸</p>
+                    <div class='options-wrap'>
+                        <span class='options-wrap-item'>44</span>
+                        <span class='options-wrap-item'>464664</span>
+                        <span class='options-wrap-item'>4464665</span>
+
+                    </div>
+                </div>
+
+                <div class='opition-number'>
+                    <span>购买数量</span>
+                    <div class='change-value'>
+                        <span class='change-min'>
+                        <em>-</em>
+                    </span>
+                        <input type="tel" class='number-value' id='number-value' value='1' oninput="if(value.length>3)value=value.slice(0,3)">
+                        <span class='change-plus'>
+                        <em>+</em>
+                    </span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class='opition-btn-wrap'>
+                <a href="javascript:;" class='comfirm-btn'>确 定</a>
+            </div>
+        </div>
+
+    </div>
+    <div class='buy-btn-wrap'>
+        <a href="javascript:;" class='buy-btn'>立即购买</a>
+    </div>
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../js/public/config.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../lib/swiper/swiper-3.4.2.jquery.min.js"></script>
+    <script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="../../common/js/app.ui.js"></script>
+    <script type="text/javascript" src="../../common/js/common.js"></script>
+    <script src="../../js/detail.js"></script>
+</body>
+
+</html>

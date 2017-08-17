@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="dns-prefetch" href="_SERVER_">
+    <link rel="dns-prefetch" href="_CDNSERVER_">
+    <link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>提交订单</title>
+    <link rel="stylesheet" href="../../common/css/mui.min.css" />
+    <link rel="stylesheet" href="../../common/css/appui.css" />
+    <link rel="stylesheet" href="../../css/submitOrder.css" />
+</head>
+
+<body>
+    <div class="mui-content">
+        <div class="mui-content" id="orderId" style="overflow: auto;">
+            <script type="text/html" id="orderTemplateId">
+                <div class="order-address" id="addressId" addressid={{data.logistics.id}}>
+                    <div class="order-address-bg">
+                        <!--<div class="order-address-imgbg">
+                            <img class="order-address-img" src="../../images/location.png" />
+                        </div>-->
+                        {{if data.logistics.id == 0}}
+                        <div class="order-address-select">
+                            <div class="order-address-select-detail">点击新增地址</div>
+                        </div>
+                        <div style="height: 60px;"></div>
+                        {{else}}
+                        <div class="order-address-infobg">
+                            <div class="order-address-name">收货人：{{data.logistics.name}}</div>
+                            <div class="order-address-phone">{{data.logistics.mobile}}</div>
+                            <div class="order-address-address"><img class="order-address-img" src="../../images/location.png" />{{data.logistics.provinceName+data.logistics.cityName+data.logistics.countyName+data.logistics.townName+data.logistics.address}}</div>
+                        </div>
+                        {{/if}}
+                        <div class="order-address-more">
+                            <span class="mui-icon mui-icon-arrowright order-arrow-right"></span>
+                        </div>
+                    </div>
+                    <div class="order-address-decration"></div>
+                </div>
+                <div class="order-list">
+                    {{each data.skuList as item index}}
+                    <div class="order-list-item" stockid={{item.stockStateId}} sku={{item.sku}}>
+                        <div class="order-list-item-imgbg">
+                            <img class="order-list-item-img" src={{imgbase+item.img}} />
+                        </div>
+                        <div class="order-list-item-title">{{item.name}}</div>
+                        <div class="order-list-item-desc">重量：{{item.weight}}kg</div>
+                        <div class="order-list-item-price">¥{{item.price}}</div>
+                        <div class="order-list-item-count">x&nbsp;{{item.num}}</div>
+                        {{if item.stockStateId != 33 && item.stockStateId != 39 && item.stockStateId != 40 && data.logistics.id != 0}}
+                        <div class="order-list-item-cover">无货</div>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+                <ul class="mui-table-view" style="margin-top: 10px;">
+                    <li class="mui-table-view-cell">
+                        <span style="float: left;">配送方式</span>
+                        <span style="float: right;">快递：¥&nbsp;{{data.amount}}</span>
+                    </li>
+                    <li class="mui-table-view-cell" id="expressMoney">
+                        <span style="float: left;width: 50%;">合计</span>
+                        <span style="float: left;width: 50%;text-align: right;" id='totalPrice1'>¥&nbsp;{{data.amount}}</span>
+                    </li>
+                </ul>
+                <!--<div style="width: 100%;font-size: 13px;color: #FD555A;padding: 3px 15px;">温馨提示：配送费由京东收取，可能与京东自身平台免邮标准存在差异。敬请谅解！</div>-->
+                <!--<ul class="mui-table-view" style="margin-top: 10px;">
+                    <li class="mui-table-view-cell">
+                        <span style="float: left;">商品金额</span>
+                        <span style="float: right;">¥&nbsp;{{data.amount}}</span>
+                    </li>
+                </ul>-->
+            </script>
+        </div>
+
+        <div class="order-toolbar">
+            <div class="order-toolbar-price-title">待支付：</div>
+            <div class="order-toolbar-price-price" id="totalPrice"></div>
+            <div class="order-toolbar-submit" id="submitBtn">提交订单</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+    <script type="text/javascript" src="../../common/js/app.ui.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../common/js/common.js"></script>
+    <script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+    <script type="text/javascript" src="../../js/submitOrder.js"></script>
+</body>
+
+</html>

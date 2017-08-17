@@ -1,0 +1,250 @@
+/*普惠活动-分类header*/
+header{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    background-color: white;
+    color: #888;
+    overflow: hidden;
+}
+header .classify{
+    width: 50%;
+    text-align: center;
+}
+header .classify>span{
+    display: inline-block;
+    position:relative;
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+    width: 100%;
+}
+header .first-classify>span:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid #ccc;
+}
+header .arrow-icon{
+    display: inline-block;
+    margin-left: .1rem;
+    width: .4rem;
+    height: .4rem;
+    background: url("../../images/public/2_05.png") no-repeat 50% 0;
+    background-size: 100%;
+}
+header .icon-active{
+    background: url("../../images/public/2_03.png") no-repeat 50% 0;
+    background-size: 100%;
+}
+header .active{
+    color: #EC2619;
+}
+aside{
+    position: fixed;
+    top: 2.1rem;
+    width: 100%;
+    max-height:12.5rem;
+    z-index: 5;
+    display: none;
+    overflow:auto;
+}
+aside>div{
+    position: relative;
+    padding-left: 1rem;
+    height:2.5rem;
+    line-height: 2.5rem;
+    border-top: 1px solid #e6e6e6;
+    background-color: white;
+    color: #333;
+}
+aside>div>span{
+    position: absolute;
+    top: .9rem;
+    right: 1.2rem;
+    display: inline-block;
+    width: .8rem;
+    height: .8rem;
+    background: url("../../images/sub-life/selected.png") no-repeat ;
+    background-size: 100%;
+    visibility: hidden;
+}
+aside>.active{
+    color: #EC2619;
+}
+aside>.active>span{
+    visibility: visible;
+}
+.time-option{
+    display: none;
+}
+
+/*普惠活动-列表*/
+.mui-scroll-wrapper{
+    overflow: auto;
+    top: 2.1rem;
+}
+.mui-card{
+    font-size: .65rem;
+    margin: .5rem;
+    box-shadow: none;
+}
+.mui-card-content{
+    padding: .5rem;
+    font-size: .65rem;
+}
+.mui-card-content .img-wrap{
+    position: relative;
+    width: 100%;
+    height: 8rem;
+}
+.mui-card-content .img-wrap img{
+    width: 100%;
+    height: 100%;
+}
+.content-title{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1.8rem;
+    padding: .5rem;
+    background-color: rgba(0,0,0,.5);
+    color: #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mui-card-footer{
+    margin-top: .3rem;
+    padding: 0;
+    color: #888;
+}
+.mui-card-footer:before{
+    height: 0;
+}
+.mui-card-footer .state{
+    position: relative;
+    width: 4rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: white;
+}
+.mui-card-footer .state-publish{
+    background-color: #EC2619;
+}
+.mui-card-footer .state-over{
+    background-color: #ccc;
+}
+.mui-card-footer .state:after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: .75rem;
+    height: 1.5rem;
+    border-radius: 0 1.5rem 1.5rem 0;
+    top: 0;
+    right: -.75rem;
+}
+.mui-card-footer .state-publish:after{
+    background-color: #EC2619;
+}
+.mui-card-footer .state-over:after{
+    background-color: #ccc;
+}
+.union{
+    margin-left: 2.5rem;
+    width:3rem;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+#pullrefresh .mui-table-view {
+    background-color: transparent;
+}
+#pullrefresh .mui-table-view:after,
+#pullrefresh .mui-table-view:before {
+    position: static;
+}
+
+/*活动报名*/
+.mui-input-row label~input, .mui-input-row label~select,
+.mui-input-row label~textarea  {
+    text-align: left;
+}
+.mui-input-group {
+    margin-top: 2rem;
+    background-color: transparent;
+}
+.mui-input-group .mui-input-row {
+    padding: 0 1rem;
+    height: 2.25rem;
+    background-color: white;
+}
+.mui-input-group .mui-input-row:after,
+.mui-input-group:after {
+    position: static;
+}
+.mui-input-row label {
+    padding:.8rem 0;
+    width: 30%;
+    color: #666;
+}
+.mui-input-row input {
+    height: 2.3rem;
+}
+.border-btm {
+    height: 100%;
+    border-bottom: 1px solid #f5f5f5;
+}
+.my-btn {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border:1px solid #EC2719;
+    width: 90%;
+    background-color:#EC2719;
+    font-size: .8rem;
+}
+.mui-input-row label~input{
+    width: 70%;
+}
+input[type='file']{
+    opacity: 0;
+}
+
+/*提交的提示信息*/
+#tip{
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 10rem;
+    background-color: rgba(0,0,0,.3);
+    color: white;
+    display: none;
+}
+
+/*报名按钮*/
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2rem;
+    background-color: rgba(225,225,225,.8);
+}
+.apply-btn .my-btn {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    border:1px solid #EC2719;
+    width: 90%;
+    background-color:#EC2719;
+    font-size: .8rem;
+}

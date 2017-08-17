@@ -1,0 +1,55 @@
+.content{
+    padding: .8rem .7rem .3rem;
+    line-height: 1.8;
+    background: url("../../images/sub-life/gh-bg.png") no-repeat 50% 70%;
+    background-size: 80%;
+    background-color: white;
+}
+.content .gh-logo{
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    background: url("../../images/public/gh-logo.png")  no-repeat;
+    background-size: 100%;
+}
+.content h4{
+    margin-bottom: .7rem;
+    text-align: center;
+    line-height: 1.5;
+    font-size: .75rem;
+    color: #EC2619;
+}
+.content .content-detail p{
+    text-indent: 2em;
+    font-size: .65rem;
+    color: #333;
+}
+.content-detail-wrap .detail-infor{
+    background-color: white;
+    padding:0 .6rem;
+}
+.content-detail-wrap .detail-infor a{
+    display: block;
+}
+.content-detail-wrap .detail-infor a{
+    position: relative;
+    padding:.7rem 0 .7rem 1.5rem;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+.content-detail-wrap .address{
+    background: url("../../images/sub-life/address-red.png") 0 50% no-repeat;
+    background-size: 1rem;
+}
+.content-detail-wrap .tel-phone{
+    background: url("../../images/sub-life/phone-red.png") 0 50% no-repeat;
+    background-size: .9rem;
+}
+.content-detail-wrap .detail-address{
+    width: 90%;
+    font-size: .65rem;
+}
+.tip{
+    height: 2rem;
+    line-height: 2rem;
+}

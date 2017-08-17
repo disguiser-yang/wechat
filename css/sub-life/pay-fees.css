@@ -1,0 +1,287 @@
+/*缴费导航页*/
+.mui-content .title-column{
+    background-color: #f5f5f5;
+}
+.pay-fees{
+    margin: 2rem .3rem 0;
+}
+.pay-fees .mui-table-view-cell{
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    height: 4.7rem;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: .65rem;
+}
+.pay-fees .mui-table-view-cell p{
+    margin-top: .1rem;
+    font-size: .4rem;
+}
+.pay-fees .mui-table-view-cell img{
+    margin-top: .6rem;
+    margin-bottom: .2rem;
+    width: 1.3rem;
+    height: 1.6rem;
+}
+.pay-fees .mui-table-view-cell #phone,
+.pay-fees .mui-table-view-cell #election,
+.pay-fees .mui-table-view-cell #property{
+    width: auto;
+    /*height: 1.5rem;*/
+}
+.a-box .icon-title {
+    margin-bottom: 0;
+}
+/*缴费详情页*/
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea  {
+    text-align: left;
+}
+.mui-input-group {
+    margin-top: 2rem;
+    background-color: transparent;
+}
+.mt-0{
+    margin-top: 0;
+}
+.mui-input-group .mui-input-row {
+    padding: 0 1rem;
+    height: 2.25rem;
+    background-color: white;
+    color: #646464;
+}
+.mui-input-group .mui-input-row:after,
+.mui-input-group:before,
+.mui-input-group:after {
+    position: static;
+}
+.mui-input-row label {
+    padding:.8rem 0;
+}
+.mui-input-row span{
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    line-height:2.3rem;
+    text-align: right;
+    color:#666;
+}
+.mui-input-group p{
+    margin-bottom: .3rem;
+    font-size: .625rem;
+    color:#999;
+}
+.mui-navigate-right:after,
+.mui-push-right:after{
+    font-size: .8rem;
+}
+.mui-navigate-right:after,
+.mui-push-left:after,
+.mui-push-right:after{
+    top:54%;
+    color: #666;
+}
+.mui-input-row input {
+    height: 2.3rem;
+}
+.border-btm {
+    height: 100%;
+    border-bottom: 1px solid #f5f5f5;
+}
+.line-height{
+    line-height: 2.7rem;
+}
+.my-btn {
+    padding-top: .45rem;
+    padding-bottom: .45rem;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+    border:1px solid #ccc;
+    width: 90%;
+    background-color:#ccc;
+    font-size: .8rem;
+}
+.btn-success{
+    border:1px solid #EC2719;
+    background-color:#EC2719;
+}
+.mui-input-row label{
+    width: 25%;
+}
+.mui-input-row label~input{
+    width: 75%;
+}
+.mui-input-group>p{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    color: #999;
+}
+.mui-input-group .mui-button-row{
+    height: auto;
+}
+.recharge-tip{
+    padding: .7rem;
+}
+.recharge-tip-title{
+    padding-left: 1.2rem;
+    background: url("../../images/sub-life/2_54.png") no-repeat;
+    background-size: auto 100%;
+}
+.mui-input-group .height-row {
+    height: 4rem;
+}
+.height-row label{
+    padding: 1.8rem 0;
+}
+.height-row span{
+    line-height: 4.2rem;
+}
+.height-row #card{
+    padding: 1.2rem 0;
+}
+/*选择单位*/
+#pay-fees{
+    position: absolute;
+    top: 0;
+    right: -20rem;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: #c2272d;
+    /*display: none;*/
+    transition: right .6s linear;
+}
+#pay-fees i{
+    position: absolute;
+    top: 30%;
+}
+#pay-fees header{
+    margin-top: .75rem;
+}
+
+/*账务查询*/
+#money{
+    height: 6rem;
+    background-color: #e20d16;
+    color: white;
+}
+#money>div{
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+#money #font{
+    font-size: 1.5rem;
+}
+.mui-checkbox input[type=checkbox]{
+    position: static;
+    margin-left: .8rem;
+    width: .8rem;
+    height: .8rem;
+}
+p.agreement{
+    margin-top: 1rem;
+    font-size: .6rem
+}
+.mui-checkbox input[type=checkbox]:before{
+    font-size: .8rem;
+}
+.mui-checkbox input[type=checkbox]:checked:before{
+    color: #ec291b;
+}
+
+.mui-input-row .type-name{
+    width: 25%;
+}
+.mui-input-row .card{
+    width: 60%;
+}
+.mui-input-row .bg{
+    float: left;
+    width: 10%;
+    height: inherit;
+}
+.mui-input-row .gas-bg{
+    background: url("../../images/sub-life/2_61.png") no-repeat 0 55%;
+    background-size: 60%;
+}
+.mui-input-row .water-bg{
+    background: url("../../images/sub-life/2_73.png") no-repeat 0 55%;
+    background-size: 60%;
+}
+.mui-input-row .electricty-bg{
+    background: url("../../images/sub-life/2_64.png") no-repeat 0 55%;
+    background-size: 60%;
+}
+/* 支付密码 */
+#pay-keyboard-wrap{
+     position: fixed;
+     top:0;
+     z-index:5;
+     right: -20rem;
+     width: 100%;
+     height: 100%;
+     /*background-color: #6d6d72;*/
+     /* transition:right .3s linear; */
+ }
+ .pwd-row{
+     margin-top: .7rem;
+     margin-bottom: .7rem;
+ }
+ .pwd-row input{
+     margin-bottom: 0;
+     padding: 0;
+     width: 2.3rem;
+     height: 2.3rem;
+     border-radius: inherit;
+     border-left: none;
+     text-align: center;
+     font-size:2rem;
+     border-color: #e6e6e6;
+ }
+ .pwd-row input:first-child{
+     border-left: 1px solid #e6e6e6;
+ }
+ #keyboard{
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     transition: .3s linear;
+ }
+ #keyboard>span{
+     display: inline-block;
+     width: 33.3%;
+     height: 2.2rem;
+     border: 1px solid #e6e6e6;
+     border-right: 0;
+     border-bottom: 0;
+     background-color: white;
+     line-height: 2.2rem;
+     text-align: center;
+     font-size: 1rem;
+     vertical-align:middle;
+ }
+ #keyboard .border-none{
+     border-left: none;
+ }
+ #keyboard .del{
+     background-color: #e6e6e6;
+ }
+ .single-del{
+     background: url("../../images/public/del.png") no-repeat 50% 50%;
+     background-size: 1.5rem;
+ }
+ #switch{
+     width: 100%;
+     height: 1.5rem;
+     line-height: 1.5rem;
+     background: url("../../images/remit-member/down.png") no-repeat 50% 50%;
+     background-size: 1rem;
+     background-color: white;
+ }
+  #keyboard{
+      background-color: white;
+  }

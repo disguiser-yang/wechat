@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>收货地址编辑</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+		<link rel="stylesheet" href="../css/addressEdit.css" />		
+	</head>
+	<body>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+   				<li class="mui-table-view-cell">
+					<div class="area-editing-title">姓名</div>
+					<input id="areaName" class="area-editing-input" type="text" placeholder="请输入姓名" />
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="area-editing-title">手机号码</div>
+					<input id="areaPhone" class="area-editing-input" type="number" placeholder="请输入手机号码" oninput="if(value.length>11)value=value.slice(0,11)" />
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<div class="area-editing-title">所在地区</div>
+						<input id="areaSelectBtn" class="area-editing-input" type="text" placeholder="请选择地区" readonly="readonly" />
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="area-editing-title">详细地址</div>
+					<input id="areaDetail" class="area-editing-input" type="text" placeholder="请输入详细地址" /> 
+				</li> 
+			</ul>
+			<ul class="mui-table-view" style="margin-top: 10px;">
+   				<li class="mui-table-view-cell" id="setDefaultCell">
+					<div class="mui-icon appui-icon-hud appui-icon-hud-unselect address-list-item-check" id="setDefault"></div>
+					<div class="area-editing-addrtips">设为默认收货地址</div>
+				</li> 
+			</ul>
+			<div id="areaSaveBtn" class="area-editing-save">保存</div>  
+			
+			
+		<div class="address-mask-layer" id="maskLayer">
+			<div class="address-selector" id="addressSelector">
+				<div class="address-selector-header">
+					<div class="address-selector-header-title">选择所在地区</div>
+					<div id="areaClose" class="mui-icon mui-icon-closeempty address-selector-close"></div>
+				</div>
+				<div class="address-selector-selectitem">
+					<div class="address-selector-selectitem-item address-active" id="tabProvince" content="#tableProvince">请选择</div>
+					<div class="address-selector-selectitem-item" style="display: none;" id="tabCity" content="#tableCity">请选择</div>
+					<div class="address-selector-selectitem-item" style="display: none;" id="tabCounty" content="#tableCounty">请选择</div>
+					<div class="address-selector-selectitem-item" style="display: none;" id="tabTown" content="#tableTown">请选择</div>
+				</div>
+				<div class="address-selector-progressbar" id="addressProgressBar"></div>
+				<div class="address-selector-list">
+					<div class="address-selector-list-table" style="transform: translate(0,0);-webkit-transform: translate(0,0);" id="tableProvince">
+						<script type="text/html" id="templateProvince">
+							{{each list as value key}}  
+								<div class="address-selector-list-table-cell" index={{value}} type="1">{{key}}</div>
+							{{/each}}
+						</script>
+					</div>
+					<div class="address-selector-list-table" id="tableCity">
+						<script type="text/html" id="templateCity">
+							{{each list as value key}}  
+								<div class="address-selector-list-table-cell" index={{value}} type="2">{{key}}</div>
+							{{/each}}
+						</script>
+					</div>
+					<div class="address-selector-list-table" id="tableCounty">
+						<script type="text/html" id="templateCounty">
+							{{each list as value key}}  
+								<div class="address-selector-list-table-cell" index={{value}} type="3">{{key}}</div>
+							{{/each}}
+						</script>
+					</div>
+					<div class="address-selector-list-table" id="tableTown">
+						<script type="text/html" id="templateTown">
+							{{each list as value key}}  
+								<div class="address-selector-list-table-cell" index={{value}} type="4">{{key}}</div>
+							{{/each}}
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- scripts -->
+		<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+		<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+		<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../common/js/common.js"></script>
+		<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+		<script type="text/javascript">document.write("<script type='text/javascript' src='../js/addressEdit.js?v="+new Date().getTime()+"'></s" + "cript>");</script>
+		<!--<script type="text/javascript" src="../js/addressEdit.js"></script>-->
+	</body>
+</html>

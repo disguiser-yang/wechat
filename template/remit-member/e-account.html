@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>什么是e账户</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link href="../../common/public.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="bank-tip-wrap">
+        <div class="bank-tip bank-tip-detail">e账户是上海银行为您开立的标准银行Ⅱ类账户，支持在该平台为您绑定全国一百余家的银行卡，提供银行卡资金消费服务和工会会员专享理财产品等增值金融服务。</div>
+    </div>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+</body>
+
+</html>
+<style>
+    .bank-tip-wrap {
+        padding: 0.6rem;
+        color: #878787;
+    }
+    
+    .bank-tip-detail {
+        text-indent: 2em;
+    }
+</style>
+
+<script>
+    $(function() {
+
+        pushHistory();
+        window.addEventListener("popstate", function(e) {
+            pushHistory();
+            // mui.toast('123')
+            // mui.toast(isWX)
+            window.location.href = 'bind-bankCard.html'
+                // alert("我监听到了浏览器的返回按钮事件啦"); //根据自己的需求实现自己的功能 
+        }, false);
+
+        function pushHistory() {
+            var state = {
+                title: "title",
+                url: "#"
+            };
+            window.history.pushState(state, "title", "#");
+        }
+
+    });
+</script>

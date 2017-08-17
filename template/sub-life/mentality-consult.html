@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>心理咨询</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../css/sub-life/mentality-consult.css">
+    </head>
+
+    <body>
+        <!--loading-->
+	    <div id="load-wrap">
+	        <div class="spinner">
+	            <div class="double-bounce1"></div>
+	            <div class="double-bounce2"></div>
+	        </div>
+	    </div>
+        <div class="content">
+            <div class="gh-logo"></div>
+            <h4>成都市总工会<br/>“心之家”职工心理咨询服务</h4>
+            <div class="content-detail">
+                <p>成都市“心之家”职工心理咨询中心，位于成都市建设南路3号成都市总工会东郊职工群众惠民服务中心。</p>
+                <p>在成都市总工会的指导下，中心为广大职工朋友及各企事业单位提供相应心理服务。中心设立心理热线室与心理咨询室，职工朋友们可以通过热线电话与心理咨询师沟通交流，也可预约前来中心的心理咨询室享受免费的面对面服务。</p>
+                <p>“心之家”职工心理咨询中心欢迎各企事业单位派员前来“心之家”观摩，“心之家”会组织心理专家与大家一起，就企事业单位的心理服务工作，展开研讨交流。在总工会的领导下，通过我们共同的努力，一起为广大职工朋友提供服务。</p>
+            </div>
+        </div>
+        <div class="content-detail-wrap">
+            <div class="detail-infor mt-1">
+                <a id="address" class="address mui-navigate-right">
+                    <div class="detail-address">成都市建设南路3号成都市总工会东郊职工群众惠民服务中心</div>
+                </a>
+                <a class="tel-phone mui-navigate-right" href="tel:18123304733">18123304733</a>
+                <div class="tip"><span class="c-red">*</span>请职工提前三天拨打电话进行预约</div>
+            </div>
+        </div>
+
+        <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../js/public/fontsize.js"></script>
+        <script src="../../lib/mui/dist/js/mui.min.js"></script>
+        <script src="https://api.map.baidu.com/api?v=2.0&ak=xsS2zVNVwv2OZItBIWdDDgdc&s=1"></script>
+        <script>
+             mui("body").on('tap', "#address",function() {
+                window.location.href='http://api.map.baidu.com/marker?location=30.672381,104.120395&title=成都市总工会&content=成都市建设南路3号成都市总工会东郊职工群众惠民服务中心&output=html';
+             });
+        </script>
+    </body>
+
+</html>

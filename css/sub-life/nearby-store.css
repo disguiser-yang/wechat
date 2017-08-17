@@ -1,0 +1,236 @@
+/*附近商家-分类header*/
+header{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    color: #666;
+    overflow: hidden;
+}
+header .classify{
+    width: 50%;
+    text-align: center;
+}
+header .classify>span{
+    display: inline-block;
+    position:relative;
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+    width: 100%;
+}
+header .first-classify>span:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid #ccc;
+}
+header .arrow-icon{
+    display: inline-block;
+    margin-left: .1rem;
+    width: .4rem;
+    height: .4rem;
+    background: url("../../images/public/2_05.png") no-repeat 50% 0;
+    background-size: 100%;
+}
+header .icon-active{
+    background: url("../../images/public/2_03.png") no-repeat 50% 0;
+    background-size: 100%;
+}
+header .active{
+    color: #EC2619;
+}
+aside{
+    position: fixed;
+    top: 2.1rem;
+    width: 100%;
+    z-index: 5;
+    display: none;
+}
+aside .mui-scroll div{
+    position: relative;
+    line-height: 2rem;
+    border-top: 1px solid #e6e6e6;
+    background-color: white;
+    color: #333;
+}
+aside .mui-scroll>div{
+    padding-left: 1rem;
+}
+aside .mui-scroll div:first-child{
+    border-top: none;
+}
+aside .second-menu>div>div{
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.time-option{
+    display: none;
+}
+.type-option .mui-scroll-wrapper{
+    width: 51%;
+}
+aside .mui-scroll-wrapper{
+    height: 20rem;
+}
+aside .mui-scroll-wrapper-right{
+    background-color: #f3f3f3;
+}
+aside .mui-scroll-wrapper-right .mui-scroll div{
+    background-color: transparent;
+}
+aside .mui-scroll-wrapper .mui-scroll{
+    width: 100%;
+    height: 20rem;
+    overflow: auto;
+}
+aside .mui-scroll-wrapper .mui-scroll .active{
+     color:#EC2619;
+}
+aside .mui-scroll-wrapper-left .mui-scroll .active{
+    background-color: #f3f3f3;
+}
+aside .mui-scroll-wrapper-left .mui-scroll div{
+    border: none;
+}
+.mui-navigate-right.active:after{
+    font-size: .8rem;
+    color:#EC2619;
+}
+.second-menu>div{
+    display: none;
+}
+
+/*附近商家-列表*/
+.content-wrap .mui-scroll-wrapper{
+    overflow: auto;
+    top: 2.1rem;
+}
+.line-box{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .5rem;
+    background-color: white;
+}
+.line-box .mui-row{
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #ddd;
+}
+.line-box:last-child .mui-row{
+    border-bottom:none;
+}
+.line-box .mui-row .pic img{
+    border-radius: .2rem;
+    width: 90%;
+    height: 2.98rem;
+}
+.line-box .infor {
+    padding-right: .3rem;
+}
+.line-box .infor div {
+    margin-bottom: .3rem;
+    min-height: 1.8rem;
+    line-height: 1.5;
+    font-size: .6rem;
+    color: #333;
+}
+.line-box .infor p{
+    margin-bottom: 0;
+}
+.line-box .infor p span{
+    font-size: .5rem;
+    display: inline-block;
+    max-width: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.line-box .discount{
+    height: 2.8rem;
+    line-height: 4.8rem;
+    text-align: right;
+    font-weight: 600;
+    color: #EC2619;
+}
+.line-box .discount .price{
+    font-size: .9rem;
+}
+.mui-table-view:before,
+.mui-table-view:after{
+    background-color: transparent;
+}
+.mui-table-view-cell:after {
+    left: .8rem;
+    right: .7rem;
+    background-color: #ddd;
+}
+
+/*附近商家详情页*/
+.content-detail-wrap .detail-infor{
+    background-color: white;
+    padding:0 .6rem;
+}
+.content-detail-wrap .detail-infor a{
+    display: block;
+}
+.content-detail-wrap .detail-infor a{
+    position: relative;
+    padding:.7rem 0 .7rem 1.5rem;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+.content-detail-wrap .line-box .mui-row{
+    border: none;
+}
+.mui-navigate-right:after,
+.mui-push-right:after{
+    right: 0;
+    font-size: .8rem;
+}
+aside .mui-navigate-right:after,
+aside .mui-push-right:after{
+    right: .5rem;
+    font-size: .8rem;
+}
+.content-detail-wrap .address{
+    background: url("../../images/sub-life/address-red.png") .2rem 50% no-repeat;
+    background-size: 1rem;
+}
+.content-detail-wrap .tel-phone{
+    background: url("../../images/sub-life/phone-red.png") .2rem 50% no-repeat;
+    background-size: .9rem;
+}
+.content-detail-wrap .detail-address{
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pay-btn-row{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+.pay-btn-row .mui-row div{
+    height: 100%;
+    line-height: 2.5rem;
+}
+.pay-btn-row .pay-title{
+    padding-left: 2rem;
+    background: url("../../images/sub-life/2_34.png") .5rem 50% no-repeat;
+    background-size: 1rem;
+    background-color: white;
+    font-size: .8rem;
+}
+.pay-btn-row .pay-btn{
+    background-color: #EC2619;
+    text-align: center;
+    font-size: .9rem;
+    color: white;
+}

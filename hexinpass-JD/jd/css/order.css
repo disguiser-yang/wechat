@@ -1,0 +1,225 @@
+.mui-segmented-control-negative.mui-segmented-control-inverted~.mui-slider-progress-bar {
+	background-color: #FD555A;
+}
+.mui-segmented-control-negative.mui-segmented-control-inverted .mui-control-item.mui-active {
+	color: #FD555A;
+}
+.order-list {
+	background-color: RGBA(244, 246, 246, 1.00);
+}
+.order-list-item {
+	margin-top: 10px;
+	background-color: white;
+	border-top: 1px solid RGBA(235, 235, 235, 1.00);
+	border-bottom: 1px solid RGBA(235, 235, 235, 1.00);
+}
+.order-list-item-header {
+	padding: 0 10px;
+	line-height: 30px;
+	height: 30px;
+}
+.order-list-item-header-jd1 {
+	color: #666;
+	float: left;
+}
+.order-list-item-header-jd2 {
+	color:#333;
+	float: left;
+	padding-left: 8px;
+}
+.order-list-item-header-state {
+	color: #FD555A;
+	float: right;
+}
+.order-list-item-goods {
+	height: 96px;
+	width: 100%;
+	background-color: RGBA(248, 248, 248, 1.00);
+	position: relative;
+	overflow: hidden;
+	padding: 8px 10px 8px 0;
+}
+.order-list-item-goods-imgbg {
+	width: 80px;
+	height: 80px;
+	padding: 8px;
+	float: left;
+}
+.mui-icon.mui-icon-arrowright.order-more {
+	position: absolute;
+	right: 5px;
+	margin-top: 30px;
+	font-size: 20px;
+	color: #666;
+}
+.order-list-item-goods-title {
+	position: absolute;
+	left: 85px;
+	right: 10px;
+	top: 14px;
+	color: #333;
+	display:-webkit-box;
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.order-list-item-goods-desc {
+	position: absolute;
+	top: 63px;
+	left: 85px;
+	color: #999;
+	font-size: 12px;
+}
+.order-list-item-goods-num {
+	position: absolute;
+	top: 63px;
+	right: 10px;
+	color: #999;
+	font-size: 14px;
+}
+.order-list-item-money {
+	line-height: 30px;
+	width: 100%;
+	padding-right: 10px;
+	text-align: right;
+	color: #333;
+}
+.order-list-item-operate {
+	width: 100%;
+	text-align: right;
+	border-top: 1px solid RGBA(235, 235, 235, 1.00);
+	height: 40px;
+	padding-top: 8px;
+	padding-right: 10px;
+	text-align: center;
+	font-size: 13px;
+}
+.order-list-item-operate-pay {
+	border: 1px solid #FD555A;
+	padding: 0 8px;
+	border-radius: 5px;
+	float: right;
+	color: #FD555A;
+}
+.order-list-item-operate-cancel {
+	border: 1px solid #999;
+	padding: 0 8px;
+	border-radius: 5px;
+	float: right;
+	color: #333;
+	margin-right: 10px;
+}
+.order-list-item-operate-express {
+	border: 1px solid #999;
+	padding: 0 8px;
+	border-radius: 5px;
+	float: right;
+	color: #333;
+}
+.order-list-item-operate-signed {
+	border: 1px solid #999;
+	padding: 0 8px;
+	border-radius: 5px;
+	float: right;
+	color: #333;
+}
+.order-list-item-operate-service {
+	border: 1px solid #999;
+	padding: 0 8px;
+	border-radius: 5px;
+	float: right;
+	color: #333;
+}
+.order-list-item-operate-asservice {
+	border: 1px solid #999;
+	padding: 0 8px;
+	border-radius: 5px;
+	float: right;
+	color: #333;
+	margin-right: 10px;
+}
+.order-list-item-operate-delete {
+	border: 1px solid #999;
+	padding: 0 8px;
+	border-radius: 5px;
+	float: right;
+	color: #333;
+}
+.app-af-bg {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 70px;
+	height: 80px;
+	z-index: 888;
+}
+.app-af-add-bg {
+	position: fixed;
+	left: 20px;
+	bottom: 35px;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: rgba(1,1,1,0);
+	box-shadow: 1px 1px 5px #999;
+	-webkit-box-shadow: 1px 1px 5px #999;
+	z-index: 100;
+}
+.app-af-add {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background: url(../img/afadd.png) no-repeat;
+	background-size: 100% 100%;
+	transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;	
+}
+.app-af-address {
+	position: absolute;
+	left: 20px;
+	bottom: 30px;
+	width: 29px;
+	height: 48px;
+	background-color: lightblue;
+	background: url(../img/afaddress1.png) no-repeat;
+	background-size: 100% 100%;
+	transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;
+	transform: scale(0.01);
+	-webkit-transform: scale(0.01);
+	z-index: 99;
+}
+.app-af-service {
+	position: absolute;
+	left: 20px;
+	bottom: 30px;
+	width: 34px;
+	height: 49px;
+	background-color: lightblue;
+	background: url(../img/afservice2.png) no-repeat; 
+	background-size: 100% 100%;
+	transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;
+	transform: scale(0.01);
+	-webkit-transform: scale(0.01);
+	z-index: 98;
+}
+.af-address-transform {
+	transform: translate(-3px,-60px) scale(1); 
+	-webkit-transform: translate(-3px,-60px) scale(1); 
+}
+.af-service-transform-right {
+	transform: translate(60px,0) scale(1); 
+	-webkit-transform: translate(60px,0) scale(1); 
+}
+.af-service-transform-left {
+	transform: translate(-60px,0) scale(1); 
+	-webkit-transform: translate(-60px,0) scale(1); 
+}
+.af-add-transform {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
+  

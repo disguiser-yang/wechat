@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>工会答题活动</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="renderer" content="webkit">
+    <meta name="browsermode" content="application">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../js/public/config.js"></script>
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/html/css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://zzb.cdzgh.com/html/css/main.css">
+    <script src="http://phfw.cdzgh.com/puhuihua/static/wechat/js/remit-member/personal-5720de77d5.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth > 750) {
+                        clientWidth = 750;
+                    }
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        function link() {
+            getToken1(26);
+            var local = window.localStorage;
+
+            function getToken1(page) {
+                token = localStorage.getItem('token');
+                sessionStorage.setItem('page', page);
+                if (!token) {
+                    window.location.href = 'login.html?enter=activity';
+                } else {
+                    $.post('/puhuihua/wechat/userInfo/validateToken', {
+                        token: token + '_' + terminal
+                    }, function(data) {
+                        if (!data.success) {
+                            local.removeItem('token');
+                            sessionStorage.setItem('page', page);
+                            window.location.href = 'login.html?enter=activity';
+                        } else {
+                            sessionStorage.setItem('close', 'yes');
+                            var phone = localStorage.getItem('phone');
+                            var token = localStorage.getItem('token');
+                            console.log(phone)
+                            console.log(token)
+                            window.location.href = activityPage + '?phone=' + phone + '&token=' + token + '_wechat';
+                        }
+                    }, 'json');
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="activity-wrap">
+        <a href="article_10.html" class="btn1">答题活动知识点</a>
+        <a href="list.html" class="btn2">中央 . 四川省，成都市重要精神</a>
+        <a href="javascript:;" onclick=link(); class="btn3">46464</a>
+    </div>
+</body>
+
+</html>

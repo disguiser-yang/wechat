@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>阳光福利</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="sunshine-welfare-introduce-wrap">
+        <div class="sunshine-welfare-introduce-detail">
+            <p>和信通“移动互联网+行业支付” 实名制综合服务平台，积极响应国家供给侧消费侧改革号召，在致力于推动本土实体经济发展，促进本土化就业和拉动消费的同时，杜绝了灰色资金进入，每一笔消费实名可追溯，仅用于拥有线下实体门店，健康诚信的联盟商家消费，在承接企业阳光福利同时，也是技术和制度创新预防腐败的有力工具。</p>
+        </div>
+
+        <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../js/public/fontsize.js"></script>
+        <script src="../../lib/mui/dist/js/mui.min.js"></script>
+</body>
+
+</html>
+<style>
+    .sunshine-welfare-introduce-wrap {
+        padding: 0.6rem;
+        color: #878787;
+    }
+    
+    .sunshine-welfare-introduce-wrap p {
+        line-height: 1.05rem;
+        font-size: 0.65rem;
+        text-indent: 2em;
+    }
+</style>
+
+<script>
+    $(function() {
+        pushHistory();
+        window.addEventListener("popstate", function(e) {
+            //监听到了浏览器的返回按钮事件
+
+            window.location.href = 'about-us.html';
+
+        }, false);
+
+        function pushHistory() {
+            window.history.pushState('', "title", "");
+        }
+
+    });
+</script>

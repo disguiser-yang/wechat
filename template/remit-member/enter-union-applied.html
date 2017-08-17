@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>会员认证</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link rel="stylesheet" href="../../common/public.css">
+        <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+        <link rel="stylesheet" href="../../css/remit-member/enter-union-apply.css">
+
+    </head>
+
+    <body>
+        <!--loading-->
+        <div id="load-wrap">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+        <!--提示-->
+        <div id="tip"><div id="tip-wrap"><div id="tip-box"></div></div></div>
+        <!--具体内容-->
+        <form class="mui-input-group" id="form-submit" enctype="multipart/form-data">
+            <!--查询有没有会员信息-->
+            <div id="step1">
+                <div class="mui-input-row">
+                    <div class="border-btm">
+                        <label>姓名</label>
+                        <input type="text" name="custName" class="inputInform custName"  placeholder="请输入姓名" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="mui-input-row">
+                    <div class="border-btm">
+                        <label>身份证号</label>
+                        <input type="text" name="idNo" class="inputInform idNo" placeholder="请输入身份证号" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="mui-button-row records-btn">
+                    <button type="button" class="mui-btn mui-btn-danger my-btn next" >下一步</button>
+                </div>
+            </div>
+
+            <!--入会获取验证码-->
+            <div id="step2" class="display-none">
+                <div class="mui-input-row">
+                    <div class="border-btm">
+                        <label>手机号</label>
+                        <div class="detail phone"></div>
+                    </div>
+                </div>
+                <div class="tip">会员认证需要短信确认，验证码将发送至工会预留手机号。</div>
+                <div class="mui-input-row">
+                    <div class="border-btm">
+                        <input type="text"  class="securityCode" placeholder="填写验证码" autocomplete="off" />
+                        <label  class="yzm"><span>获取验证码</span></label>
+                    </div>
+                </div>
+                <input type="hidden" id="id" />
+                <div class="mui-button-row records-btn">
+                    <button type="button" class="mui-btn mui-btn-danger my-btn next" >下一步</button>
+                </div>
+            </div>
+
+            <!--查看会员信息-->
+            <div id="step3" class="display-none">
+                <div class="mui-input-row">
+                    <div class="border-btm">
+                        <label>姓名</label>
+                        <div class="detail name"></div>
+                    </div>
+                </div>
+                <div class="mui-input-row">
+                    <div class="border-btm">
+                        <label>性别</label>
+                    <span class="mui-radio mui-left sex-box first-box">
+                      <input name="sex" type="radio"  disabled />男
+                    </span>
+                    <span class="mui-radio mui-left sex-box">
+                        <input name="sex" type="radio" disabled />女
+                    </span>
+                    </div>
+                </div>
+                <div class="mui-input-row">
+                    <div class="border-btm ">
+                        <label>民族</label>
+                        <div  class="detail nationality"></div>
+                    </div>
+                </div>
+                <div class="mui-input-row">
+                    <div class="border-btm">
+                        <label>身份证号</label>
+                        <div class="detail idcard"></div>
+                    </div>
+                </div>
+                <div class="mui-input-row">
+                    <div class="border-btm">
+                        <label>手机号</label>
+                        <div class="detail mobile"></div>
+                    </div>
+                </div>
+                <div class="mui-input-row mt-1">
+                    <div class="border-btm ">
+                        <label>所在单位</label>
+                        <div class="detail department"></div>
+                    </div>
+                </div>
+                <div class="mui-input-row">
+                    <div class="border-btm" >
+                        <label>农村籍职工</label>
+                        <span class="mui-radio mui-left sex-box first-box">
+                            <input name="village" type="radio"  disabled />是
+                        </span>
+                        <span class="mui-radio mui-left sex-box">
+                            <input name="village" type="radio" disabled />否
+                        </span>
+                    </div>
+                </div>
+                <div class="mui-input-row">
+                    <div class="border-btm ">
+                        <label>政治面貌</label>
+                        <div class="detail politics"></div>
+                    </div>
+                </div>
+                <div id="detail">
+                    <div class="mui-input-row">
+                        <div class="border-btm " >
+                            <label>区市县/产业</label>
+                            <div class="detail first-union"></div>
+                        </div>
+                    </div>
+                    <div class="mui-input-row">
+                        <div class="border-btm "  >
+                            <label id="long-label">乡镇(街道)<br/>/工业园区</label>
+                            <div class="detail second-union"></div>
+                        </div>
+                    </div>
+                    <div class="mui-input-row">
+                        <div class="border-btm" >
+                            <label>地址</label>
+                            <div class="detail address"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hint">请确认您在工会预留的信息，若信息有误请联系所在工会组织变更</div>
+                <div id="footer">
+                    <div class="mui-button-row records-btn">
+                        <button type="button" class="mui-btn mui-btn-danger my-btn btn-success" >确   认</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+        <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../js/public/fontsize.js"></script>
+        <script src="../../lib/mui/dist/js/mui.min.js"></script>
+        <script src="../../js/remit-member/enter-union-applied.js"></script>
+        <script>
+
+        </script>
+    </body>
+
+</html>

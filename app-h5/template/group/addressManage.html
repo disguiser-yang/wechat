@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的收货地址</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/css/appui.css" />
+    <link href="../../css/addressManage.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../common/css/appui.css" />
+</head>
+
+<body>
+    <!--loading-->
+    <div class='main-content address-list'>
+        <script type="text/html" id="addressList">
+            {{each list as value index}}
+            <div class='address-items' index={{value.id}}>
+                <div class='address-items-detail'>
+                    <p class='items-detail-info'>
+                        <span class='nickname'>{{value.name}}</span>
+                        <span class='telphone'>{{value.mobile}}</span>
+                    </p>
+                    {{if value.main==1}}
+                    <p class='items-detail-address'>
+                        <span class='address-default'>[默认地址]</span> 四川成都武侯区南四段26号附4号黄金小区一栋（高升桥苏宁广场斜对门）
+                    </p>
+                    {{else}}
+                    <p class='items-detail-address'>
+                        {{if value.townName == 0}}
+                        <span>{{value.provinceName+' '+value.cityName+' '+value.countyName+' '+value.address}}</span> {{else}}
+                        <span>{{value.provinceName+' '+value.cityName+' '+value.countyName+' '+value.townName+' '+value.address}}</span> {{/if}}
+                    </p>
+                    {{/if}}
+                </div>
+                <div class='address-items-edit address-list-cell-operation-edit'>
+                    编辑
+                </div>
+            </div>
+
+            {{/each}}
+        </script>
+    </div>
+
+    <div class='add-address'>
+        <a href="javascript:;" class='add-address-btn' id='addressAddBtn'>添加新地址</a>
+    </div>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script type="text/javascript" src="../../common/js/app.ui.js"></script>
+    <script type="text/javascript" src="../../common/js/common.js"></script>
+    <script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+    <script src="../../js/addressManage.js"></script>
+</body>
+
+</html>

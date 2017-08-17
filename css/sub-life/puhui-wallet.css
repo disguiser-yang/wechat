@@ -1,0 +1,265 @@
+/*普惠钱包-记录*/
+
+#mui-content {
+    background-color: #697079;
+}
+
+.mui-table-view-cell>a.a-box {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+}
+
+.mui-table-view-cell>a.a-color {
+    padding-top: .8rem;
+    padding-bottom: .7rem;
+    color: white;
+}
+
+.mui-table-view-cell>a.a-color #price {
+    margin-top: .1rem;
+}
+
+.a-box .icon-title {
+    width: 35%;
+    font-size: .7rem;
+}
+
+.a-box .icon-title .time {
+    font-size: .65rem;
+}
+
+.a-box .records-icon-title1 {
+    margin-top: .4rem;
+    margin-bottom: .5rem;
+}
+
+.a-box .records-icon-title3 {
+    margin-bottom: .35rem;
+    margin-top: .2rem;
+}
+
+header {
+    background-color: white;
+}
+
+
+/*.li-header span{*/
+
+
+/*font-size: .75rem;*/
+
+
+/*}*/
+
+.mui-table-view-cell .deal-type {
+    /*margin-bottom: .3rem;*/
+    height: 1.2rem;
+    font-size: .7rem;
+}
+
+.mui-media-body>div {
+    width: 50%;
+}
+
+.mui-media-body .price {
+    margin-top: .5rem;
+    text-align: right;
+    font-size: .8rem;
+    color: #ec291b;
+}
+
+.mui-table-view:after,
+.mui-table-view:before {
+    position: static;
+}
+
+.records-content header a {
+    border-bottom: 1px solid #ddd;
+}
+
+.records-content header .active a {
+    border-bottom: 1px solid #ec291b;
+    color: #ec291b;
+}
+
+.my-btn {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    margin-top: 1rem;
+    /*margin-bottom: 1rem;*/
+    margin-bottom: .5rem;
+    border: 1px solid #EC2719;
+    width: 90%;
+    background-color: #EC2719;
+    font-size: .75rem;
+}
+
+#pay-phone {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#pay-phone a {
+    color: #8f8f94;
+    /*position: relative;*/
+}
+
+
+/*消费记录*/
+
+#consume {
+    display: none;
+    background-color: transparent;
+}
+
+#consume .mui-table-view-cell:after {
+    background-color: transparent;
+}
+
+
+/*普惠记录*/
+
+.puhui-records>div {
+    width: auto;
+    font-size: .6rem;
+}
+
+.puhui-records>div>img {
+    width: 100%;
+    height: 100%;
+}
+
+.puhui-records>.img-box {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: .3rem;
+}
+
+.mui-table-view-cell .puhui-records .deal-type {
+    margin-top: .3rem;
+}
+
+.puhui-records>.price {
+    margin-top: .8rem;
+    font-size: .7rem;
+}
+
+
+/*无数据提示*/
+
+.tip {
+    height: 14rem;
+    line-height: 14rem;
+    text-align: center;
+    font-size: .7rem;
+    color: #666;
+}
+
+.float-mask {
+    background: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 99;
+    display: none;
+}
+
+.float-mask-reg-bag {
+    position: relative;
+    /*top: 2.99rem;*/
+    width: 13.9rem;
+    height: 16.1rem;
+    /*margin-top: 70px;*/
+    background: url(../../images/remit-member/pocket-money.png);
+    background-size: 100%;
+    background-position: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+    background-repeat: no-repeat;
+    /*transform: scale(0.5);*/
+    /*animation: drop 0.5s;*/
+    /*animation-fill-mode: forwards;*/
+    /*transform: rotateX(45deg);*/
+}
+
+.redirect-bind-card {
+    display: block;
+    width: 11.7rem;
+    height: 1.92rem;
+    background-image: url(../../images/remit-member/redirect-bind-card.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 1.49rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.close-btn {
+    margin-top: 2.31rem;
+    /*animation: showBtn 1s;
+    animation-fill-mode: forwards;*/
+}
+
+.close-btn-a {
+    width: 2.13rem;
+    height: 2.13rem;
+    display: block;
+    background: url(../../images/remit-member/close-btn.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    position: relative;
+    /*display: none;*/
+}
+
+.mui-popup-text {
+    text-align: left;
+}
+
+@keyframes drop {
+    from {
+        margin-top: -17rem;
+        transform: scale(0.1);
+    }
+    /*30% {
+        transform: scale(0.2);
+    }*/
+    /*80% {
+        margin-top: 3rem;
+        /*transform: scale(0.5);*/
+    /*}*/
+    90% {
+        transform: scale(1.01);
+    }
+    to {
+        margin-top: 3rem;
+        transform: scale(1);
+    }
+}
+
+@keyframes showBtn {
+    from {
+        opacity: 0.0;
+    }
+    70% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.manage-bind-card-p {
+    font-size: .65rem;
+    color: white;
+}

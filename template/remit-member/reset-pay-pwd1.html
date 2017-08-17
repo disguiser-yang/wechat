@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>修改支付密码</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+        <link href="../../common/public.css" rel="stylesheet">
+        <link href="../../css/remit-member/pay-pwd.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="tip"><div id="tip-wrap"><div id="tip-box"></div></div></div>
+        <p class="once">输入支付密码，完成身份验证</p>
+        <div class="pwd-row mui-text-center">
+            <input type="password" maxlength="1" readonly
+            /><input type="password" maxlength="1" readonly
+            /><input type="password" maxlength="1" readonly
+            /><input type="password" maxlength="1" readonly
+            /><input type="password" maxlength="1" readonly
+            /><input type="password" maxlength="1" readonly />
+        </div>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn my-btn" id="btn-success">确  定</button>
+        </div>
+
+        <div id="keyboard">
+        	<div id="switch"></div>
+            <span class="num border-none">1</span><span class="num">2</span><span class="num">3</span>
+            <span class="num border-none">4</span><span class="num">5</span><span class="num">6</span>
+            <span class="num border-none">7</span><span class="num">8</span><span class="num">9</span>
+            <span class="del all-del border-none">C</span><span class="num">0</span><span class="del single-del"></span>
+        </div>
+        
+         <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    	 <script src="../../js/public/fontsize.js"></script>
+	     <script src="../../lib/mui/dist/js/mui.min.js"></script>
+	     <script src="../../js/remit-member/reset-pay-pwd.js"></script>
+    </body>
+</html>

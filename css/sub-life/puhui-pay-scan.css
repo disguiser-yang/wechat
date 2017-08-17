@@ -1,0 +1,237 @@
+/*普惠支付*/
+body,html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#pay-wrap{
+    height: 100%;
+}
+.pay-wrap{
+    box-sizing: border-box;
+    padding: .6rem 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ec291b;
+    /*display:none;*/
+}
+.pay-content{
+    position: relative;
+    margin: auto;
+    height: 86%;
+    width: 14.25rem;
+    border-radius: 3px;
+    background-color: white;
+    overflow: hidden;
+}
+.pay-content .bar-code{
+    margin:1.634rem auto .5rem;
+    width: 10.75rem;
+    height: 3rem;
+}
+.pay-content .bar-code #canvas{
+    width: 10.75rem;
+    height: 3rem;
+}
+.pay-content .bar-code-num{
+    margin: 0;
+    font-size: .8rem;
+    color:#000;
+}
+.pay-content .QR-code{
+    margin: .7rem auto;
+    width: 8rem;
+    height: 8rem;
+}
+.pay-content .QR-code canvas{
+    width: 8rem;
+    height: 8rem;
+}
+.pay-content .tip{
+    margin-top: 1rem;
+    font-size: .6rem;
+    text-align: center;
+}
+.pay-content .wallet-infor{
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: .6rem;
+    width: 100%;
+    height: 2rem;
+    background-color: #f3f3f3;
+    font-size: .65rem;
+}
+.pay-content .wallet-infor>div{
+    float: left;
+}
+.wallet-infor .balance{
+    margin-left: .5rem;
+}
+.refresh-btn{
+    text-align: center;
+    color: white;
+}
+.refresh-btn .refresh{
+    display: inline-block;
+    height: .7rem;
+    width: 4rem;
+}
+.refresh-btn .refresh img{
+    margin-right: .2rem;
+    width: .75rem;
+    /*height: 100%;*/
+    vertical-align: bottom;
+}
+/*选择支付类型*/
+.close-icon {
+    position: absolute;
+    left: .5rem;
+    top: 0.55rem;
+}
+.select-type-wrap{
+    position: fixed;
+    bottom: -18rem;
+    width: 100%;
+    background-color: #f5f5f5;
+    display: none;
+}
+.select-type-wrap header{
+    border-bottom: 1px solid #ddd;
+    line-height: 2rem;
+    text-align: center;
+    background-color: white;
+}
+.select-type-wrap .tip{
+    padding-left: .3rem;
+    font-size: .55rem;
+    line-height: 1.5rem;
+    color: #666;
+}
+.select-type-wrap .type>div{
+    padding-left: 1.2rem;
+    border-bottom: 1px solid #ddd;
+}
+.select-type-wrap .type:last-child>div{
+    border:none;
+}
+.select-type-wrap .balance>div{
+    background: url("../../images/remit-member/ic_balance@2x.png") no-repeat .1rem 50%;
+    background-size: auto 45%;
+}
+.select-type-wrap .add-card>div{
+    background: url("../../images/remit-member/ic_Add%20bank%20card@2x.png") no-repeat .1rem 50%;
+    background-size: auto 40%;
+}
+.select-type-wrap .bank-card>div{
+    background: url("../../images/remit-member/banks/yinlian.png") no-repeat 0 53%;
+    background-size: auto 50%;
+}
+.select-type-wrap .active{
+    background: url("../../images/remit-member/ic_Hook@2x.png") no-repeat 95% 50%;
+    background-size: auto 15%;
+}
+.select-type-wrap .type{
+    line-height: 2rem;
+    padding-left: .5rem;
+    background-color: white;
+}
+.select-type-wrap .select-type-box{
+    border-bottom: 1px solid #ddd;
+}
+.bank{
+    display: none;
+    max-width:80%;
+}
+.change-pay-type{
+    padding-right: .5rem;
+    background: url("../../images/remit-member/ic_Arrow@2x.png") no-repeat 100% 50%;
+    background-size: auto 60%;
+}
+.bank-server{
+    background-color: white;
+    text-align: center;
+    font-size: .5rem;
+    color: #999;
+    line-height: 3rem;
+}
+.bank-name{
+    display: inline-block;
+    max-width: 74%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+.identify{
+    padding-bottom: .6rem;
+    text-align: center;
+    color: white;
+}
+.identify img{
+    height: 1.5rem;
+    vertical-align: middle;
+    margin-right: .6rem;
+}
+/*免密支付设置*/
+.no-password-wrap{
+    position: fixed;
+    bottom: -18rem;
+    width: 100%;
+    background-color: #ec291b;
+    /*display: none;*/
+}
+.no-password-wrap>div{
+    padding: 0 .3rem ;
+}
+.no-password-wrap>div p{
+	margin:0;
+    width: 100%;
+    line-height: 1.8rem;
+    background-color: white;
+    text-align: center;
+    color: #333;
+}
+.no-password-wrap>div .help{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: 1px solid #ececec;
+}
+.no-password-wrap>div .password-set{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: .2rem;
+}
+.refresh-btn .set{
+    padding:.6rem .4rem;
+    display: inline-block;
+}
+.no-password-wrap>div .cancel{
+    margin-bottom: .2rem;
+    border-radius: 3px;
+}
+.no-password-box{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+}
+
+/*同意协议*/
+.mui-checkbox input[type=checkbox]{
+    position: static;
+    /*margin-left: .8rem;*/
+    width: .8rem;
+    height: .8rem;
+}
+p.agreement{
+    margin-top: .5rem;
+    font-size: .6rem
+}
+.mui-checkbox input[type=checkbox]:before{
+    font-size: .8rem;
+}
+.mui-checkbox input[type=checkbox]:checked:before{
+    color: #ec291b;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>法律咨询</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../lib/mui/dist/fonts/mui.ttf">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/labor-server/law-consult.css">
+    
+</head>
+
+<body>
+	<!--loading-->
+	<div id="load-wrap">
+	    <div class="spinner">
+	        <div class="double-bounce1"></div>
+	        <div class="double-bounce2"></div>
+	    </div>
+	</div> 
+	
+	<!--下拉刷新容器-->
+	<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+	    <div class="mui-scroll">
+	        <div class="textarea-wrap">
+			   <textarea placeholder="请输入您要咨询的内容" class="words-textarea"></textarea>
+			   <div class="residue"><span class="residue-word">0</span>/300</div>
+			   <div class="mui-button-row">
+			       <button type="button" class="mui-btn my-btn c-fff btn-fail" >提 交</button>
+			   </div>
+			</div>
+	        <!--数据列表-->
+	        <div class="mui-table-view mui-table-view-chevron interaction-content" id="content-list">
+	        </div>
+	    </div>
+	</div>
+	
+	<!--列表模板开始-->
+	<script type="text/html" id="list">
+    <div class="interaction-content-box">
+        <div>
+            <span class="portrait"><img data-lazyload=${headImage}></span>
+            <span>${nickname}</span>
+        </div>
+        <div class="interaction-words">
+            <p class="c-333">${content}</p>
+            <p class="reply ${className}">回复：</p>
+            <p class="reply-content c-333">${feedback}</p>
+        </div>
+    </div>
+	</script>
+	<!--列表模板结束-->
+	
+	<script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../../js/public/fontsize.js"></script>
+	<script src="../../lib/mui/dist/js/mui.min.js"></script>
+	<script src="../../lib/mui/mui.lazyload.js"></script>
+	<script src="../../lib/mui/mui.lazyload.img.js"></script>
+	<script src="../../lib/jquery-tmpl/jquery.tmpl.min.js"></script>
+	<script src="../../js/labor-server/law-consult.js"></script>
+</body>
+
+</html>

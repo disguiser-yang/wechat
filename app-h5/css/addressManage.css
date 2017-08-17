@@ -1,0 +1,89 @@
+p {
+    margin: 0;
+}
+
+body {
+    margin-bottom: 4rem;
+}
+
+.address-items {
+    /*height: 3.59rem;*/
+    border-bottom: 1px solid #d8d8d8;
+    padding: 0.64rem;
+    padding-right: 0rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.main-content {
+    /*background-color: #fff;*/
+    margin-top: 10px;
+    border-top: 1px solid #d8d8d8;
+}
+
+.address-items-detail {
+    width: 12.8rem;
+    padding-right: 0.64rem;
+}
+
+.address-items-detail p span.nickname {
+    float: left;
+}
+
+.address-items-detail p span.telphone {
+    float: right;
+}
+
+.items-detail-info {
+    overflow: hidden;
+    font-size: 0.6rem;
+    color: #363a45;
+    margin-bottom: 0rem;
+}
+
+.items-detail-address {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #363a45;
+}
+
+.items-detail-address .address-default {
+    color: #fe0130;
+}
+
+.address-items-edit {
+    /*height: 100%;*/
+    width: 2.35rem;
+    height: 2.35rem;
+    line-height: 2.35rem;
+    text-align: center;
+    border-left: 1px solid #bbbbbb;
+    color: #93969e;
+    font-size: 0.68rem;
+}
+
+.add-address {
+    position: fixed;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
+    height: 2.14rem;
+}
+
+.add-address-btn {
+    text-align: center;
+    height: 2.14rem;
+    line-height: 2.14rem;
+    background-color: #ff2649;
+    color: #fff;
+    display: block;
+    font-size: 0.68rem;
+}
+
+.add-address-btn:active {
+    color: #fff;
+    background-color: #fb5e76;
+}

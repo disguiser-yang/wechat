@@ -1,0 +1,97 @@
+.address-list {
+	overflow: auto;
+}
+.address-list-cell {
+	margin-top: 13px;
+	background-color: white;
+}
+.address-list-cell-name {
+	width: 40%;
+	float: left;
+	text-align: left;
+	padding-left: 10px;
+	margin-top: 10px;
+	color: RGBA(84, 85, 86, 1.00);
+}
+.address-list-cell-phone {
+	width: 60%;
+	float: left;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px;
+	color: RGBA(84, 85, 86, 1.00);
+}
+.address-list-cell-address {
+	width: 100%;
+	color: RGBA(189, 191, 191, 1.00);
+	font-size: 14px;
+	padding-left: 10px;
+	padding-top: 35px;
+	padding-bottom:10px;
+}
+.address-list-cell-operation {
+	width: 100%;
+	border-top: 2px solid RGBA(248, 249, 250, 1.00);
+	padding: 6px 10px;
+	height: 35px;
+	font-size: 14px;
+	color: RGBA(189, 191, 191, 1.00);
+}
+.mui-icon.appui-icon-hud.appui-icon-hud-unselect.address-list-item-check {
+	margin: auto;
+	color: RGBA(189, 191, 191, 1.00);
+	font-size: 19px;	
+	float: left;
+}
+.mui-icon.appui-icon-hud.appui-icon-hud-select.address-list-item-check {
+	margin: auto;
+	color: #FD555A;
+	font-size: 19px;	
+	float: left;
+}
+.address-list-cell-operation-default {
+	padding-left: 5px;
+	line-height: 20px;
+	float: left;
+}
+.address-list-cell-operation-text {
+	float: left;
+	padding-left: 5px;
+	text-align: center;
+	line-height: 22px;
+}
+.address-list-cell-operation-delete {
+	float: right;
+	width: 55px;
+}
+.address-list-cell-operation-edit {
+	float: right;
+	width: 60px;
+	margin-right: 20px;
+}
+.address-list-cell-operation-imgdelete {
+	width: 13px;
+	height: 17px;
+	float: left;
+	margin-top: 2px;
+}
+.address-list-cell-operation-imgedit {
+	width: 17px;
+	height: 17px;
+	float: left;
+	margin-top: 2px;
+}
+
+.address-add {
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	bottom: 10px;
+	height: 44px;
+	border-radius: 5px;
+	background-color: #FD555A;
+	color: white;
+	font-size: 18px;
+	line-height: 44px;
+	text-align: center;
+}

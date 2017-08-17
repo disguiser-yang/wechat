@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>商品详情</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="m.jd.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" CONTENT="-1">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <link rel="stylesheet" type="text/css" href="../../common/css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/appui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/goodDetailBase.css" charset="gbk" />
+    <link rel="stylesheet" type="text/css" href="../css/goodDetailInfo.css?v=1" charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/goodDetail.css" charset="UTF-8" />
+    <meta name="applicable-device" content="mobile">
+</head>
+
+<body id="body">
+    <a name="top"></a>
+    <header>
+        <div class="m_common_new_top">
+            <div id="m_common_header">
+                <header class="jd-header">
+                    <div class="jd-header-new-bar" id="itemProductHead">
+                        <ul class="jd-header-title" id="header-tabs">
+                            <li class="header-tab-item J_ping" report-pageparam="1434925" report-eventid="MProductdetail_ProductTab" report-eventlevel="5">
+                                <p class="header-tab-title header-tab-selected" id="detailView">
+                                    商品
+                                </p>
+                            </li>
+                            <li class="header-tab-item J_ping" id="detailInfo" report-pageparam="1434925" report-eventid="MProductdetail_DetailTab" report-eventlevel="5">
+                                <p class="header-tab-title">
+                                    详情
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="jd-header-new-bar" id="itemDetailHead" style="display: none;">
+                        <div class="jd-header-title">
+                            图文详情
+                        </div>
+                    </div>
+
+                    <!-- 普通商品详情分支头部 -->
+                    <div id="fixed" class="sift-tab">
+                        <ul class="tab-lst">
+                            <li>
+                                <a href="javascript:void(0)" value="wareInfo" class="on J_ping tab-lst-a" report-eventlevel="5" report-eventid="MProductdetail_DetailProductIntroduction" report-pageparam="1434925">
+										商品介绍
+									</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" value="wareStandard" class="J_ping tab-lst-a" report-eventlevel="5" report-eventid="MProductdetail_DetailParameter" report-pageparam="1434925">
+										规格参数
+									</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" value="warePack" class="J_ping tab-lst-a" report-eventlevel="5" report-eventid="MProductdetail_DetailCustomerService" report-pageparam="1434925">
+										包装售后
+									</a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+            <!-- 新版商详头部结束 -->
+        </div>
+    </header>
+    <button id="tempforsuite" style="display:none;">
+		</button>
+    <div id="mainLayout">
+        <div id="mainStay" class="new-wt">
+            <div class="miblebox" id="goods-img-box">
+                <!-- 头部等顶部部分占位 -->
+                <div class="hold-div-top" style="height: 86px;">
+                </div>
+                <!-- 上层页面外容器 -->
+                <div class="header-slider">
+                    <div class="header-slider-con">
+                        <li class="header-slider-item" id="productTabLi">
+                            <div class="page-content" id="mainLayout">
+                                <div class="page-content" id="content">
+                                    <script type="text/html" id="contentTemplateId">
+                                        <!-- 焦点图片 -->
+                                        <div class="scroll-imgs">
+                                            <div id="slide" class="slide" sku={{detail.sku}}>
+                                                <ul data-slide-ul='firstUl' id="banner">
+                                                    {{each detail.images as item index}}
+                                                    <li data-ul-child="child" class="J_ping" report-eventid="MProductdetail_BigPicClick" report-pageparam={{item.sku}}>
+                                                        <img src={{imgbase+item.path}} class="J_ping" report-eventid="MProductdetail_Photo" report-pageparam={{item.sku}} report-eventlevel="5">
+                                                    </li>
+                                                    {{/each}}
+                                                </ul>
+                                                <div class="tittup" id="tittup">
+                                                    <div class="arrow-box">
+                                                        <em class="arrow">
+													</em>
+                                                        <em class="arrow2">
+													</em>
+                                                    </div>
+                                                    <span class="inner">
+													滑动查看详情
+												</span>
+                                                </div>
+                                                <div class="page-nub" id="slidePageNub">
+                                                    <em data-slide-num="slideNub" class="fz18">
+												</em>
+                                                    <em class="nub-bg">
+													/
+												</em>
+                                                    <em data-slide-num="slideSum" class="fz12">
+												</em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="goods-part bdr-tb price-floor">
+                                            <div class="basic-info bdr-b borb">
+                                                <!--名称-->
+                                                <div class="prod-title">
+                                                    <a class="detailInfoClick J_ping" report-eventid="MProductdetail_Productinfo" report-pageparam="1434925" report-eventlevel="5">
+                                                        <span class="title-text-wrap">
+														<!--<i class="label-icon-div have-not-icon-div icon-pos red-div">
+															<span class="label-text white-text">
+																自营
+															</span>
+                                                        </i>-->
+                                                        <span class="title-text">
+															{{detail.name}}
+														</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <!-- 价格 -->
+                                                <div class="detail-swipe-area" style="height: 60px;">
+                                                    <div class="detail-desc">重量:{{detail.weight}}kg{{if detail.sales > 0}}&nbsp;&nbsp;&nbsp;&nbsp;已售:{{detail.sales}}{{/if}} {{if detail.readNum>0}}&nbsp;&nbsp;&nbsp;&nbsp;浏览量:{{detail.readNum}}{{/if}}</div>
+                                                    <div class="detail-price">
+                                                        <div class="detail-price-rmb">¥&nbsp;</div>
+                                                        <div class="detail-price-price">{{detail.price}}</div>
+                                                        {{if detail.price
+                                                        < detail.jdPrice}} <div class="detail-price-jdprice">京东价:¥{{detail.jdPrice}}</div>
+                                                    {{/if}}
+                                                </div>
+                                                <!--<div class="detail-refund-desc">支持七天无理由退货</div>-->
+                                            </div>
+                                        </div>
+                                </div>
+                                </script>
+                            </div>
+                            <div id="bottomTipFloor" class="bottom-tip-floor">
+                                <span class="btm-detail-icon btm-up">
+										</span>
+                                <span class="bottom-tip">
+											点击查看图文详情
+										</span>
+                            </div>
+                    </div>
+                    </li>
+                    <li class="header-slider-item posi-rela">
+                        <div class="good-detail sift-mg" id="goodDetail">
+                        </div>
+                        <div class="loading-position">
+                            <div class="is-loading"></div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <!-- 下拉返回上层商品页提示 -->
+            <div id="btmLoading" class="btm-loading">
+                下拉回到"商品详情"
+            </div>
+            <!-- 下层页面外容器 -->
+            <div id="btmDetail" class="btm-detail">
+            </div>
+            <!-- 吸底提示占位 -->
+            <div class="hold-div-bottom" style="display:none">
+            </div>
+        </div>
+        <div style="width: 100%;height: 50px;"></div>
+    </div>
+    </div>
+
+    <!-- 上层页面返回顶部 -->
+    <div report-eventid="MProductdetail_BackToTop" class="bottom-to-top J_ping" id="indexToTop" report-pageparam="1434925" report-eventlevel="5">
+        <img src="../../common/images/back1.png" style="width: 100%;">
+    </div>
+    <!-- 底层页面返回顶部 -->
+    <div report-eventid="MProductdetail_BackToTop" class="btm-detail-to-top J_ping" id="btmToTop" report-pageparam="1434925" report-eventlevel="5">
+        <img src="../../common/images/back1.png" style="width: 100%;">
+    </div>
+    <!-- 底部按钮 -->
+    <div id="cart1" class="cart-concern-btm-fixed five-column detail-toolbar">
+        <div class="detail-toolbar-left">
+            <span class="appui-icon appui-icon-cart detail-cart" id="cartId">
+					<span class="mui-badge detail-cart-badge" id="cartBagedId">0</span>
+            </span>
+            <div class="detail-cart-caculate">去结算</div>
+        </div>
+        <div class="detail-toolbar-right">加入购物车</div>
+    </div>
+    <input type="hidden" id="currentWareId" value="1434925" />
+    <input type="hidden" id="openAppFlagA" value="" />
+</body>
+<script type="text/javascript" src="../../common/js/mui.min.js"></script>
+<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+<script type="text/javascript" src="../../common/js/common.js"></script>
+<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+<script type="text/javascript" src="../js/detailData.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    window.jQuery = window.Zepto;
+</script>
+<script type="text/javascript" src="../js/openPlatform.js"></script>
+<script type="text/javascript" src="../js/goodDetail.js"></script>
+<script type="text/javascript" src="../js/goodDetailExrtm.js"></script>
+<script type="text/javascript" src="../js/goodDetailView.js?v=1"></script>
+
+</html>

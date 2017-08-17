@@ -1,0 +1,84 @@
+.mui-row.mui-fullscreen>[class*="mui-col-"] {
+    height: 100%;
+}
+.mui-col-xs-3,
+.mui-control-content {
+    overflow-y: auto;
+    height: 100%;
+}
+.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item,
+.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item.mui-active{
+    border-bottom-color: #ddd;
+}
+.mui-segmented-control .mui-control-item {
+    padding-left: .3rem;
+    padding-right: .3rem;
+    line-height: 2rem;
+    width: 100%;
+    background-color: #fff;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    background-color: #fff;
+    color: #EC2619;
+}
+
+#segmentedControlContents .detail{
+    padding-left: .5rem;
+}
+#segmentedControlContents .detail>div{
+    padding-bottom: .25rem;
+}
+#segmentedControlContents .pic img{
+    width: 100%;
+    height: 3.3rem;
+}
+.mui-table-view-cell{
+    padding: .4rem .6rem 0;
+}
+.mui-table-view-cell:after{
+    left: 11px;
+}
+#segmentedControlContents .add{
+    height: 3.2rem;
+    background: url("../../images/sub-life/2_70.png") 100% 100% no-repeat;
+    background-size: 1.5rem;
+}
+.pay-btn-row{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+.pay-btn-row .mui-row div{
+    height: 100%;
+    line-height: 2.5rem;
+}
+.pay-btn-row .pay-title{
+    padding-left: 4rem;
+    background: url("../../images/sub-life/2_80.png") 1.5rem 50% no-repeat;
+    background-size: 1.3rem;
+    background-color: white;
+    font-size: .8rem;
+    color: #EC2619;
+}
+.pay-btn-row .pay-btn{
+    background-color: #EC2619;
+    text-align: center;
+    font-size: .9rem;
+    color: white;
+}
+.pay-btn-row .amount{
+    position: absolute;
+    z-index: 3;
+    left: 2.3rem;
+    top: .3rem;
+    display: inline-block;
+    width: .9rem;
+    height: .9rem;
+    line-height: .9rem;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #EC2619;
+    font-size: .6rem;
+    color: white;
+}

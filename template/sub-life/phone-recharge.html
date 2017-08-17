@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>手机充值</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/sub-life/phone-recharge.css">
+</head>
+<style>
+    #tip {
+        z-index: 99;
+    }
+</style>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!--提示-->
+    <div id="tip">
+        <div id="tip-wrap">
+            <div id="tip-box"></div>
+        </div>
+    </div>
+    <div class="login-content">
+        <div class="input-box">
+            <input type="text" class="phone-num" placeholder="请输入手机号码" maxlength="13" />
+            <div class="tip">
+                <!--四川移动 注册手机号码-->
+            </div>
+        </div>
+    </div>
+    <div class="mui-row recharge-money-box">
+        <div class="mui-col-xs-4">
+            <div class="recharge-money">50元</div>
+        </div>
+        <div class="mui-col-xs-4">
+            <div class="recharge-money">100元</div>
+        </div>
+        <div class="mui-col-xs-4">
+            <div class="recharge-money">300元</div>
+        </div>
+        <div class="mui-col-xs-4">
+            <div class="recharge-money">500元</div>
+        </div>
+    </div>
+    <div class="recharge-tip">
+        <p class="recharge-tip-title">温馨提示：</p>
+        <p>1.本服务不提供机打发票，运营商是否提供发票以当地运营商发票获取政策为准</p>
+        <p>2.不保证通过“手机充值”功能进行手机充值号码，有机会参与运营商组织的任何活动</p>
+    </div>
+
+    <!--弹出框-->
+    <form class="mui-input-group">
+        <div class="mui-input-row">
+            <span class="mui-icon mui-icon-closeempty close-icon"></span>
+            <header class="text-c">确认交易</header>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm c-666">
+                <label>订单信息</label>
+                <input type="text" class="order-infor" value="" readonly />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="border-btm c-666">
+                <label>付款账户</label>
+                <input type="text" class="" value="普惠钱包" readonly />
+            </div>
+        </div>
+        <div class="mui-input-row">
+            <div class="">
+                <label>付款金额</label>
+                <input type="text" class="pay-price c-red font-6" value="50.00元" readonly />
+            </div>
+        </div>
+        <div class="mui-button-row records-btn">
+            <button type="button" id="rechargebtn" class="mui-btn mui-btn-danger my-btn" disabled>正在查询余额，请稍等...</button>
+        </div>
+    </form>
+
+    <!--支付键盘-->
+    <div id="pay-keyboard-wrap">
+        <div id="pay-keyboard">
+            <div id="keyboard">
+                <div class="mui-input-row">
+                    <span class="mui-icon mui-icon-closeempty close-icon"></span>
+                    <header class="text-c">支付密码</header>
+                </div>
+                <div class="pwd-row mui-text-center">
+                    <input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly /><input type="password" maxlength="1" readonly
+                    /><input type="password" maxlength="1" readonly />
+                </div>
+                <span class="num border-none">1</span><span class="num">2</span><span class="num">3</span>
+                <span class="num border-none">4</span><span class="num">5</span><span class="num">6</span>
+                <span class="num border-none">7</span><span class="num">8</span><span class="num">9</span>
+                <span class="del all-del border-none">C</span><span class="num">0</span><span class="del single-del"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../js/public/fontsize.js"></script>
+    <script src="../../lib/mui/dist/js/mui.min.js"></script>
+    <script src="../../js/sub-life/phone-recharge.js"></script>
+</body>
+
+</html>

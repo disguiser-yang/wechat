@@ -1,0 +1,130 @@
+.detail-header-imgbg {
+	width: 100%;
+	height: 120px;
+	background-color: lightblue;
+}
+.detail-name {
+	background-color: white;
+	padding: 10px 10px 0 10px;
+	width: 100%;
+}
+.detail-desc {
+	width: 100%;
+	color: #999;
+	font-size: 13px;
+	padding: 3px 0 5px 0;
+	background-color: white;
+}
+.detail-price {
+	width: 100%;
+	color: #FD555A;
+	background-color: white; 
+	float: left;
+	line-height: 30px;
+}
+.detail-price-rmb {
+	float: left;
+	font-size: 15px;
+	padding-top: 3px;
+	font-weight:bolder;
+}
+.detail-price-price {
+	float: left;
+	font-size: 25px;
+	font-weight: bolder;
+}
+.detail-price-jdprice {
+	color: #999;
+	float: left;
+	font-size: 13px;
+	line-height: 16px;
+	margin-top: 10px;
+	text-decoration: line-through;
+	padding-left: 5px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.detail-refund-desc {
+	color: #999;
+	font-size: 12px;
+	background-color: white;
+	width: 100%;
+	height: 5px;
+}
+.detail-from-jd {
+	width: 100%;
+}
+.detail-from-jd img {
+	width: 100%;
+}
+.detail-bill-list {
+	padding: 5px 10px;
+	background-color: white;
+	font-size: 15px;
+	color: #666;
+}
+.detail-swipeup-item {
+	height: 80px;
+	line-height: 80px;
+	font-size: 14px;
+	color: #999;
+	text-align: center;
+}
+
+
+.cart-concern-btm-fixed.five-column.detail-toolbar {
+	height: 50px;
+	line-height: 50px;
+	background-color: white;
+}
+.detail-toolbar-left {
+	width: 50%;
+	background-color: white;
+	border-top: 1px solid rgb(235, 235, 235);
+	float: left;
+	position: relative;
+	height: 50px;
+}
+.appui-icon.appui-icon-cart.detail-cart {
+	color: #FD555A;
+	width: 50%;
+	text-align: right;
+	float: left;
+	font-size: 25px;
+	margin-top: 6px;
+	-webkit-transition: all 	0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+}
+.detail-cart-scale {
+	-webkit-transform: scale(1.16);
+	-moz-transform: scale(1.16);
+}
+
+.mui-badge.detail-cart-badge {
+	background-color: #FD555A;
+	color: white;
+	position: relative;
+	left: -6px;
+	top: -2px;
+	float: right;
+	border: 1px solid white;
+}
+.detail-cart-caculate {
+	width: 50%;
+	text-align: left;
+	float: right;
+	font-size: 15px;
+	line-height: 15px;
+	margin-top: 17px;
+}
+.detail-toolbar-right {
+	width: 50%;
+	background-color: #FD555A;
+	float: left;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	line-height: 50px;
+}
+

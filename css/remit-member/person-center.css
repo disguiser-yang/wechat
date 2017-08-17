@@ -1,0 +1,429 @@
+.mui-input-row label~input,
+.mui-input-row label~select,
+.mui-input-row label~textarea {
+    text-align: right;
+}
+
+.mui-input-group {
+    /*padding: 1rem;*/
+    background-color: transparent;
+}
+
+.mui-input-group .mui-input-row {
+    padding: 0 1rem;
+    height: 2.25rem;
+    background-color: white;
+}
+
+.mui-input-group .mui-input-row:after,
+.mui-input-group:after {
+    position: static;
+}
+
+.mui-input-row label {
+    padding: .8rem 0;
+}
+
+input[type=text],
+input[type=password] {
+    height: 2.3rem;
+}
+
+.mui-input-group .input-file {
+    margin: .65rem 0;
+    height: 3.5rem;
+    line-height: 3.5rem;
+}
+
+.mui-input-group .input-file span,
+.mui-input-group .input-file a {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.mui-input-group .input-file span {
+    width: 35%;
+}
+
+.mui-input-group .input-file a {
+    margin-top: .45rem;
+    margin-right: .6rem;
+    width: 2.7rem;
+    height: 2.7rem;
+    text-align: right;
+}
+
+.mui-input-group .input-file #headImg {
+    width: 100%;
+    height: 100%;
+    background: url("../../images/public/headImg.png") no-repeat 50% 50%;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.mui-input-group .input-file label {
+    padding-top: 2.2rem;
+}
+
+.mui-input-group .vip-infor {
+    height: 1.85rem;
+    background-color: transparent;
+    line-height: 1.9rem;
+    color: #777;
+    font-size: .7rem;
+}
+
+.border-btm {
+    height: 100%;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.my-btn {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid #EC2719;
+    width: 90%;
+    background-color: #EC2719;
+    font-size: .8rem;
+}
+
+.detail {
+    float: left;
+    width: 65%;
+    height: 100%;
+    line-height: 2.25rem;
+    text-align: right;
+    word-break: break-all;
+}
+
+.padding-r {
+    padding-right: .6rem;
+}
+
+
+/*互动交流*/
+
+.interaction-title {
+    margin-top: 1.45rem;
+    line-height: 1.5rem;
+}
+
+.interaction-title:before,
+.interaction-title:after {
+    position: static;
+}
+
+.interaction-content {
+    margin-top: .6rem;
+    padding: .75rem;
+    background-color: white;
+}
+
+.interaction-content .portrait {
+    display: inline-block;
+    margin-right: .2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.interaction-content .portrait img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.interaction-content-box {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.interaction-content-box:nth-last-child(1) {
+    border: none;
+}
+
+.interaction-words {
+    padding-left: 2.45rem;
+    color: #333;
+}
+
+.interaction-words p {
+    margin-bottom: .5rem;
+    font-size: .6rem;
+    word-break: break-all;
+}
+
+p.reply {
+    position: relative;
+    padding-left: .5rem;
+    font-size: .7rem;
+}
+
+.reply:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    /*top: .15rem;*/
+    display: inline-block;
+    width: 2px;
+    height: 90%;
+    background-color: #EC2719;
+    vertical-align: middle;
+}
+
+.reply-content {
+    padding-left: .5rem;
+}
+
+.mui-table-view:before,
+.mui-table-view:after {
+    position: static;
+}
+
+
+/*留言页*/
+
+.words-content {
+    background-color: #f5f5f5;
+}
+
+.words-textarea {
+    padding: .5rem;
+    margin-bottom: 0;
+    width: 100%;
+    height: 6.5rem;
+    border-radius: 3px;
+    border: none;
+    font-size: .65rem;
+    color: #333;
+}
+
+.my-btn-cancel {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    margin-top: .6rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    width: 100%;
+    background-color: #ccc;
+    font-size: .8rem;
+    color: white;
+}
+
+.residue {
+    margin-bottom: 1rem;
+    margin-right: .5rem;
+    text-align: right;
+    color: #999;
+}
+
+
+/*登录*/
+
+.login-bg {
+    position: relative;
+    width: 100%;
+    height: 7.15rem;
+}
+
+.login {
+    background: url("../../images/remit-member/login-bg.png") no-repeat 50% 50%;
+    background-size: 100%;
+}
+
+.register {
+    background: url("../../images/remit-member/register-bg.png") no-repeat 50% 50%;
+    background-size: 100%;
+}
+
+.login-bg>.login-btn-row>span {
+    display: inline-block;
+    width: 50%;
+    height: 1.5rem;
+    /*line-height: 1.5rem;*/
+    font-size: .7rem;
+    text-align: center;
+    color: white;
+}
+
+.login-bg .login-btn:after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    width: 0;
+    height: 40%;
+    border: 1px solid #fff;
+}
+
+.login-bg>.login-btn-row {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.login-content {
+    /*padding-top: .3rem;*/
+    padding-left: .75rem;
+    padding-right: .75rem;
+    background-color: white;
+}
+
+.input-box {
+    /*padding-top: .3rem;*/
+    /*padding-bottom: .3rem;*/
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.input-box input {
+    margin-bottom: initial;
+    width: 77%;
+    border: none;
+}
+
+.input-box .input-yzm {
+    width: 60%;
+}
+
+.input-box .yzm {
+    padding: 0;
+    width: 40%;
+    text-align: right;
+    font-size: .6rem;
+}
+
+.get-yzm {
+    display: inline-block;
+    padding: .4rem 0;
+}
+
+.get-yzm span {
+    padding: .4rem .6rem;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #EC2619;
+    text-align: center;
+    /*font-size: .65rem;*/
+    color: white;
+}
+
+.input-box .login-phone {
+    width: 63%;
+}
+
+.input-box>span {
+    display: inline-block;
+    /*padding: 10px 15px;*/
+    width: 20%;
+    height: 1rem;
+}
+
+.input-box .user-phone {
+    padding: 0 15px;
+    height: .8rem;
+    border-right: 1px solid #f5f5f5;
+}
+
+.input-box .see-pwd {
+    padding-top: 1rem;
+}
+
+.input-box .no-see {
+    background: url("../../images/remit-member/no-see.png") 50% 90% no-repeat;
+    background-size: 30%;
+}
+
+.input-box .can-see {
+    background: url("../../images/remit-member/can-see.png") 50% 90% no-repeat;
+    background-size: 30%;
+}
+
+.my-btn-login {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    border: 1px solid #ccc;
+    width: 90%;
+    background-color: #ccc;
+    font-size: .8rem;
+    color: white;
+}
+
+.btn-success {
+    border: 1px solid #EC2719;
+    background-color: #EC2719;
+}
+
+
+/* .mui-input-row .mui-input-clear~.mui-icon-clear{
+    top: 1.1rem;
+    right: .9rem;
+    font-size: .7rem;
+} */
+
+.mui-button-row a:active {
+    color: #EC2719;
+}
+
+.icon-clear {
+    position: absolute;
+    right: .8rem;
+    top: .15rem;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../../images/public/gray-close.png") no-repeat 50% 50%;
+    background-size: 30% auto;
+}
+
+.icon-hidden {
+    display: none;
+}
+
+
+/*充值*/
+
+.mui-checkbox input[type=checkbox] {
+    position: static;
+    margin-left: .8rem;
+    width: .8rem;
+    height: .8rem;
+}
+
+p.agreement {
+    margin-top: .5rem;
+    font-size: .6rem
+}
+
+.mui-checkbox input[type=checkbox]:before {
+    font-size: .8rem;
+}
+
+.mui-checkbox input[type=checkbox]:checked:before {
+    color: #ec291b;
+}
+
+
+/*文件上传*/
+
+#file {
+    position: absolute;
+    height: inherit;
+    opacity: 0;
+}
+
+#nick-name input {
+    text-align: right;
+    color: black;
+}
+
+
+/*支付密码*/
+
+.pwd {
+    display: none;
+}

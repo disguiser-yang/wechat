@@ -1,0 +1,171 @@
+.person-top {
+    height: 5.12rem;
+    background-image: url(../../images/remit-member/personal-top-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.person-top-photo {
+    width: 65%;
+    height: inherit;
+    display: inline-block;
+    float: left;
+    padding-left: 0.5rem;
+    position: relative;
+}
+
+.person-top-link {
+    width: 35%;
+    height: inherit;
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+
+.person-top-photo-img {
+    width: 2.56rem;
+    height: 2.56rem;
+    border-radius: 100%;
+    position: absolute;
+    overflow: hidden;
+    border: 2px solid #fff;
+    top: 50%;
+    margin-top: -1.128rem;
+}
+
+.person-top-photo-img img {
+    display: block;
+    width: 2.56rem;
+    height: 2.56rem;
+}
+
+.person-top-nickname {
+    position: absolute;
+    left: 3.5rem;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.person-top-nickname .nickname {
+    padding-top: 4px;
+    color: #fff;
+}
+
+.person-top-nickname .name {
+    color: #f0f0f0;
+}
+
+.link-to-personal-center {
+    padding: 0px;
+    margin: 0px;
+    width: 3.73rem;
+    height: 1.06rem;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -0.52rem;
+}
+
+.link-to-personal-center img {
+    width: 3.73rem;
+    display: block;
+    height: 1.06rem;
+}
+
+.person-main-content {
+    padding-left: 1.15rem;
+    background: #fff;
+    margin-top: 0.91rem;
+}
+
+.wallet-money {
+    float: right;
+}
+
+.login-out {
+    margin-top: 4.5rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.login-out-btn {
+    width: 12.8rem;
+    height: 1.92rem;
+    border: 1px solid #fd4949;
+    border-radius: 5px;
+    line-height: 1.92rem;
+    text-align: center;
+    color: #fd4949;
+    font-size: 0.68rem;
+    margin: 0 auto;
+}
+
+.mui-input-row {
+    padding: 0.6rem 0rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.common-icon {
+    display: inline-block;
+    width: 0.66rem;
+    height: 0.66rem;
+}
+
+.puhui-wallet-icon {
+    background: url(../../images/remit-member/puhui-wallet-icon.png);
+    background-size: 0.66rem 0.66rem;
+    vertical-align: -1px;
+    background-repeat: no-repeat;
+}
+
+.puhui-apply-icon {
+    background: url(../../images/remit-member/my-app-icon.png);
+    background-size: 0.66rem 0.66rem;
+    vertical-align: -2px;
+    background-repeat: no-repeat;
+}
+
+.safe-center-icon {
+    background: url(../../images/remit-member/safe-center-icon.png);
+    background-size: 0.66rem 0.66rem;
+    vertical-align: -2px;
+    background-repeat: no-repeat;
+}
+
+.suggest {
+    background: url(../../images/remit-member/suggest-icon.png);
+    background-size: 0.66rem 0.66rem;
+    vertical-align: -2px;
+    background-repeat: no-repeat;
+}
+
+#safe-center {
+    border-bottom: none;
+}
+
+#price {
+    float: right;
+    padding-right: 1.8rem;
+}
+
+#about-us {
+    border-bottom: none;
+}
+
+.about-us {
+    background: url(../../images/remit-member/about-us-icon.png);
+    background-size: 0.66rem 0.66rem;
+    vertical-align: -2px;
+    background-repeat: no-repeat;
+}
+
+#person-main-content-about-us {
+    margin-top: 0px;
+}
+
+.bind-card-alert {
+    font-size: 0.51rem;
+    color: #ff0000;
+    padding-left: 0.5rem;
+}

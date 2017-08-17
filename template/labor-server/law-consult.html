@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>法律咨询</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../common/public.css">
+    <link rel="stylesheet" href="../../css/labor-server/law-consult.css">
+
+</head>
+
+<body>
+    <!--loading-->
+    <div id="load-wrap">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <div class="consult-button">我要咨询 <i></i></div>
+    <div class="phone-wrap">
+        <header>各区县工会法律援助工作联系电话</header>
+        <div class="pos-r content">
+            <div class="pos-a tip">点击拨打</div>
+            <div class="pos-a phone-box">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <p><a href="tel:85339351">高新区办事处：85339351</a></p>
+                        <p><a href="tel:68772531">天府新区办事处：68772531</a></p>
+                        <p><a href="tel:86754063">锦江区总工会：86754063</a></p>
+                        <p><a href="tel:86646930">青羊区总工会：86646930</a></p>
+                        <p><a href="tel:87705232">金牛区总工会：87705232</a></p>
+                        <p><a href="tel:85512959">武侯区总工会：85512959</a></p>
+                        <p><a href="tel:84313350">成华区总工会：84313350</a></p>
+                        <p><a href="tel:84852300">龙泉驿区总工会：84852300</a></p>
+                        <p><a href="tel:83308865">青白江区总工会：83308865</a></p>
+                        <p><a href="tel:83091725">新都区总工会：83091725</a></p>
+                        <p><a href="tel:82712110">温江区总工会：82712110</a></p>
+                        <p><a href="tel:64001357">双流区总工会：64001357</a></p>
+                        <p><a href="tel:69506956">郫都区总工会：69506956</a></p>
+                        <p><a href="tel:27558635">简阳市总工会：27558635</a></p>
+                        <p><a href="tel:87110724">都江堰市总工会：87110724</a></p>
+                        <p><a href="tel:83708522">彭州市总工会：83708522</a></p>
+                        <p><a href="tel:88766136">邛崃市总工会：88766136</a></p>
+                        <p><a href="tel:82208969">崇州市总工会：82208969</a></p>
+                        <p><a href="tel:84921851">金堂县总工会：84921851</a></p>
+                        <p><a href="tel:82510591">新津县总工会：82510591</a></p>
+                        <p><a href="tel:88312877">大邑县总工会：88312877</a></p>
+                        <p><a href="tel:88522370">蒲江县总工会：88522370</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="address-wrap">
+        <div class="text-c c-999 lh-15 font-1">市总工会在西区职工帮扶中心和东郊职工群众惠民服务中心分别设置法律援助窗口，由执业经验丰富的公益律师开展咨询接待、文书代写、网络舆情引导以及法律援助等服务。</div>
+        <header>西区地址</header>
+        <p>羊区贝森路2号职工帮扶中心</p>
+        <p>法律援助热线：<a href="tel:81710335">81710335</a></p>
+        <header>东区地址</header>
+        <p>成华区建设南路1号成都市总工会东郊职工群众惠民服务中心</p>
+        <p>法律援助热线：<a href="tel:81705715">81705715</a></p>
+    </div>
+
+</body>
+
+<script src="../../js/public/fontsize.js"></script>
+<script src="../../lib/mui/dist/js/mui.min.js"></script>
+<script>
+    mui("body").on('tap', '.consult-button', function() {
+        window.location.href = 'consult-detail.html'
+    });
+    mui('.mui-scroll-wrapper').scroll({
+        deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    });
+</script>
+
+</html>

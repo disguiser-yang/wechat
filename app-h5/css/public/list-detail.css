@@ -1,0 +1,54 @@
+body,html{
+	width:100%;
+	height:100%;
+	position: relative;
+}
+.hot-content{
+    padding: 1rem .5rem;
+}
+.hot-content>h3{
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+.hot-content>.author{
+    margin-top: .75rem;
+    margin-bottom: .7rem;
+    font-size: .6rem;
+}
+.hot-content>.author>.time{
+    margin-left: .5rem;
+}
+.hot-img-box{
+    width: 100%;
+    margin-bottom: .8rem;
+}
+.hot-img-box>img{
+    width: 100%;
+}
+.hot-content .content-detail{
+    padding-bottom: 1rem;
+    font-size: .7rem;
+    line-height: 1.7;
+    word-break: break-all;
+}
+.content-detail img{
+    width: 100%;
+}
+/* 活动报名详情 */
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2rem;
+    background-color: rgba(225,225,225,.8);
+}
+.my-btn {
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    border:1px solid #EC2719;
+    width: 90%;
+    background-color:#EC2719;
+    font-size: .8rem;
+}

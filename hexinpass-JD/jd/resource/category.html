@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache"> 
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>分类</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../css/category.css" />		
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+	</head>
+	<body>		
+		<div class="mui-content mui-row mui-fullscreen" id="category">
+			<script type="text/html" id="categoryDetail">
+				<div class="mui-col-xs-3">
+					<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+						{{each list as item index}}  
+							{{if item.catId == selectid}}
+								<a class="mui-control-item mui-active" data-index={{index}} href={{"#content"+index}}>{{item.name}}</a>
+							{{else}}
+								<a class="mui-control-item" data-index={{index}} href={{"#content"+index}}>{{item.name}}</a>
+							{{/if}}
+	                    {{/each}}  
+					</div>
+				</div>
+				<div id="segmentedControlContents" class="mui-col-xs-9">
+					{{each list as item index}}  
+	                     <div id={{"content"+index}} class="mui-control-content" {{if item.catId != selectid}}style="display: none;" imgload="0"{{/if}}>
+	                     	<ul class="mui-table-view">
+	                     		{{each item.subCategory as val i}} 
+	                     			<li class="mui-table-view-cell">
+	                     				<div class="category-cell-title">	
+	                     					<div class="category-cell-title-line"></div>
+	                     					<div class="category-cell-title-text">{{val.name}}</div>
+	                     					<div class="category-cell-title-line"></div>
+	                     				</div>
+	                     				{{each val.subCategory as cate index}}
+		                     				<div class="category-cell-item" catid={{cate.catId}}>
+		                     					<div class="category-cell-item-imgbg">
+		                     						{{if item.catId != selectid}}
+		                     							<img class="category-cell-item-img" src="../img/default.png" imgsrc={{cate.img}} />
+		                     						{{else}}
+		                     							<img class="category-cell-item-img" src={{cate.img}}>
+		                     						{{/if}}
+		                     					</div>
+		                     					<div class="category-cell-item-txt">{{cate.name}}</div>
+		                     				</div>
+	                     				{{/each}}
+	                     			</li>
+	                     		{{/each}}
+	                     	</ul>
+	                     </div>
+	                {{/each}}  
+				</div>
+			</script>
+		</div>
+		<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+		<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../common/js/common.js"></script>
+		<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+		<script type="text/javascript" src="../../common/js/lib/template.min.js"></script>
+		<script type="text/javascript">document.write("<script type='text/javascript' src='../js/category.js?v="+new Date().getTime()+"'></s" + "cript>");</script>
+		<!--<script type="text/javascript" src="../js/category.js"></script>-->
+	</body>
+</html>

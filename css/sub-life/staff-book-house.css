@@ -1,0 +1,37 @@
+/*职工书屋（书屋推荐）*/
+.recommend-wrap{
+    border-bottom: 1px solid #e6e6e6;
+    padding-left: 1.5em;
+    width: 100%;
+    height: 2rem;
+    /*line-height: 2rem;*/
+    background-color: white;
+    overflow: hidden;
+}
+.recommend{
+    padding-left: .5rem;
+    margin: .5rem 0;
+    border-left: 3px solid red;
+    box-sizing: border-box;
+}
+.mui-table-view-cell>a.a-box{
+    color: #555;
+}
+.content-wrap .title-column{
+    padding: 0 .5rem 1rem;
+}
+.content-wrap .title-column img{
+    width: 100%;
+}
+.content-wrap .title-column .mui-col-xs-4{
+    padding: .6rem .3rem .3rem;
+}
+.content-wrap .title-column .bookname .mui-col-xs-4{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.content-wrap .title-column .author .mui-col-xs-4{
+    padding-top: .3rem;
+    /*padding-bottom: 0;*/
+    color: #999;
+}

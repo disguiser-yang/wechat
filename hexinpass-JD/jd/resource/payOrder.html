@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="dns-prefetch" href="_SERVER_"> 
+		<link rel="dns-prefetch" href="_CDNSERVER_">
+		<link href="_CDNSERVER_/_COMMONPATH_/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Expires" content="-1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<title>订单支付</title>
+		<link rel="stylesheet" href="../../common/css/mui.min.css" />
+		<link rel="stylesheet" href="../../common/css/appui.css" />
+		<script type="text/javascript" src="../../common/js/lib/mui.min.js"></script>
+		<script type="text/javascript" src="../../common/js/app.ui.js"></script>
+		<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../common/js/common.js"></script>
+		<style type="text/css">
+			body {
+				font-size: 16px;
+			}
+			.pay-title {
+				float: left;
+				width: 85px;
+			}
+			.pay-desc {
+				float: left;
+				color: #999;
+			}
+			.pay-button {
+				width: 90%;
+				background-color: #FD555A;
+				color: white;
+				height: 44px;
+				line-height: 44px;
+				border-radius: 5px;
+				text-align: center;
+				margin: 30px auto 0 auto;
+			}
+			.pay-result-imgbg {
+				width: 100%;
+				text-align: center;
+			}
+			.pay-result-img {
+				width: 100px;
+				margin: 120px auto;
+			}
+			.pay-result-operate {
+				width: 100%;
+				line-height: 44px;
+			}
+			.pay-result-operate-1 {
+				width: 28.25%;
+				margin: 0 14.5%;
+				border: 1px solid #FD555A;
+				text-align: center;
+				font-size: 15px;
+				float: left;
+				border-radius: 5px;
+			}
+			.pay-result-operate-2 {
+				width: 28.25%;
+				margin: 0 14.5% 0 0;
+				background-color: #FD555A;
+				color: white;
+				border-radius: 5px;
+				text-align: center;
+				font-size: 15px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content" id="payInfo">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">订单信息</li>
+				<li class="mui-table-view-cell">
+					<div class="pay-title">订单号：</div>
+					<div class="pay-desc" id="orderId"></div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="pay-title">下单时间：</div>
+					<div class="pay-desc" id="orderTime"></div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="pay-title">订单金额：</div>
+					<div class="pay-desc" id="money" style="color: #FD555A;"></div>
+				</li>
+			</ul>
+			<div class="pay-button" id="payButton">确认支付</div>
+		</div>
+		<div class="mui-content" id="payResult" style="display: none;">
+			<div class="pay-result-imgbg">
+			  	<img class="pay-result-img" id="payResultImg" src="../img/paysuccess.png" />
+			</div>
+			<div class="pay-result-operate" id="paySuccessOperate">
+				<div class="pay-result-operate-1" id="operate1">返回首页</div>
+				<div class="pay-result-operate-2" id="operate2">查看订单</div>
+			</div>
+			<div class="pay-result-operate" id="payFailureOperate">
+				<div class="pay-result-operate-1" id="operate3">查看订单</div>
+				<div class="pay-result-operate-2" id="operate4">重新支付</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				mui.init();
+				
+				var orderId = getQueryString('order');
+				var time = getQueryString('time');
+				var money = getQueryString('money');
+				
+				
+				$('#orderId').html(orderId);
+				$('#orderTime').html(new Date(parseInt(time)*1000).pattern("yyyy-MM-dd HH:mm:ss"));
+				$('#money').html(money);
+				
+				mui('body').on('tap', '#payButton', function(){
+					window.appInterfaceReady(function(){
+						window.app.startPay(orderId);
+					});
+				});
+				
+				mui('#payResult').on('tap', '#operate1', function(){
+					location.replace('index.html');
+					//location.href = 'index.html';
+				});
+				mui('#payResult').on('tap', '#operate2', function(){
+					location.replace('order.html');
+					//location.href = 'order.html';
+				});
+				mui('#payResult').on('tap', '#operate3', function(){
+					location.replace('order.html');
+					//location.href = 'order.html';
+				});
+				mui('#payResult').on('tap', '#operate4', function(){
+					$('#payInfo').show();
+					$('#payResult').hide();
+				});
+			});
+			
+			var mhx = new Object();
+			mhx.payCallback = function(type) {
+				$('#payInfo').hide();
+				$('#payResult').show();
+				if (type == 1) { // pay success
+					$('#payResultImg').attr('src', '../img/paysuccess.png');
+					$('#paySuccessOperate').show();
+					$('#payFailureOperate').hide();
+				} else {
+					$('#payResultImg').attr('src', '../img/payfailure.png');
+					$('#paySuccessOperate').hide();
+					$('#payFailureOperate').show();
+				}
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>开通普惠钱包</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../../lib/mui/dist/css/mui.min.css">
+    <link rel="stylesheet" href="../../css/public/hint.css">
+    <link href="../../css/remit-member/pay-pwd.css" rel="stylesheet">
+    <link href="../../css/sub-life/puhui-pay.css" rel="stylesheet">
+</head>
+
+<body style='height:auto'>
+    <!--<div class="success-infor">
+        <div class="bind-success-icon"></div>
+        <p class="hint hint-success">绑定成功</p>
+    </div>
+    <div class='random-red-pocket'>
+        <div class='red-pocket-img'>
+
+        </div>
+        <div class='random-red-pocket-value'>
+            <p class='random-red-pocket-value-info'>恭喜你获得<span class='pocket-value'></span>元随机红包</p>
+            <p class='random-red-pocket-value-describe'>红包将于次日到账</p>
+        </div>
+    </div>
+    <div class="mui-button-row">
+        <button type="button" class="mui-btn my-btn btn-success" id="btn-success">确&nbsp;&nbsp;定</button>
+    </div>-->
+    <div id="convenient-pay-wrap" class="">
+
+
+        <div class='progress-bar'>
+            <div class='step1 '>1设置支付密码</div>
+            <div class='step2'>2实名认证</div>
+            <div class='step3 actived'>3完成</div>
+        </div>
+        <div class='convenient-content'>
+            <div class='convenient-icon'></div>
+            <p>开通普惠钱包成功，<br/>你已可使用普惠钱包进行扫码支付!</p>
+        </div>
+        <div class='random-red-pocket' style='display:none;'>
+            <div class='red-pocket-img'>
+
+            </div>
+            <div class='random-red-pocket-value'>
+                <p class='random-red-pocket-value-info'>恭喜你获得<span class='pocket-value'></span>元随机红包</p>
+                <p class='random-red-pocket-value-describe'>红包将于次日到账</p>
+            </div>
+        </div>
+        <div class='choose-default-pay-type'>
+            <p class='choose-title'>选择默认的支付方式：</p>
+            <p class="agreement">
+                <form action="">
+                    <input name="radio" type="radio" checked="checked" id='radio1' value='wallet' class='radioItem'>
+                    <label for="radio1">普惠钱包余额</label>
+                    <input name="radio" type="radio" id='second-radio' value='bankCard' class='radioItem'>
+                    <label for="second-radio">银行卡</label>
+                </form>
+            </p>
+            <p class='alert-info alert-info-wallet'>
+                您已可通过微信向余额账户充值进行扫码支付，未来工会的相关福利资金将会发至余额账户中。
+            </p>
+            <p class='alert-info alert-info-bankCard'>
+                您的每笔扫码支付将直接通过银行卡进行支付
+            </p>
+        </div>
+        <!--<a href="javascript:;" id='a-btn'>点击测试</a>-->
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn my-btn" id="btn-convenient-pay" style='margin-top:0.4rem;margin-bottom:0.4rem;'>完   成</button>
+        </div>
+
+        <p id='skip' style='padding:0 1rem;text-align:left;color:#999999;margin-bottom:2rem;'>到普惠平台诚信优质商家扫码支付，365天每笔消费都送红包，享随机立送，最高免单特权！</p>
+
+        <!--<div style='height:5rem;'>
+
+        </div>-->
+    </div>
+</body>
+
+<script src="../../js/public/fontsize.js"></script>
+<script src="../../js/public/config.js"></script>
+<script src="../../lib/mui/dist/js/mui.min.js"></script>
+<script src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script src="../../js/remit-member/bind-bankCard-success.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".alert-info-wallet").show();
+        $(".radioItem").change(function() {
+            var $selectedvalue = $("input[name='radio']:checked").val();
+            if ($selectedvalue == 'wallet') {
+                // alert('wallet');
+                $(".alert-info-wallet").show();
+                $(".alert-info-bankCard").hide();
+            } else {
+                // alert('bankCard');
+                $(".alert-info-wallet").hide();
+                $(".alert-info-bankCard").show();
+            }
+        });
+    });
+</script>
+
+<style>
+    input[type="radio"] {
+        -webkit-appearance: none;
+        background: url(../../images/remit-member/icon-unchecked.png);
+        height: 0.7rem;
+        vertical-align: middle;
+        width: 0.7rem;
+        background-color: transparent;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+        /*background-position: -46px -5px;*/
+    }
+    
+    input[type="radio"]:checked {
+        -webkit-appearance: none;
+        background: url(../../images/remit-member/icon-checked.png);
+        height: 0.7rem;
+        vertical-align: middle;
+        width: 0.7rem;
+        background-color: transparent;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
+
+</html>
